@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo搭建博客（从零到一） | Hexo</title>
+  <title>hexo搭建博客（从零到一） | lenmontree</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="MinHow,MinHow's Blog" />
@@ -12,31 +12,31 @@
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo搭建博客（从零到一）">
-<meta property="og:url" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:url" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/index.html">
+<meta property="og:site_name" content="lenmontree">
 <meta property="og:description" content="0. 日常叨叨平常学习到的知识点多而杂，经常是当时理解，过不了几天就一片空白了。所以吧，古人说的“好记性不如烂笔头”确实中肯。可是吧，面对纷杂的笔记，不仅当时记录的时候很吃力，而且时候也不利于查阅。所以，在这良辰美景（国庆8天小长假）之际，我终于做了自己一直想做却没做的事（唉，人有时候就是这么自我矛盾）。 万事开头难，决定开始做就是成功的第一步！通过查阅网上各种资料、和小伙伴尬聊之后，最后选用">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/git_version.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/nodejs_path.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/node_v.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/cd_path.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/hexo_v.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/files.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/sign_in.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/new_repo.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/create_repo.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/settings.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/ssh_key.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/deploy.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/域名解析.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/download_theme.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/themes.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/changetheme.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/theme_config.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/git_version.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/nodejs_path.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/node_v.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/cd_path.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/hexo_v.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/files.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/sign_in.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/new_repo.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/create_repo.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/settings.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/ssh_key.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/deploy.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/域名解析.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/download_theme.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/themes.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/changetheme.jpg">
+<meta property="og:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/theme_config.jpg">
 <meta property="og:updated_time" content="2017-10-06T17:17:54.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建博客（从零到一）">
 <meta name="twitter:description" content="0. 日常叨叨平常学习到的知识点多而杂，经常是当时理解，过不了几天就一片空白了。所以吧，古人说的“好记性不如烂笔头”确实中肯。可是吧，面对纷杂的笔记，不仅当时记录的时候很吃力，而且时候也不利于查阅。所以，在这良辰美景（国庆8天小长假）之际，我终于做了自己一直想做却没做的事（唉，人有时候就是这么自我矛盾）。 万事开头难，决定开始做就是成功的第一步！通过查阅网上各种资料、和小伙伴尬聊之后，最后选用">
-<meta name="twitter:image" content="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/git_version.jpg">
+<meta name="twitter:image" content="http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/git_version.jpg">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -326,11 +326,11 @@
             <div class="post-copyright">
     <div class="content">
         <p>最后更新： 2017年10月07日 01:17</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/05/hexo-set-up-blog（0-to-1）/" title="hexo搭建博客（从零到一）">http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/</a></p>
+        <p>原始链接： <a class="post-url" href="/2017/10/05/hexo-set-up-blog（0-to-1）/" title="hexo搭建博客（从零到一）">http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/</a></p>
         <footer>
-            <a href="http://yoursite.com">
-                <img src="/images/logo.png" alt="John Doe">
-                John Doe
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
             </a>
         </footer>
     </div>
@@ -348,7 +348,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/&title=《hexo搭建博客（从零到一）》 — Hexo&pic=http://yoursite.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/&title=《hexo搭建博客（从零到一）》 — lenmontree&pic=http://lenmontree.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -358,22 +358,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/&title=《hexo搭建博客（从零到一）》 — Hexo&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/&title=《hexo搭建博客（从零到一）》 — lenmontree&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo搭建博客（从零到一）》 — Hexo&url=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《hexo搭建博客（从零到一）》 — lenmontree&url=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/&via=http://lenmontree.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -383,7 +383,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2017/10/05/hexo-set-up-blog（0-to-1）/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -456,7 +456,7 @@
       <p>
         Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
         Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
-      &copy; 2017 John Doe<br>
+      &copy; 2017 jasmine<br>
       </p>
     </div>
   </div>
@@ -465,7 +465,7 @@
 <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script>
   var mihoConfig = {
-      root: "http://yoursite.com",
+      root: "http://lenmontree.com",
       animate: true,
       isHome: false,
       share: true
