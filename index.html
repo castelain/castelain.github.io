@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,12 +61,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-MarkDown-Tips" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/10/17/hello-world/" class="article-date">
-  <time datetime="2017-10-17T11:08:51.379Z" itemprop="datePublished">2017-10-17</time>
+    <a href="/2017/10/16/MarkDown-Tips/" class="article-date">
+  <time datetime="2017-10-16T00:20:09.000Z" itemprop="datePublished">2017-10-16</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/MarkDown/">MarkDown</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -75,7 +79,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/17/hello-world/">Hello World</a>
+      <a class="article-title" href="/2017/10/16/MarkDown-Tips/">MarkDown-Tips</a>
     </h1>
   
 
@@ -83,22 +87,767 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="MarkDown-–小贴士"><a href="#MarkDown-–小贴士" class="headerlink" title="MarkDown –小贴士"></a>MarkDown –小贴士</h2><h3 id="MarkDown-的简要介绍"><a href="#MarkDown-的简要介绍" class="headerlink" title="MarkDown 的简要介绍"></a>MarkDown 的简要介绍</h3><p><img src="markdown.png" alt="markdown" title="markdown"></p>
+<p>Markdown 是一种轻量级<a href="http://www.bing.com/knows/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80" target="_blank" rel="external">标记语言</a>，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的<a href="http://www.bing.com/knows/XHTML" target="_blank" rel="external">XHTML</a>(或者<a href="http://www.bing.com/knows/HTML" target="_blank" rel="external">HTML</a>)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
+<h3 id="MarkDown-中生成表格与管理"><a href="#MarkDown-中生成表格与管理" class="headerlink" title="MarkDown 中生成表格与管理"></a>MarkDown 中生成表格与管理</h3><p>示例代码：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-|左对齐|居中对齐|右对齐</div><div class="line">:-:|:-|:-:|-:</div><div class="line">1|left|center|right</div><div class="line">2|left|center|right</div></pre></td></tr></table></figure>
+<p>表格效果如下：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th style="text-align:left">左对齐</th>
+<th style="text-align:center">居中对齐</th>
+<th style="text-align:right">右对齐</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:left">left</td>
+<td style="text-align:center">center</td>
+<td style="text-align:right">right</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:left">left</td>
+<td style="text-align:center">center</td>
+<td style="text-align:right">right</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>表格中的所有内容，处理表格内容文字以外，都要确保使用的都是英文字符</p>
+<p>如果表格相邻的上面一行有内容，一定要在这行内容与表格之间插入一行空行，这样，表格的格式才能生效（否则，会将表格内容作为普通文本输出的）</p>
+<p>表格中的每行的首尾添加 |  与否都不影响表格的格式</p>
+<p>可以借助Execel来生成表格：</p>
+<p>在Execel中，正常填入表格后，在表格中的第二行，添加上控制表格格式的行；将Execel中的内容复制到markdown的编辑器中以后，将Tab符号都换成  |  即可。</p>
+</blockquote>
+<h3 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h3><p>在段首输入一个<strong>&amp;ensp</strong>相当于输入一个空格。</p>
+<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><ol>
+<li>在每行代码前加入4个空格后一个（个数是相对于当前格式而言的）Tab键</li>
+<li>在代码的前后添加<strong>```</strong></li>
+</ol>
+<p><strong>```</strong>后加的单词表示后面这段代码是什么语言的，编译器会相应的做出高亮部分</p>
+<p><strong>加粗下划线</strong><br><strong>加粗星号</strong><br><strong><em>斜体加粗下划线</em></strong><br><strong><em>斜体加粗下划线</em></strong></p>
+<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">alt</span>](<span class="link">address "title"</span>)</div></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/&gt;</div></pre></td></tr></table></figure>
+<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol>
+<li>数字+’.’+’空格’——&gt;有序列表</li>
+<li>‘*’+’空格’————-&gt;无序列表</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/17/hello-world/" data-id="cj8vjjqdg0000jouod9b1ypeu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/16/MarkDown-Tips/" data-id="cj8vjnhhf0000tsuo3pclsqmn" class="article-share-link">Delen</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MarkDown/">MarkDown</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript-Learning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/14/JavaScript-Learning/" class="article-date">
+  <time datetime="2017-10-14T07:20:52.000Z" itemprop="datePublished">2017-10-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/14/JavaScript-Learning/">JavaScript的学习--基础知识点篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="前端学习之语言基础储备–JavaScript的学习"><a href="#前端学习之语言基础储备–JavaScript的学习" class="headerlink" title="前端学习之语言基础储备–JavaScript的学习"></a>前端学习之语言基础储备–JavaScript的学习</h1><ul>
+<li><p>Web 开发人员必须学习的3门语言：</p>
+<ol>
+<li>HTML: 定义了网页的内容</li>
+<li>CSS： 描述了网页的布局</li>
+<li>JavaScript 书写了网页的行为</li>
+</ol>
+</li>
+</ul>
+<h2 id="JavaScript-简介"><a href="#JavaScript-简介" class="headerlink" title="JavaScript 简介"></a>JavaScript 简介</h2><ul>
+<li><p>JavaScript 是互联网上最流行的脚本语言，这门语言可用于 HTML 和 web，更可广泛用于服务器、PC、笔记本电脑、平板电脑和智能手机等设备。</p>
+</li>
+<li><p>JavaScript 是一种轻量级的编程语言。</p>
+<p>JavaScript 是可插入 HTML 页面的编程代码。</p>
+<p>JavaScript 插入 HTML 页面后，可由所有的现代浏览器执行。</p>
+</li>
+<li><p>JavaScript 与 Java 是两种完全不同的语言，无论在概念上还是设计上。<br>Java（由 Sun 发明）是更复杂的编程语言。</p>
+<p>ECMA-262 是 JavaScript 标准的官方名称。</p>
+<p>JavaScript 由 Brendan Eich 发明。它于 1995 年出现在 Netscape 中（该浏览器已停止更新），并于 1997 年被 ECMA（一个标准协会）采纳。</p>
+</li>
+<li><h2 id="ECMAScript-版本"><a href="#ECMAScript-版本" class="headerlink" title="ECMAScript 版本"></a>ECMAScript 版本</h2></li>
+<li>JavaScript 已经由 ECMA（欧洲电脑制造商协会）通过 ECMAScript 实现语言的标准化。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">年份</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1997</td>
+<td style="text-align:center">ECMAScript 1</td>
+<td style="text-align:center">第一个版本</td>
+</tr>
+<tr>
+<td style="text-align:center">1998</td>
+<td style="text-align:center">ECMAScript 2</td>
+<td style="text-align:center">版本变更</td>
+</tr>
+<tr>
+<td style="text-align:center">1999</td>
+<td style="text-align:center">ECMAScript 3</td>
+<td style="text-align:center">添加正则表达式 添加</td>
+</tr>
+<tr>
+<td style="text-align:center">–</td>
+<td style="text-align:center">ECMAScript 4</td>
+<td style="text-align:center">没有发布</td>
+</tr>
+<tr>
+<td style="text-align:center">2009</td>
+<td style="text-align:center">ECMAScript 5</td>
+<td style="text-align:center">添加 “strict mode”，严格模式添加 JSON 支持</td>
+</tr>
+<tr>
+<td style="text-align:center">2011</td>
+<td style="text-align:center">ECMAScript 5.1</td>
+<td style="text-align:center">版本变更</td>
+</tr>
+<tr>
+<td style="text-align:center">2015</td>
+<td style="text-align:center">ECMAScript 6</td>
+<td style="text-align:center">添加类和模块</td>
+</tr>
+<tr>
+<td style="text-align:center">2016</td>
+<td style="text-align:center">ECMAScript 7</td>
+<td style="text-align:center">增加指数运算符 (**)增加 Array.prototype.include</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>ECMAScript 6 也称为 ECMAScript 2015。<br>ECMAScript 7 也称为 ECMAScript 2016。</p>
+</blockquote>
+<h2 id="JavaScript输出"><a href="#JavaScript输出" class="headerlink" title="JavaScript输出"></a>JavaScript输出</h2><ol>
+<li>JavaScript 显示数据</li>
+</ol>
+<ul>
+<li>使用window.alert()弹出警告框</li>
+</ul>
+<ul>
+<li>使用document.write()将内容写到HTML文档中去（如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。）</li>
+<li>使用innerHTML写入到HTML元素中</li>
+<li>使用console.log()写入到浏览器的控制台</li>
+</ul>
+<ol>
+<li><p>操作HTML 元素</p>
+<p>从 JavaScript 访问某个 HTML 元素，可以使用 document.getElementById(<em>id</em>) 方法。</p>
+<p>开启chrome的调试：可参考这个<a href="http://www.cnblogs.com/moonvan/archive/2011/12/09/2282710.html" target="_blank" rel="external">网址</a></p>
+</li>
+</ol>
+<h2 id="JavaScript-中的关键字"><a href="#JavaScript-中的关键字" class="headerlink" title="JavaScript 中的关键字"></a>JavaScript 中的关键字</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">语句</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">break</td>
+<td style="text-align:center">用于跳出循环。</td>
+</tr>
+<tr>
+<td style="text-align:center">catch</td>
+<td style="text-align:center">语句块，在 try 语句块执行出错时执行 catch 语句块。</td>
+</tr>
+<tr>
+<td style="text-align:center">continue</td>
+<td style="text-align:center">跳过循环中的一个迭代。</td>
+</tr>
+<tr>
+<td style="text-align:center">do … while</td>
+<td style="text-align:center">执行一个语句块，在条件语句为 true 时继续执行该语句块。</td>
+</tr>
+<tr>
+<td style="text-align:center">for</td>
+<td style="text-align:center">在条件语句为 true 时，可以将代码块执行指定的次数。</td>
+</tr>
+<tr>
+<td style="text-align:center">for … in</td>
+<td style="text-align:center">用于遍历数组或者对象的属性（对数组或者对象的属性进行循环操作）。</td>
+</tr>
+<tr>
+<td style="text-align:center">function</td>
+<td style="text-align:center">定义一个函数</td>
+</tr>
+<tr>
+<td style="text-align:center">if … else</td>
+<td style="text-align:center">用于基于不同的条件来执行不同的动作。</td>
+</tr>
+<tr>
+<td style="text-align:center">return</td>
+<td style="text-align:center">退出函数</td>
+</tr>
+<tr>
+<td style="text-align:center">switch</td>
+<td style="text-align:center">用于基于不同的条件来执行不同的动作。</td>
+</tr>
+<tr>
+<td style="text-align:center">throw</td>
+<td style="text-align:center">抛出（生成）错误 。</td>
+</tr>
+<tr>
+<td style="text-align:center">try</td>
+<td style="text-align:center">实现错误处理，与 catch 一同使用。</td>
+</tr>
+<tr>
+<td style="text-align:center">var</td>
+<td style="text-align:center">声明一个变量。</td>
+</tr>
+<tr>
+<td style="text-align:center">while</td>
+<td style="text-align:center">当条件语句为 true 时，执行语句块。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="JavaScript-中的数据类型"><a href="#JavaScript-中的数据类型" class="headerlink" title="JavaScript 中的数据类型"></a>JavaScript 中的数据类型</h2><ol>
+<li>字符串（String）、数字(Number)、布尔(Boolean)、数组(Array)、对象(Object)、空（Null）、未定义（Undefined）。</li>
+<li>JavaScript 拥有动态类型。</li>
+<li>当声明新变量时，可以使用关键词 “new” 来声明其类型：</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> carname=<span class="keyword">new</span> <span class="built_in">String</span>;</div><div class="line"><span class="keyword">var</span> x=<span class="keyword">new</span> <span class="built_in">Number</span>;</div><div class="line"><span class="keyword">var</span> y=<span class="keyword">new</span> <span class="built_in">Boolean</span>;</div><div class="line"><span class="keyword">var</span> cars=<span class="keyword">new</span> <span class="built_in">Array</span>;</div><div class="line"><span class="keyword">var</span> person=<span class="keyword">new</span> <span class="built_in">Object</span>;</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">print</span> <span class="string">"helloworld"</span>;</div></pre></td></tr></table></figure>
+<ol>
+<li>JavaScript 字符串</li>
+</ol>
+<ul>
+<li><p>JavaScript 字符串是原始值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="string">"Jasmine"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>JavaScript 字符串值可以是对象</p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> y = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Jasmine"</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>原始字符串值，没有属性和方法，但原始值可以使用JavaScript 的属性和方法（JavaScript 在执行方法和属性时，可以把原始值当做对象）</p>
+</li>
+</ul>
+<p><strong><em>字符串属性</em></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th style="text-align:center">属性</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">constructor</td>
+<td style="text-align:center">返回创建字符串属性的函数</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">length</td>
+<td style="text-align:center">返回字符串的长度</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">prototype</td>
+<td style="text-align:center">允许您向对象添加属性和方法</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>字符串方法</em></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">-</th>
+<th style="text-align:center">方法</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">charAt()</td>
+<td style="text-align:center">返回指定索引位置的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">charCodeAt()</td>
+<td style="text-align:center">返回指定索引位置字符的 Unicode 值</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">concat()</td>
+<td style="text-align:center">连接两个或多个字符串，返回连接后的字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">fromCharCode()</td>
+<td style="text-align:center">将 Unicode 转换为字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">indexOf()</td>
+<td style="text-align:center">返回字符串中检索指定字符第一次出现的位置</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">lastIndexOf()</td>
+<td style="text-align:center">返回字符串中检索指定字符最后一次出现的位置</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">localeCompare()</td>
+<td style="text-align:center">用本地特定的顺序来比较两个字符串</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">match()</td>
+<td style="text-align:center">找到一个或多个正则表达式的匹配</td>
+</tr>
+<tr>
+<td style="text-align:center">9</td>
+<td style="text-align:center">replace()</td>
+<td style="text-align:center">替换与正则表达式匹配的子串</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">search()</td>
+<td style="text-align:center">检索与正则表达式相匹配的值</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td style="text-align:center">slice()</td>
+<td style="text-align:center">提取字符串的片断，并在新的字符串中返回被提取的部分</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">split()</td>
+<td style="text-align:center">把字符串分割为子字符串数组</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td style="text-align:center">substr()</td>
+<td style="text-align:center">从起始索引号提取字符串中指定数目的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">substring()</td>
+<td style="text-align:center">提取字符串中两个指定的索引号之间的字符</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td style="text-align:center">toLocaleLowerCase()</td>
+<td style="text-align:center">根据主机的语言环境把字符串转换为小写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">toLocaleUpperCase()</td>
+<td style="text-align:center">根据主机的语言环境把字符串转换为大写，只有几种语言（如土耳其语）具有地方特有的大小写映射</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td style="text-align:center">toLowerCase()</td>
+<td style="text-align:center">把字符串转换为小写</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">toString()</td>
+<td style="text-align:center">返回字符串对象值</td>
+</tr>
+<tr>
+<td style="text-align:center">19</td>
+<td style="text-align:center">toUpperCase()</td>
+<td style="text-align:center">把字符串转换为大写</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">trim()</td>
+<td style="text-align:center">移除字符串首尾空白</td>
+</tr>
+<tr>
+<td style="text-align:center">21</td>
+<td style="text-align:center">valueOf()</td>
+<td style="text-align:center">返回某个字符串对象的原始值</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>null 和undefined 的区别<br>null 和undefined 的值相等，但类型不等</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>             <span class="comment">//undefined</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span>                  <span class="comment">// object</span></div><div class="line"><span class="literal">null</span> === <span class="literal">undefined</span>           <span class="comment">// false</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span>            <span class="comment">// true</span></div></pre></td></tr></table></figure>
+<p><strong><em>小Tips</em></strong></p>
+<p>JavaScript 中的== 与===（绝对相等）的区别：</p>
+<ol>
+<li>对于number、string等基本类型，==和===存在区别：<ul>
+<li>不同类型间比较，== 之比较 “转化成同一类型后的值” 看 “值” 是否相等，=== 如果类型不同，其结果就是不等。</li>
+<li>同类型比较，直接进行 “值” 比较，两者结果一样。</li>
+</ul>
+</li>
+<li>对于 Array,Object 等高级类型，== 和 === 是没有区别的，进行 “指针地址” 比较</li>
+<li>基础类型与高级类型，== 和 === 是有区别的：<ul>
+<li>对于 ==，将高级转化为基础类型，进行 “值” 比较</li>
+<li>因为类型不同，=== 结果为 false</li>
+</ul>
+</li>
+</ol>
+<h2 id="JavaScript中的运算符"><a href="#JavaScript中的运算符" class="headerlink" title="JavaScript中的运算符"></a>JavaScript中的运算符</h2><p><strong>条件运算符</strong></p>
+<p><strong><em>语法</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">variablename = (condition)?value1 : value2;</div></pre></td></tr></table></figure>
+<p><strong><em>小练习</em></strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt; </div><div class="line">&lt;meta charset=<span class="string">"utf-8"</span>&gt; </div><div class="line">&lt;title&gt;条件运算符(runoob.com)&lt;<span class="regexp">/title&gt; </span></div><div class="line"><span class="regexp">&lt;/</span>head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;p&gt;点击按钮检测年龄。&lt;<span class="regexp">/p&gt;</span></div><div class="line"><span class="regexp">年龄:&lt;input id = "age" value = "18" /</span>&gt;</div><div class="line">&lt;p&gt;是否达到投票年龄?&lt;/p&gt;</div><div class="line">&lt;button onclick=<span class="string">"myFunction()"</span>&gt;点击按钮&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">&lt;p id = "demo"&gt;&lt;/</span>p&gt;</div><div class="line">&lt;script&gt;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">var</span> age,voteable;</div><div class="line">	age = <span class="built_in">document</span>.getElementById(<span class="string">"age"</span>).value;</div><div class="line">	voteable = (age&lt;<span class="number">18</span>)?<span class="string">"年龄太小"</span>:<span class="string">"年龄已达到"</span>;</div><div class="line">	<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = voteable;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div><div class="line"><span class="regexp"></span></div><div class="line"><span class="regexp">&lt;/</span>body&gt;</div><div class="line">&lt;<span class="regexp">/html&gt;</span></div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/14/JavaScript-Learning/" data-id="cj8vjnhhm0001tsuobxzqxhr2" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo-set-up-blog（0-to-1）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/hexo-set-up-blog（0-to-1）/" class="article-date">
+  <time datetime="2017-10-05T15:26:42.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/hexo-set-up-blog（0-to-1）/">hexo搭建博客（从零到一）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=450518399&auto=0&height=66"></iframe>
+
+<h2 id="0-日常叨叨"><a href="#0-日常叨叨" class="headerlink" title="0. 日常叨叨"></a>0. 日常叨叨</h2><p>平常学习到的知识点多而杂，经常是当时理解，过不了几天就一片空白了。所以吧，古人说的“好记性不如烂笔头”确实中肯。可是吧，面对纷杂的笔记，不仅当时记录的时候很吃力，而且时候也不利于查阅。所以，在这良辰美景（国庆8天小长假）之际，我终于做了自己一直想做却没做的事（唉，人有时候就是这么自我矛盾）。</p>
+<p>万事开头难，决定开始做就是成功的第一步！通过查阅网上各种资料、和小伙伴尬聊之后，最后选用了<a href="https://hexo.io/" target="_blank" rel="external">hexo</a>来搭建自己的的一个博客。各种资料还算详细。但是，一路上，自己还算遇上了各种各样的坑，自觉应该记录下来（哈哈，以后还可以笑话笑话现在傻兮兮的自己）。好了，下面言归正传。</p>
+<p>本篇仅为从零开始的基础篇，更多的高级设置暂不涉及，暂定内容为：</p>
+<ol>
+<li>安装Git Bash</li>
+<li>安装Nodejs</li>
+<li>安装hexo</li>
+<li>生成SSH以及添加到github</li>
+<li>部署项目</li>
+<li>上传至github</li>
+<li>绑定个人域名</li>
+<li>修改及配置主体</li>
+<li>后说</li>
+</ol>
+<h2 id="1-安装-Git-Bash"><a href="#1-安装-Git-Bash" class="headerlink" title="1. 安装 Git Bash"></a>1. 安装 Git Bash</h2><p>windows自带的cmd命令窗口通过【win+r】、然后回车即可调出，平常使用的都是它。这次在好多相关资料中看到了<a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git Bash</a> 的身影，就想着下来用用，然后发现，简直巨好用啊（长得也五颜六色，很好看）。</p>
+<p>—-&gt;<a href="https://git-for-windows.github.io/" target="_blank" rel="external">下载地址</a></p>
+<p>—&gt;安装步骤：双击下载下来的.exe文件，然后一路欢乐地 【next】，知道看到 【Finish】。</p>
+<p>—&gt;杜绝“以为对了”: 打开 Git Bash，输入以下命令，查看版本号（版本号以自己的为准，不一定和图中一样）。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git version</div></pre></td></tr></table></figure>
+<p><img src="git_version.jpg" alt="git_version" title="git_version"></p>
+<p>—&gt;若有版本号，则证明你的第一步成功了！(建议将它固定到任务栏，因为后面你会和它“形影不离”)。</p>
+<h2 id="2-安装-NodeJS"><a href="#2-安装-NodeJS" class="headerlink" title="2. 安装 NodeJS"></a>2. 安装 NodeJS</h2><p>—-&gt;<a href="https://nodejs.org/en/" target="_blank" rel="external">下载地址</a></p>
+<p>(PS:LTS–&gt;稳定版；Current–&gt;当前最新版)</p>
+<p>—&gt;安装步骤：</p>
+<p>双击打开下载下来的.msi文件，开始安装。也是可以一直 点击 【next】，<strong>但是</strong>,到了’Custom Setup’这一步，一定要记得选上【Add to PATH】那个图标（它可以帮你配置好电脑上的环境变量。PS：虽然自己也可以配环境变量，不过个人觉得略麻烦，还容易出错）。</p>
+<p>—&gt;查看环境变量是否配置好：</p>
+<p>【win+r】然后回车，即可调出cmd命令窗口；在 cmd 中输入path ，查看 node 是否配置在其中。</p>
+<p><img src="nodejs_path.jpg" alt="nodejs_path" title="nodejs_path"></p>
+<p>(PS:我把它放在了D盘下，自己具体的路径以自己安装时的设置为准)  </p>
+<p>—&gt;查看版本：</p>
+<p>执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">node -v</div></pre></td></tr></table></figure>
+<p><img src="node_v.jpg" alt="node_v" title="node_v"></p>
+<h2 id="3-安装-hexo"><a href="#3-安装-hexo" class="headerlink" title="3. 安装 hexo"></a>3. 安装 hexo</h2><p>—&gt;先创建一个文件夹（用于存放你的博客的所有东西），然后将 Git Bash 的目录转到该文件夹下，完成这一操作有两种方法：</p>
+<p>   方法一：在新创建的文件夹下，点击右键，在弹出的菜单中，选择【Git Bash Here】即可将工作目录转到新建目录下。</p>
+<p>   方法二：在 Git Bash 中如何以下格式的语句：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> -P &#123;你的文件路径&#125; <span class="comment">#实际写的时候不要&#123;&#125;</span></div></pre></td></tr></table></figure>
+<p>   比如：</p>
+<p>   <img src="cd_path.jpg" alt="cd_path"></p>
+<p>—&gt;安装hexo</p>
+<p>在Git Bash 中，执行下面这句命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm i -g hexo</div></pre></td></tr></table></figure>
+<p>(PS: npm 是 node program manager 的缩写，i 代表是要 install–&gt;安装 )</p>
+<p>—&gt;安装完成后，查看版本：</p>
+<p>   执行下面这条命令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo -v</div></pre></td></tr></table></figure>
+<p>   <img src="hexo_v.jpg" alt="&quot;hexo_v&quot;" title="hexo_v"></p>
+<p>—&gt;初始化命令：</p>
+<p>   执行下面这条命令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init</div></pre></td></tr></table></figure>
+<p>   初始化完成后，打开工作目录所在的文件夹，就可以看到以下文件：</p>
+<p>   <img src="files.jpg" alt="files" title="files"></p>
+<p>（PS：一开始 public 这个文件夹是不会生成的，在写文章时，它就会自动生成；同理，db.json 一开始也是没有的；截图中的第二个是我自己装的，不要在意……因此，如果一开始生成的文件数目比我的少的话，不要慌张，这是正常的。）</p>
+<p>其中：</p>
+<ul>
+<li>node_modules：是依赖包</li>
+<li>public：存放的是生成的页面</li>
+<li>scaffolds：命令生成文章等的模板</li>
+<li>source：用命令创建的各种文章</li>
+<li>themes：主题</li>
+<li>_config.yml：整个博客的配置</li>
+<li>db.json：source解析所得到的</li>
+<li>package.json：项目所需模块项目的配置信息</li>
+</ul>
+<h2 id="4-生成-SSH-并添加到-github"><a href="#4-生成-SSH-并添加到-github" class="headerlink" title="4. 生成 SSH 并添加到 github"></a>4. 生成 SSH 并添加到 github</h2><p>这步比较繁琐，不要着急，慢慢来，后面的就简单多了！</p>
+<p>—&gt;进入<a href="https://github.com/" target="_blank" rel="external">github的网站</a>,并注册一个自己的账号</p>
+<p><img src="sign_in.jpg" alt="sign_in" title="sign in"></p>
+<p>—&gt;按照 github 上的提示，创建一个repository， 名称格式必须为：__你的用户名.github.io。</p>
+<p>   (PS: 点击头像旁的加号，选择【New respository】即可) </p>
+<p><img src="new_repo.jpg" alt="new_repo" title="new_repo"></p>
+<p><img src="create_repo.jpg" alt="create_repo" title="create_repo"></p>
+<p>—&gt;在Git Bash 中，配置 github 账户信息（YourName和YourEail都替换成自己的）</p>
+<p>   分别在Git Bash 中输入以下语句：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"YourName"</span></div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git config --global user.email <span class="string">"YourEmail"</span></div></pre></td></tr></table></figure>
+<p>—&gt;创建SSH</p>
+<p>   在 Git Bash 中输入：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"youremail@example.com</span></div></pre></td></tr></table></figure>
+<p>   上面那条命令就能生成 SSH。</p>
+<p>   然后，再在 Git Bash 中依次执行以下两条命令，来获得 id_rsa.pub 文件中的内容：</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd ~/.ssh</div></pre></td></tr></table></figure>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat id_rsa.pub</div></pre></td></tr></table></figure>
+<p>—&gt;将执行上面的语句所获取的 SSH 的内容复制到 github 中。</p>
+<p><img src="settings.jpg" alt="settings" title="settings"></p>
+<p>​    添加一个【New SSH key】，title随意取，key填刚刚获取到的那段内容。</p>
+<p><img src="ssh_key.jpg" alt="ssh_key" title="ssh_key"></p>
+<p>—&gt;检查添加是否成功：</p>
+<p>   在Git Bash 中，输入以下指令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure>
+<h2 id="5-部署项目"><a href="#5-部署项目" class="headerlink" title="5. 部署项目"></a>5. 部署项目</h2><p>—&gt;用编辑器打开你的blog项目，修改<code>_config.yml</code>文件的一些配置(PS：一定要注意—&gt;冒号之后都是有一个半角空格的,否则在执行命令时就会报错)：</p>
+<p><img src="deploy.jpg" alt="deploy" title="deploy"></p>
+<p>—&gt;回到gitbash中，进入你的blog目录，分别执行以下命令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo server</div></pre></td></tr></table></figure>
+<p>   注：hexo 3.0把服务器独立成个别模块，需要单独安装：<code>npm i hexo-server</code>。</p>
+<p>—&gt;检查部署情况：</p>
+<p>   在浏览器中输入：<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a></p>
+<p>   (PS:如果是一个带有 hexo 标志的页面—&gt;hexo 默认的主题 landspace ，恭喜你，标志，到目前为止，你还在正路上！)</p>
+<h2 id="6-上传到github"><a href="#6-上传到github" class="headerlink" title="6. 上传到github"></a>6. 上传到github</h2><p>—&gt;安装  hexo-deployer-git   –save</p>
+<p>   在  Git Bash  中执行下面的命令：</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>—&gt;在  Git Bash  中依次执行以下命令，进行部署</p>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo clean</div></pre></td></tr></table></figure>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo generate</div></pre></td></tr></table></figure>
+   <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>注意：在  deploy 的过程中，需要输入自己的  github  的用户名和密码。</p>
+<p><strong>小 Tips</strong>  :</p>
+<p>上面的部署的三条命令，可以简化为以下两条：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo d -g</div></pre></td></tr></table></figure>
+<p>等价于：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g -d</div></pre></td></tr></table></figure>
+<p>​</p>
+<p>—&gt;以后每次对博客进行更改以后，都需要重新按照上述步骤 6. 2 进行部署。</p>
+<p>—&gt;与个人博客初次会晤</p>
+<p>在浏览器中，输入  <a href="http://yourgithubname.github.io" target="_blank" rel="external">http://yourgithubname.github.io</a> ，就可以看到自己的个人微博了。</p>
+<h2 id="7-绑定个人域名"><a href="#7-绑定个人域名" class="headerlink" title="7. 绑定个人域名"></a>7. 绑定个人域名</h2><p>—&gt;购买域名</p>
+<p>建议到<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">阿里云</a>购买一个自己喜欢的域名，还可以顺便购买 DNS 。</p>
+<p>（PS： 购买时，需保证 实名认证–&gt;上传自己的身份证正面照，通过了才可以支付订单）</p>
+<p>—&gt;添加 CNAME</p>
+<p>在项目的 source 文件夹下，新建一个名为 CNAME 的文件（PS：注意啦，名字只能是 CNAME，不需要其他后缀名的），然后在里面添加自己购买的域名（添加域名时，只能添加一个，比如我添加的是 lenmontree.com，输入结束后不能回车，直接保存即可）</p>
+<p>—&gt;到 DNS 添加一条记录</p>
+<p><img src="域名解析.jpg" alt="域名解析" title="域名解析"></p>
+<pre><code>Tips:
+</code></pre><p>如何获得自己的 github 的地址？</p>
+<p>—&gt; 打开 cmd，输入以下指令即可查看到自己的github 的地址了</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ping yourname.github.io</div></pre></td></tr></table></figure>
+<p>yourname需替换成自己的对应的  GitHub 的用户名。</p>
+<p>—&gt;再次部署一下</p>
+<p>用之前在6.2处的方法部署即可</p>
+<p>—&gt;查看个人博客</p>
+<p>在浏览器中输入自己购买的域名，打开就可以看到自己的博客了。</p>
+<h2 id="8-修改及配置主题"><a href="#8-修改及配置主题" class="headerlink" title="8. 修改及配置主题"></a>8. 修改及配置主题</h2><p>hexo 初始化后，默认的主题是 landspace ，不满意的话，可以自行更改主题。方法如下：</p>
+<p>—&gt;去<a href="https://hexo.io/themes/" target="_blank" rel="external">这儿</a> 寻觅你喜欢的主题，记下它的名字，然后去 github 上搜索它，然后将它下载下来【Download ZIP】）。</p>
+<p><img src="download_theme.jpg" alt="download_theme" title="theme"></p>
+<ul>
+<li><p>将下载下来的压缩包解压到 theme文件夹中，并将解压所得的文件夹改名为该主题的名字，比如下图：</p>
+<p> <img src="themes.jpg" alt="themes" title="themes"></p>
+<p> ​</p>
+</li>
+</ul>
+<p>—&gt;更换主题为你喜欢的那个</p>
+<p>打开项目的_config.yml（与 themes 文件夹同级 ） 文件，找到 【theme:】进行一下更改即可：</p>
+<p><img src="changetheme.jpg" alt="changetheme" title="changetheme"></p>
+<p>Tips: 冒号后面有一个空格啊啊啊！</p>
+<p>—&gt;配置主题</p>
+<p>在下载下来的文件夹中，有个 README.md文件，它里面讲解了与该主题相关的配置，你照着它的说明，按着自己喜好来，修修改改就可以大功告成了！（与主题相关的配置在该主题的文件夹下的 _config.yml 中。</p>
+<p><img src="theme_config.jpg" alt="theme_config" title="theme_config"></p>
+<p>接下来的配置就靠你自己啦，照着它的介绍，多试几次，总能倒腾对的。</p>
+<h2 id="9-后说"><a href="#9-后说" class="headerlink" title="9. 后说"></a>9. 后说</h2><p>关于主题的一些具体配置，看看之后有没有时间详细记录吧！嘿嘿嘿！</p>
+<p>(PS: 第一次用 MarkDown 写东西，格式有点凄惨，还请见谅！)</p>
+<p><strong><em>最后安利一波</em></strong></p>
+<p>本人搭建博客的主要资料参考：</p>
+<p>学习<a href="https://daringfireball.net/projects/markdown/" target="_blank" rel="external">MarkDown </a>来写写文章</p>
+<p><a href="https://hexo.io/zh-cn/docs/writing.html" target="_blank" rel="external">hexo官网</a>上的关于文章编辑的部分</p>
+<p><a href="https://github.com/" target="_blank" rel="external">github 官网</a></p>
+<p>一个极好用的<a href="https://typora.io/" target="_blank" rel="external">MarkDown的编辑器- Typora 的官网</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/05/hexo-set-up-blog（0-to-1）/" data-id="cj8vjnhhx0005tsuork0htyxz" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-关于" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/关于/" class="article-date">
+  <time datetime="2017-10-05T07:33:56.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/日常/">日常</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/关于/">关于</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=33911781&auto=0&height=66"></iframe>
+
+
+
+<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>属性：96年 巨蟹女<br>爱好：看看剧 晒晒太阳 敲敲代码<br>小星星： 愿你出走半生，归来仍是少年<br>出没地：云南大学    软件工程专业</p>
+<h2 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h2><p>QQ：2804755011<br>Email：2804755011@qq.com<br>Wechat：wql20151120247</p>
+<h2 id="如何巧取友情链接"><a href="#如何巧取友情链接" class="headerlink" title="如何巧取友情链接"></a>如何巧取友情链接</h2><p>私信我 或者发邮件<br>框框如下：</p>
+<pre><code>你的昵称：
+网址：
+一段简介：
+</code></pre><p>欢迎把我的小小据点加入你的友链，我的小小据点信息如下：</p>
+<pre><code>昵称：小柠檬
+网址：http://www.lenmontree.com
+网站简述：记录成长，分享心情
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/05/关于/" data-id="cj8vjnhiq0006tsuo6rc6pnu7" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/碎碎念/">碎碎念</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/10/05/hello-world/" class="article-date">
+  <time datetime="2017-10-05T07:05:22.000Z" itemprop="datePublished">2017-10-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/hexo/">hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/10/05/hello-world/">小柠檬的 Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=26598252&auto=0&height=66"></iframe>
+
+
+
+<p>欢迎来到 <a href="http://lenmontree.com/" target="_blank" rel="external">柠檬树のBlog</a>! 这是我的第一个博文。（PS：虽然只是对文档做了一小丢丢的改动，但还是巨开心啊啊啊！）。</p>
+<h2 id="快速入门–写文章"><a href="#快速入门–写文章" class="headerlink" title="快速入门–写文章"></a>快速入门–写文章</h2><h4 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h4 id="保存文档"><a href="#保存文档" class="headerlink" title="保存文档"></a>保存文档</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h4 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h4 id="部署到远端"><a href="#部署到远端" class="headerlink" title="部署到远端"></a>部署到远端</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/10/05/hello-world/" data-id="cj8vjnhhu0004tsuokmiy8bso" class="article-share-link">Delen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
     </footer>
   </div>
   
@@ -112,16 +861,37 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorieën</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MarkDown/">MarkDown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo/">hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日常/">日常</a></li></ul>
+    </div>
+  </div>
 
-  
-    
 
-  
-    
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Labels</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/碎碎念/">碎碎念</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archieven</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">October 2017</a></li></ul>
     </div>
@@ -131,12 +901,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">Recente berichten</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2017/10/17/hello-world/">Hello World</a>
+            <a href="/2017/10/16/MarkDown-Tips/">MarkDown-Tips</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/14/JavaScript-Learning/">JavaScript的学习--基础知识点篇</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/hexo-set-up-blog（0-to-1）/">hexo搭建博客（从零到一）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/关于/">关于</a>
+          </li>
+        
+          <li>
+            <a href="/2017/10/05/hello-world/">小柠檬的 Hello World</a>
           </li>
         
       </ul>
