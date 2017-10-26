@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
 <meta property="og:description" content="初识  HTML5、CSS以及Bootstrap“热爱你的热爱”，找到自己感兴趣的东西，为之奋斗，日子才会有了颜色！ 最近，找到了自己的“热爱”——前端开发。和对的相遇，尽管有时有点晚，却不会永远迟！ 最近通过 freecodecamp来开始学习前端开发 。一步一个脚印，在完成了第一个小任务后，就兴高采烈的来“存档”啦~~~ 任务描述用html,css,bootstrap 完成一条横线中间有文本的">
 <meta property="og:image" content="http://lenmontree.com/2017/10/26/初始HTML5-CSS以及-Bootstrap/result.png">
-<meta property="og:updated_time" content="2017-10-26T01:58:39.730Z">
+<meta property="og:updated_time" content="2017-10-26T02:02:37.774Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello-t0-HTML5-CSS&amp;Bootstrap">
 <meta name="twitter:description" content="初识  HTML5、CSS以及Bootstrap“热爱你的热爱”，找到自己感兴趣的东西，为之奋斗，日子才会有了颜色！ 最近，找到了自己的“热爱”——前端开发。和对的相遇，尽管有时有点晚，却不会永远迟！ 最近通过 freecodecamp来开始学习前端开发 。一步一个脚印，在完成了第一个小任务后，就兴高采烈的来“存档”啦~~~ 任务描述用html,css,bootstrap 完成一条横线中间有文本的">
@@ -164,16 +164,16 @@
 </ol>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"</span>&gt;</span>  </div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
 <ol>
-<li><p>用”\<div class="container-fluid">“、“\</div>”将所有的 HTML 内容都包裹起来。</p>
+<li><p>如以下代码所示将所有的 HTML 内容都包裹起来。</p>
 <p>如下代码所示：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container-fluid"</span>&gt;</span></div><div class="line">  其他处于 body 部分的所有html的内容放在这</div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>​</p>
 </li>
-<li><p>在上面步骤完成后，再用 class =”row” 来修饰内部嵌套的“\<div>”标签，然后再用该标签对包起其他需要修饰的内容，实现内容在一行显示。</div></p>
+<li><p>在上面步骤完成后，再用 class =”row” 来修饰内部嵌套的“div”标签，然后再用该标签对包起其他需要修饰的内容，实现内容在一行显示。</p>
 <p>如下代码所示：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container-fluid"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  		其他需要修饰的内容</div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 </li>
-<li><p>在上面步骤完成后，再用 class =”col-xs-n”(n要替代为具体的比例数值) 来修饰其内部嵌套的“\<div>”标签，然后再用该标签对包起其他需要修饰的内容。</div></p>
+<li><p>在上面步骤完成后，再用 class =”col-xs-n”(n要替代为具体的比例数值) 来修饰其内部嵌套的“div”标签，然后再用该标签对包起其他需要修饰的内容。</p>
 <p>如下代码所示：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container-fluid"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">  		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-5"</span>&gt;</span></div><div class="line">      		其他内容    </div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-2"</span>&gt;</span></div><div class="line">      		其他内容    </div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      	<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"col-xs-5"</span>&gt;</span></div><div class="line">      		其他内容    </div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>上面的代码实现了将一行的空间以 5:2:5 的比例等分了。</p>
@@ -194,7 +194,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年10月26日 09:58</p>
+        <p>最后更新： 2017年10月26日 10:02</p>
         <p>原始链接： <a class="post-url" href="/2017/10/26/初始HTML5-CSS以及-Bootstrap/" title="Hello-t0-HTML5-CSS&amp;Bootstrap">http://lenmontree.com/2017/10/26/初始HTML5-CSS以及-Bootstrap/</a></p>
         <footer>
             <a href="http://lenmontree.com">
