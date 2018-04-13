@@ -8,13 +8,18 @@
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta property="og:type" content="article">
+  <meta name="description" content="title: box-model-1date: 2018-04-01 13:42:50 tags:    css box-modelCSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  mar">
+<meta property="og:type" content="article">
 <meta property="og:title" content="test">
 <meta property="og:url" content="http://lenmontree.com/2018/04/13/test/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:updated_time" content="2018-04-13T09:03:42.351Z">
+<meta property="og:description" content="title: box-model-1date: 2018-04-01 13:42:50 tags:    css box-modelCSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  mar">
+<meta property="og:image" content="http://lenmontree.com/2018/04/13/test/box-model/box-model1.png">
+<meta property="og:updated_time" content="2018-04-13T09:13:45.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="test">
+<meta name="twitter:description" content="title: box-model-1date: 2018-04-01 13:42:50 tags:    css box-modelCSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  mar">
+<meta name="twitter:image" content="http://lenmontree.com/2018/04/13/test/box-model/box-model1.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -131,10 +136,38 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            
+            <hr>
+<p>title: box-model-1<br>date: 2018-04-01 13:42:50</p>
+<h2 id="tags-css-box-model"><a href="#tags-css-box-model" class="headerlink" title="tags:    css box-model"></a>tags:    css box-model</h2><h2 id="CSS-中的盒模型"><a href="#CSS-中的盒模型" class="headerlink" title="CSS 中的盒模型"></a>CSS 中的盒模型</h2><h3 id="1-万物皆盒子"><a href="#1-万物皆盒子" class="headerlink" title="1. 万物皆盒子"></a>1. 万物皆盒子</h3><p>所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。<br>下图即为盒子模型的示意图：</p>
+<p><img src="box-model/box-model1.png" alt="box-model" title="box-model.png"></p>
+<p>说明：</p>
+<ul>
+<li>margin(外边距)：清除边框外的区域，为透明的。</li>
+<li>padding（内边距）：清除内容周围的区域，为透明的。</li>
+<li>border(边框) ：处在外边距和内边距中间，包围着padding和content。</li>
+<li>content（内容）：盒子的内容。</li>
+</ul>
+<h3 id="2-元素的宽度和高度"><a href="#2-元素的宽度和高度" class="headerlink" title="2. 元素的宽度和高度"></a>2. 元素的宽度和高度</h3><ul>
+<li>最终元素的总宽度计算公式是这样的：<br><strong>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</strong></li>
+<li>元素的总高度最终计算公式是这样的：<br><strong>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</strong></li>
+</ul>
+<h3 id="3-标准模式和混杂模式"><a href="#3-标准模式和混杂模式" class="headerlink" title="3. 标准模式和混杂模式"></a>3. 标准模式和混杂模式</h3><p>在了解浏览器的兼容性问题之前，有必要先了解<strong>DTD</strong>以及浏览器解析执行HTML文档两种模式：<strong>标准模式</strong>和<strong>怪异模式</strong>：</p>
+<ol>
+<li>Doctype:<br>Doctype 是一种标准通用的文档类型声明，它必须出现在文件的第一行，目的是告诉浏览器要以何种文档类型定义来解析文档。</li>
+<li>标准（严格）模式（strict model）<br>标准模式指浏览器按w3c的标准来解析执行代码。</li>
+<li>怪异（混杂）模式(quirks model)<br>怪异模式是指浏览器以一种较为宽松的向后兼容的方式来解析和执行代码。</li>
+<li>两种模式在盒模型的解释上的差异<br>标准模式下，元素宽度 = content width + padding left + padding right + border left + border right。<br>混杂模式下，元素宽度 = content width （content + padding left + padding right + border left + border right）。</li>
+</ol>
+<p>简而言之，就是 content width 是否是真的 content width?</p>
+<ul>
+<li>是 –》标准模式（严格模式）</li>
+<li>否 –&gt;怪异模式（混杂模式）</li>
+</ul>
+<h3 id="4-浏览器的兼容性问题"><a href="#4-浏览器的兼容性问题" class="headerlink" title="4. 浏览器的兼容性问题"></a>4. 浏览器的兼容性问题</h3><p>一旦为页面设置了恰当的 DTD，大多数浏览器都会按照上面的图示来呈现内容。<strong>然而 IE 5 和 6 的呈现却是不正确的。</strong>根据 W3C 的规范，元素内容占据的空间是由 width 属性设置的，而内容周围的 padding 和 border 值是另外计算的。不幸的是，IE5.X 和 6 在怪异模式中使用自己的非标准模型。这些浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。<br>虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。<br>IE8 及更早IE版本不支持设置填充的宽度和边框的宽度属性。<br>解决IE8及更早版本不兼容问题可以在HTML页面声明 &lt;!DOCTYPE html&gt;即可。（都使用标准模式不就没问题啦）</p>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年04月13日 17:03</p>
+        <p>最后更新： 2018年04月13日 17:13</p>
         <p>原始链接： <a class="post-url" href="/2018/04/13/test/" title="test">http://lenmontree.com/2018/04/13/test/</a></p>
         <footer>
             <a href="http://lenmontree.com">
@@ -208,6 +241,12 @@
 </article>
 
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#tags-css-box-model"><span class="post-toc-text">tags:    css box-model</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-中的盒模型"><span class="post-toc-text">CSS 中的盒模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-万物皆盒子"><span class="post-toc-text">1. 万物皆盒子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-元素的宽度和高度"><span class="post-toc-text">2. 元素的宽度和高度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-标准模式和混杂模式"><span class="post-toc-text">3. 标准模式和混杂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-浏览器的兼容性问题"><span class="post-toc-text">4. 浏览器的兼容性问题</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
 
 <nav id="article-nav">
   
