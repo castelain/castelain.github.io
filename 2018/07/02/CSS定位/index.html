@@ -3,17 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Mot-clé: linux | Lenmontree&#39; Blog</title>
+  <title>CSS定位.md | Lenmontree&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lenmontree&#39; Blog">
-<meta property="og:url" content="http://lenmontree.com/tags/linux/index.html">
+  <meta name="description" content="CSS 定位（Positing）CSS 定位机制CSS 有三种基本的定位机制：普通流、浮动和绝对定位.除非专门指定，不然所有的框都是在普通流中定位的。 CSS position 属性position 属性的取值有四个，这就影响到了元素框生成的方式。  static元素框正常生成，位置排放就按照普通文档流的方式来进行。  relative元素框相对于它之前所处的位置，偏移某个距离。元素仍保持其未定位">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS定位.md">
+<meta property="og:url" content="http://lenmontree.com/2018/07/02/CSS定位/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="CSS 定位（Positing）CSS 定位机制CSS 有三种基本的定位机制：普通流、浮动和绝对定位.除非专门指定，不然所有的框都是在普通流中定位的。 CSS position 属性position 属性的取值有四个，这就影响到了元素框生成的方式。  static元素框正常生成，位置排放就按照普通文档流的方式来进行。  relative元素框相对于它之前所处的位置，偏移某个距离。元素仍保持其未定位">
+<meta property="og:updated_time" content="2018-07-01T17:03:32.486Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lenmontree&#39; Blog">
+<meta name="twitter:title" content="CSS定位.md">
+<meta name="twitter:description" content="CSS 定位（Positing）CSS 定位机制CSS 有三种基本的定位机制：普通流、浮动和绝对定位.除非专门指定，不然所有的框都是在普通流中定位的。 CSS position 属性position 属性的取值有四个，这就影响到了元素框生成的方式。  static元素框正常生成，位置排放就按照普通文档流的方式来进行。  relative元素框相对于它之前所处的位置，偏移某个距离。元素仍保持其未定位">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -101,53 +106,163 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap">
-  
-  
+        <section id="main" class="body-wrap"><article id="post-CSS定位" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/10/19/linux-commands/" class="archive-article-date">
-  <time datetime="2017-10-19T09:20:27.000Z" itemprop="datePublished">10-19</time>
-</a>
-      
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/19/linux-commands/"  >linux_commands</a>
+    <h1 class="post-title" itemprop="name">
+      CSS定位.md
     </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端知识点/">前端知识点</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-02
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
   
 
-    </header>
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
       
-        <div class="archive-post-footer">
+            
+            <h2 id="CSS-定位（Positing）"><a href="#CSS-定位（Positing）" class="headerlink" title="CSS 定位（Positing）"></a>CSS 定位（Positing）</h2><h3 id="CSS-定位机制"><a href="#CSS-定位机制" class="headerlink" title="CSS 定位机制"></a>CSS 定位机制</h3><p>CSS 有三种基本的定位机制：<strong>普通流、浮动和绝对定位</strong>.<br>除非专门指定，不然所有的框都是在普通流中定位的。</p>
+<h3 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS position 属性</h3><p>position 属性的取值有四个，这就影响到了元素框生成的方式。</p>
+<ol>
+<li><p><strong>static</strong><br>元素框正常生成，位置排放就按照普通文档流的方式来进行。</p>
+</li>
+<li><p><strong>relative</strong><br>元素框相对于它之前所处的位置，偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍被保留。</p>
+</li>
+<li><p><strong>absolute</strong><br>元素框从文档流中被移除。相对于离它最近的包含块发生一定的偏离。它原本所占的空间将不被保留。</p>
+</li>
+<li><p><strong>fixed</strong><br>元素框从文档流中被移除。相对于视窗（一般就是指浏览器的窗口）进行定位<br>。它原本所占的空间将不被保留。</p>
+</li>
+</ol>
+<p><strong>说明:</strong></p>
+<ol>
+<li>相对定位可以看做为普通文档流定位模型的一部分，因为元素的位置相对于它在普通文档流中的位置。</li>
+<li>绝对定位和固定定位，都脱离了正常的文档流，它们先前所占的空间将不会被保留。因为它们脱离了正常的文档流，所有它们的存在，对于其它正常流中的元素可看做是透明的。这就造成了：它们可能会遮盖住部分的正常文档流中的内容。</li>
+</ol>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月02日 01:03</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/02/CSS定位/" title="CSS定位.md">http://lenmontree.com/2018/07/02/CSS定位/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/02/CSS定位/&title=《CSS定位.md》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/02/CSS定位/&title=《CSS定位.md》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/02/CSS定位/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《CSS定位.md》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/02/CSS定位/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/02/CSS定位/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/02/CSS定位/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/linux/" class="color1">linux</a>
+    <a href="/tags/CSS/" class="color4">CSS</a>
       
   </li>
 
-        </div>
-      
+        </ul>
+        
+    </footer>
   </div>
 </article>
 
-  
-  
-    </div></section>
-  
 
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-定位（Positing）"><span class="post-toc-text">CSS 定位（Positing）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS-定位机制"><span class="post-toc-text">CSS 定位机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS-position-属性"><span class="post-toc-text">CSS position 属性</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/02/CSS定位-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">CSS定位.md</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
 </section>
         
       </div>
