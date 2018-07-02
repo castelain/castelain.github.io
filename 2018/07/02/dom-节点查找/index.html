@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://lenmontree.com/2018/07/02/dom-节点查找/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
 <meta property="og:description" content="js系列编程练习（一）—-dom 节点查找说明： 题目来自于牛客网在线编程模块 题目描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身 输入描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点 解题思路 初始思路：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先思考，DOM">
-<meta property="og:updated_time" content="2018-07-02T10:48:19.837Z">
+<meta property="og:updated_time" content="2018-07-02T10:53:10.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dom 节点查找">
 <meta name="twitter:description" content="js系列编程练习（一）—-dom 节点查找说明： 题目来自于牛客网在线编程模块 题目描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身 输入描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点 解题思路 初始思路：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先思考，DOM">
@@ -146,24 +146,15 @@
 <p>&ensp;&ensp;&ensp;&ensp;而对于第二种关系的话，就要复杂一些了。这时候，需要从某一个节点出发，不断向上找它的父节点，并判断是否也是另一个节点的父节点，若是，则说明找到了。否则，就需要一直重复上面这个过程，直至找到或者是找到了document这个根节点。</p>
 <p>&ensp;&ensp;&ensp;&ensp;从上述思考过程，着手编写代码以后，会发现，存在这一些重复性的代码，这时候，需要将重复性的工作抽离出来，封装一下，再使用。</p>
 <p>2.&ensp;&ensp;&ensp;&ensp;在使用原始思路解决了问题以后，回头看看代码，找找还有什么地方可以改进。发现，转换一个思路会更简便。</p>
-<p>&ensp;&ensp;&ensp;&ensp;其中，只要顺着一个节点，向上找它的父节点，判断是否包含另一节点，若包含，其实就是找到题目要求的节点了。这种思路，逃过了原始两个节点关系的判断，而是采用一种更通用的方式去解决问题。实际上，是事半功倍的。</p>
+<p>&ensp;&ensp;&ensp;&ensp;其中，只要顺着一个节点，向上找它的父节点，判断是否包含另一节点，若包含，其实就是找到题目要求的节点了。这种思路，跳过了原始两个节点关系的判断，而是采用一种更通用的方式去解决问题。实际上，是事半功倍的。</p>
 <h3 id="结果代码"><a href="#结果代码" class="headerlink" title="结果代码"></a>结果代码</h3><p>下面是，基于第二种思路的js代码：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">commonParentNode</span>(<span class="params">oNode1, oNode2</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> pNode = oNode1;</div><div class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(pNode.contains(oNode2))&#123;</div><div class="line">            <span class="keyword">return</span> pNode;</div><div class="line">        &#125;</div><div class="line">        pNode = pNode.parentNode;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h3 id="总结工作"><a href="#总结工作" class="headerlink" title="总结工作"></a>总结工作</h3><p>&ensp;&ensp;&ensp;&ensp;在完成这个题目的过程中，也复习了一些知识点，总结如下：</p>
-<ol>
-<li>var node = document.getElementById(“id”); //根据id查找节点</li>
-<li>var parentNode = node.parentNode; //获取 node 节点的父节点</li>
-<li>var children = node.childNodes; //获取 node 节点的所有子节点</li>
-<li>var firstChildNode = node.firstChild; //获取 node 节点的第一个子节点</li>
-<li>var lastChildNode = node.lastChild; //获取 node 节点的最后一个子节点</li>
-<li>var previousNode = node.previousSibling; //获取 node 节点的上一个兄弟节点</li>
-<li>var nextNode = node.nextSibling; //获取 node 节点的下一个兄弟节点</li>
-<li>var bool = node1.contains(node2); //判断node1节点是否包括了node2</li>
-</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span> <span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">"id"</span>); <span class="comment">//根据id查找节点</span></div><div class="line"><span class="number">2.</span> <span class="keyword">var</span> parentNode = node.parentNode; <span class="comment">//获取 node 节点的父节点</span></div><div class="line"><span class="number">3.</span> <span class="keyword">var</span> children = node.childNodes; <span class="comment">//获取 node 节点的所有子节点</span></div><div class="line"><span class="number">4.</span> <span class="keyword">var</span> firstChildNode = node.firstChild; <span class="comment">//获取 node 节点的第一个子节点</span></div><div class="line"><span class="number">5.</span> <span class="keyword">var</span> lastChildNode = node.lastChild; <span class="comment">//获取 node 节点的最后一个子节点</span></div><div class="line"><span class="number">6.</span> <span class="keyword">var</span> previousNode = node.previousSibling; <span class="comment">//获取 node 节点的上一个兄弟节点</span></div><div class="line"><span class="number">7.</span> <span class="keyword">var</span> nextNode = node.nextSibling; <span class="comment">//获取 node 节点的下一个兄弟节点</span></div><div class="line"><span class="number">8.</span> <span class="keyword">var</span> bool = node1.contains(node2); <span class="comment">//判断node1节点是否包括了node2</span></div></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月02日 18:48</p>
+        <p>最后更新： 2018年07月02日 18:53</p>
         <p>原始链接： <a class="post-url" href="/2018/07/02/dom-节点查找/" title="dom 节点查找">http://lenmontree.com/2018/07/02/dom-节点查找/</a></p>
         <footer>
             <a href="http://lenmontree.com">
