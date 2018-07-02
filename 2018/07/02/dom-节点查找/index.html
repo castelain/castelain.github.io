@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>MarkDown-Tips | Lenmontree&#39; Blog</title>
+  <title>dom 节点查找 | Lenmontree&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="MarkDown –小贴士MarkDown 的简要介绍 Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 MarkDown 中生成表格与管理示例代码： 1234-|左对齐|居中对齐|右对齐:-:|:-|:-:|">
-<meta name="keywords" content="MarkDown">
+  <meta name="description" content="js系列编程练习（一）—-dom 节点查找说明： 题目来自于牛客网在线编程模块 题目描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身 输入描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点 解题思路 初始思路：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先思考，DOM">
+<meta name="keywords" content="JavaScript js系列编程练习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MarkDown-Tips">
-<meta property="og:url" content="http://lenmontree.com/2017/10/16/MarkDown-Tips/index.html">
+<meta property="og:title" content="dom 节点查找">
+<meta property="og:url" content="http://lenmontree.com/2018/07/02/dom-节点查找/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="MarkDown –小贴士MarkDown 的简要介绍 Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 MarkDown 中生成表格与管理示例代码： 1234-|左对齐|居中对齐|右对齐:-:|:-|:-:|">
-<meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/1727387.jpg">
-<meta property="og:updated_time" content="2018-07-01T12:40:11.019Z">
+<meta property="og:description" content="js系列编程练习（一）—-dom 节点查找说明： 题目来自于牛客网在线编程模块 题目描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身 输入描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点 解题思路 初始思路：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先思考，DOM">
+<meta property="og:updated_time" content="2018-07-02T10:44:29.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MarkDown-Tips">
-<meta name="twitter:description" content="MarkDown –小贴士MarkDown 的简要介绍 Markdown 是一种轻量级标记语言，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML(或者HTML)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。 MarkDown 中生成表格与管理示例代码： 1234-|左对齐|居中对齐|右对齐:-:|:-|:-:|">
-<meta name="twitter:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/1727387.jpg">
+<meta name="twitter:title" content="dom 节点查找">
+<meta name="twitter:description" content="js系列编程练习（一）—-dom 节点查找说明： 题目来自于牛客网在线编程模块 题目描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身 输入描述&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点 解题思路 初始思路：  &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先思考，DOM">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -108,27 +106,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-MarkDown-Tips" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-dom-节点查找" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      MarkDown-Tips
+      dom 节点查找
     </h1>
     <div class="post-title-bar">
       <ul>
           
-              <li>
-                  <i class="fa fa-book"></i>
-                  
-                      <a href="/categories/工具类/">工具类</a>
-                  
-              </li>
-          
         <li>
-          <i class="fa fa-calendar"></i>  2017-10-16
+          <i class="fa fa-calendar"></i>  2018-07-02
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,61 +135,36 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="MarkDown-–小贴士"><a href="#MarkDown-–小贴士" class="headerlink" title="MarkDown –小贴士"></a>MarkDown –小贴士</h2><h3 id="MarkDown-的简要介绍"><a href="#MarkDown-的简要介绍" class="headerlink" title="MarkDown 的简要介绍"></a>MarkDown 的简要介绍</h3><p><img src="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/1727387.jpg" alt="markdown"></p>
-<p>Markdown 是一种轻量级<a href="http://www.bing.com/knows/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80" target="_blank" rel="external">标记语言</a>，创始人为约翰·格鲁伯（John Gruber）。它允许人们“使用易读易写的纯文本格式编写文档，然后转换成有效的<a href="http://www.bing.com/knows/XHTML" target="_blank" rel="external">XHTML</a>(或者<a href="http://www.bing.com/knows/HTML" target="_blank" rel="external">HTML</a>)文档”。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。</p>
-<h3 id="MarkDown-中生成表格与管理"><a href="#MarkDown-中生成表格与管理" class="headerlink" title="MarkDown 中生成表格与管理"></a>MarkDown 中生成表格与管理</h3><p>示例代码：</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-|左对齐|居中对齐|右对齐</div><div class="line">:-:|:-|:-:|-:</div><div class="line">1|left|center|right</div><div class="line">2|left|center|right</div></pre></td></tr></table></figure>
-<p>表格效果如下：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">-</th>
-<th style="text-align:left">左对齐</th>
-<th style="text-align:center">居中对齐</th>
-<th style="text-align:right">右对齐</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">1</td>
-<td style="text-align:left">left</td>
-<td style="text-align:center">center</td>
-<td style="text-align:right">right</td>
-</tr>
-<tr>
-<td style="text-align:center">2</td>
-<td style="text-align:left">left</td>
-<td style="text-align:center">center</td>
-<td style="text-align:right">right</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p>表格中的所有内容，处理表格内容文字以外，都要确保使用的都是英文字符</p>
-<p>如果表格相邻的上面一行有内容，一定要在这行内容与表格之间插入一行空行，这样，表格的格式才能生效（否则，会将表格内容作为普通文本输出的）</p>
-<p>表格中的每行的首尾添加 |  与否都不影响表格的格式</p>
-<p>可以借助Execel来生成表格：</p>
-<p>在Execel中，正常填入表格后，在表格中的第二行，添加上控制表格格式的行；将Execel中的内容复制到markdown的编辑器中以后，将Tab符号都换成  |  即可。</p>
-</blockquote>
-<h3 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h3><p>在段首输入一个<strong>&amp;ensp</strong>相当于输入一个空格。</p>
-<h3 id="插入代码"><a href="#插入代码" class="headerlink" title="插入代码"></a>插入代码</h3><ol>
-<li>在每行代码前加入4个空格后一个（个数是相对于当前格式而言的）Tab键</li>
-<li>在代码的前后添加<strong>```</strong></li>
+            <h2 id="js系列编程练习（一）—-dom-节点查找"><a href="#js系列编程练习（一）—-dom-节点查找" class="headerlink" title="js系列编程练习（一）—-dom 节点查找"></a>js系列编程练习（一）—-dom 节点查找</h2><p>说明： 题目来自于<a href="https://www.nowcoder.com/practice/74d74be449af4c66907fe2d6961c255c" target="_blank" rel="external">牛客网在线编程模块</a></p>
+<h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>&ensp;&ensp;&ensp;&ensp;查找两个节点的最近的一个共同父节点，可以包括节点自身</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a>输入描述</h3><p>&ensp;&ensp;&ensp;&ensp;oNode1 和 oNode2 在同一文档中，且不会为相同的节点</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ol>
+<li>初始思路：</li>
 </ol>
-<p><strong>```</strong>后加的单词表示后面这段代码是什么语言的，编译器会相应的做出高亮部分</p>
-<p><strong>加粗下划线</strong><br><strong>加粗星号</strong><br><strong><em>斜体加粗下划线</em></strong><br><strong><em>斜体加粗下划线</em></strong></p>
-<h3 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![<span class="string">alt</span>](<span class="link">address "title"</span>)</div></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;img src="图片地址" width="图片显示宽度" height="显示高度" alt="图片名称"/&gt;</div></pre></td></tr></table></figure>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol>
-<li>数字+’.’+’空格’——&gt;有序列表</li>
-<li>‘*’+’空格’————-&gt;无序列表</li>
+<p>&ensp;&ensp;&ensp;&ensp;首先思考，DOM树上的任意两个节点会存在些什么关系呢？很容易想到，无非两种关系：父子节点关系、兄弟节点关系。</p>
+<p>&ensp;&ensp;&ensp;&ensp;那么在第一种关系中，即父子节点，只需要判断出哪个是父节点，就可以解决题目要求。</p>
+<p>&ensp;&ensp;&ensp;&ensp;而对于第二种关系的话，就要复杂一些了。这时候，需要从某一个节点出发，不断向上找它的父节点，并判断是否也是另一个节点的父节点，若是，则说明找到了。否则，就需要一直重复上面这个过程，直至找到或者是找到了document这个根节点。</p>
+<p>&ensp;&ensp;&ensp;&ensp;从上述思考过程，着手编写代码以后，会发现，存在这一些重复性的代码，这时候，需要将重复性的工作抽离出来，封装一下，再使用。</p>
+<p>2.&ensp;&ensp;&ensp;&ensp;在使用原始思路解决了问题以后，回头看看代码，找找还有什么地方可以改进。发现，转换一个思路会更简便。</p>
+<p>&ensp;&ensp;&ensp;&ensp;其中，只要顺着一个节点，向上找它的父节点，判断是否包含另一节点，若包含，其实就是找到题目要求的节点了。这种思路，逃过了原始两个节点关系的判断，而是采用一种更通用的方式去解决问题。实际上，是事半功倍的。</p>
+<h3 id="结果代码"><a href="#结果代码" class="headerlink" title="结果代码"></a>结果代码</h3><p>下面是，基于第二种思路的js代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">commonParentNode</span>(<span class="params">oNode1, oNode2</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> pNode = oNode1;</div><div class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</div><div class="line">        <span class="keyword">if</span>(pNode.contains(oNode2))&#123;</div><div class="line">            <span class="keyword">return</span> pNode;</div><div class="line">        &#125;</div><div class="line">        pNode = pNode.parentNode;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="总结工作"><a href="#总结工作" class="headerlink" title="总结工作"></a>总结工作</h3><p>&ensp;&ensp;&ensp;&ensp;在完成这个题目的过程中，也复习了一些知识点，总结如下：</p>
+<ol>
+<li>var node = document.getElementById(“id”); //根据id查找节点</li>
+<li>var parentNode = node.parentNode; //获取 node 节点的父节点</li>
+<li>var children = node.childNodes; //获取 node 节点的所有子节点</li>
+<li>var firstChildNode = node.firstChild; //获取 node 节点的第一个子节点</li>
+<li>var lastChildNode = node.lastChild; //获取 node 节点的最后一个子节点</li>
+<li>var previousNode = node.previousSibling; //获取 node 节点的上一个兄弟节点</li>
+<li>var nextNode = node.nextSibling; //获取 node 节点的下一个兄弟节点</li>
+<li>var bool = node1.contains(node2); //判断node1节点是否包括了node2</li>
 </ol>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月01日 20:40</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/16/MarkDown-Tips/" title="MarkDown-Tips">http://lenmontree.com/2017/10/16/MarkDown-Tips/</a></p>
+        <p>最后更新： 2018年07月02日 18:44</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/02/dom-节点查找/" title="dom 节点查找">http://lenmontree.com/2018/07/02/dom-节点查找/</a></p>
         <footer>
             <a href="http://lenmontree.com">
                 <img src="/images/logo.png" alt="jasmine">
@@ -220,7 +186,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2017/10/16/MarkDown-Tips/&title=《MarkDown-Tips》 — Lenmontree' Blog&pic=images/banner_3.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/02/dom-节点查找/&title=《dom 节点查找》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -230,22 +196,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2017/10/16/MarkDown-Tips/&title=《MarkDown-Tips》 — Lenmontree' Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/02/dom-节点查找/&title=《dom 节点查找》 — Lenmontree' Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2017/10/16/MarkDown-Tips/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/02/dom-节点查找/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《MarkDown-Tips》 — Lenmontree' Blog&url=http://lenmontree.com/2017/10/16/MarkDown-Tips/&via=http://lenmontree.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《dom 节点查找》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/02/dom-节点查找/&via=http://lenmontree.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2017/10/16/MarkDown-Tips/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/02/dom-节点查找/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -255,7 +221,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2017/10/16/MarkDown-Tips/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/02/dom-节点查找/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -267,7 +233,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/MarkDown/" class="color4">MarkDown</a>
+    <a href="/tags/JavaScriptjs系列编程练习/" class="color5">JavaScript js系列编程练习</a>
       
   </li>
 
@@ -280,26 +246,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#MarkDown-–小贴士"><span class="post-toc-text">MarkDown –小贴士</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MarkDown-的简要介绍"><span class="post-toc-text">MarkDown 的简要介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MarkDown-中生成表格与管理"><span class="post-toc-text">MarkDown 中生成表格与管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#首行缩进"><span class="post-toc-text">首行缩进</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入代码"><span class="post-toc-text">插入代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入图片"><span class="post-toc-text">插入图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列表"><span class="post-toc-text">列表</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#js系列编程练习（一）—-dom-节点查找"><span class="post-toc-text">js系列编程练习（一）—-dom 节点查找</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-text">题目描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入描述"><span class="post-toc-text">输入描述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解题思路"><span class="post-toc-text">解题思路</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#结果代码"><span class="post-toc-text">结果代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结工作"><span class="post-toc-text">总结工作</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/10/19/linux-commands/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          linux_commands
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/10/14/JavaScript-Learning/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">JavaScript的学习--基础知识点篇</span>
+    <a href="/2018/07/02/找实习之一/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">找实习之一</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
