@@ -3,22 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于 | Lenmontree&#39; Blog</title>
+  <title>@import与link的区别 | Lenmontree&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="关于我属性：96年 巨蟹女爱好：看看剧 晒晒太阳 敲敲代码小星星： 愿你出走半生，归来仍是少年出没地：云南大学    软件工程专业 如何联系我QQ：2804755011Email：2804755011@qq.comWechat：wql20151120247 如何巧取友情链接私信我 或者发邮件框框如下： 你的昵称： 网址： 一段简介： 欢迎把我的小小据点加入你的友链，我的小小据点信息如下：">
-<meta name="keywords" content="碎碎念">
+  <meta name="description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://lenmontree.com/2017/10/05/关于/index.html">
+<meta property="og:title" content="@import与link的区别">
+<meta property="og:url" content="http://lenmontree.com/2018/07/18/import与link的区别/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="关于我属性：96年 巨蟹女爱好：看看剧 晒晒太阳 敲敲代码小星星： 愿你出走半生，归来仍是少年出没地：云南大学    软件工程专业 如何联系我QQ：2804755011Email：2804755011@qq.comWechat：wql20151120247 如何巧取友情链接私信我 或者发邮件框框如下： 你的昵称： 网址： 一段简介： 欢迎把我的小小据点加入你的友链，我的小小据点信息如下：">
-<meta property="og:updated_time" content="2017-10-19T09:04:48.421Z">
+<meta property="og:description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
+<meta property="og:updated_time" content="2018-07-18T01:32:40.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于">
-<meta name="twitter:description" content="关于我属性：96年 巨蟹女爱好：看看剧 晒晒太阳 敲敲代码小星星： 愿你出走半生，归来仍是少年出没地：云南大学    软件工程专业 如何联系我QQ：2804755011Email：2804755011@qq.comWechat：wql20151120247 如何巧取友情链接私信我 或者发邮件框框如下： 你的昵称： 网址： 一段简介： 欢迎把我的小小据点加入你的友链，我的小小据点信息如下：">
+<meta name="twitter:title" content="@import与link的区别">
+<meta name="twitter:description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -106,27 +106,20 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-关于" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-import与link的区别" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      关于
+      @import与link的区别
     </h1>
     <div class="post-title-bar">
       <ul>
           
-              <li>
-                  <i class="fa fa-book"></i>
-                  
-                      <a href="/categories/日常/">日常</a>
-                  
-              </li>
-          
         <li>
-          <i class="fa fa-calendar"></i>  2017-10-05
+          <i class="fa fa-calendar"></i>  2018-07-18
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -142,25 +135,36 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="530" height="86" src="//music.163.com/outchain/player?type=2&id=33911781&auto=0&height=66"></iframe>
+            <h2 id="import-与-link-的区别"><a href="#import-与-link-的区别" class="headerlink" title="@import 与 link 的区别"></a>@import 与 link 的区别</h2><p> 前情提示：<br>在 html 页面中加载 css 的四种方式：</p>
+<ul>
+<li>内嵌式<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">style</span>&gt;</div><div class="line">	//内嵌的样式写在这</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>导入式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">style</span>&gt;</div><div class="line">	@<span class="keyword">import</span> <span class="string">"test.css"</span>;</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>外链式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;link rel="stylesheet" href="test.css"&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>内联式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;div style="background-color: red;"&gt;</div><div class="line">	<span class="selector-tag">test</span></div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><code>引入的样式的优先级：内联 &gt; 内嵌 &gt; (外链或导入)</code><br>其中，外链和导入两种方式引入的样式表的优先级高低，取决于定义位置的先后顺序，最后定义的优先级最高。</p>
+<h3 id="import-与-link-的区别-1"><a href="#import-与-link-的区别-1" class="headerlink" title="@import 与 link 的区别"></a>@import 与 link 的区别</h3><blockquote>
+<ol>
+<li><strong>来源不同</strong><br>@import是由css提出的，只能用于导入 css 样式表；link是由 xhtml 提出的，不仅可以用于引入样式表，还能做其他的事：比如说定义RSS，定义rel属性等。</li>
+<li><strong>兼容性不同</strong><br>@import 是 css2.1 才提出来的，所以老的浏览器不支持它，要 IE5 以上才能支持它。而 link 是 xhtml 中的，所以并没有兼容性问题。 </li>
+<li><strong>加载时间与顺序不同</strong><br>使用 @import 导入样式，浏览器会先加载页面结构，再导入样式。这种情况下，如果网速很慢，可能会出现页面结构出现在页面上了，可是样式没加载出来，页面显得比较难看的情形，会影响用户体验。而，使用 link 来加载样式表时，当用户要浏览某一页面时，浏览器会先将样式表加载进来、准备好，然后再加载页面具体内容与结构。这样的话，即使网络较慢，也不会影响页面的呈现效果了。</li>
+<li><strong>dom控制不同</strong><br>js 不能操纵 @import 元素。而，js 可以操纵 link 这个 dom 元素。</li>
+</ol>
+</blockquote>
 
-
-
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>属性：96年 巨蟹女<br>爱好：看看剧 晒晒太阳 敲敲代码<br>小星星： 愿你出走半生，归来仍是少年<br>出没地：云南大学    软件工程专业</p>
-<h2 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h2><p>QQ：2804755011<br>Email：2804755011@qq.com<br>Wechat：wql20151120247</p>
-<h2 id="如何巧取友情链接"><a href="#如何巧取友情链接" class="headerlink" title="如何巧取友情链接"></a>如何巧取友情链接</h2><p>私信我 或者发邮件<br>框框如下：</p>
-<pre><code>你的昵称：
-网址：
-一段简介：
-</code></pre><p>欢迎把我的小小据点加入你的友链，我的小小据点信息如下：</p>
-<pre><code>昵称：小柠檬
-网址：http://www.lenmontree.com
-网站简述：记录成长，分享心情
-</code></pre>
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2017年10月19日 17:04</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/05/关于/" title="关于">http://lenmontree.com/2017/10/05/关于/</a></p>
+        <p>最后更新： 2018年07月18日 09:32</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/18/import与link的区别/" title="@import与link的区别">http://lenmontree.com/2018/07/18/import与link的区别/</a></p>
         <footer>
             <a href="http://lenmontree.com">
                 <img src="/images/logo.png" alt="jasmine">
@@ -182,7 +186,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2017/10/05/关于/&title=《关于》 — Lenmontree' Blog&pic=images/banner_5.jpg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/18/import与link的区别/&title=《@import与link的区别》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -192,22 +196,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2017/10/05/关于/&title=《关于》 — Lenmontree' Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/18/import与link的区别/&title=《@import与link的区别》 — Lenmontree' Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2017/10/05/关于/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/18/import与link的区别/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于》 — Lenmontree' Blog&url=http://lenmontree.com/2017/10/05/关于/&via=http://lenmontree.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《@import与link的区别》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/18/import与link的区别/&via=http://lenmontree.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2017/10/05/关于/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/18/import与link的区别/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -217,7 +221,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2017/10/05/关于/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/18/import与link的区别/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -229,7 +233,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/碎碎念/" class="color4">碎碎念</a>
+    <a href="/tags/css/" class="color4">css</a>
       
   </li>
 
@@ -242,26 +246,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于我"><span class="post-toc-text">关于我</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何联系我"><span class="post-toc-text">如何联系我</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#如何巧取友情链接"><span class="post-toc-text">如何巧取友情链接</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#import-与-link-的区别"><span class="post-toc-text">@import 与 link 的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#import-与-link-的区别-1"><span class="post-toc-text">@import 与 link 的区别</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/10/05/hexo-set-up-blog（0-to-1）/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          hexo搭建博客（从零到一）
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/10/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">小柠檬的 Hello World</span>
+    <a href="/2018/07/02/dom-节点查找/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">dom 节点查找</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
