@@ -8,17 +8,17 @@
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
+  <meta name="description" content="前情提示在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;gt;  内联式 123&amp;lt;div">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="@import与link的区别">
 <meta property="og:url" content="http://lenmontree.com/2018/07/18/import与link的区别/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
-<meta property="og:updated_time" content="2018-07-18T01:32:40.830Z">
+<meta property="og:description" content="前情提示在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;gt;  内联式 123&amp;lt;div">
+<meta property="og:updated_time" content="2018-07-18T01:35:22.484Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="@import与link的区别">
-<meta name="twitter:description" content="@import 与 link 的区别 前情提示：在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;">
+<meta name="twitter:description" content="前情提示在 html 页面中加载 css 的四种方式：  内嵌式123&amp;lt;style&amp;gt;	//内嵌的样式写在这&amp;lt;/style&amp;gt;    导入式 123&amp;lt;style&amp;gt;	@import &quot;test.css&quot;;&amp;lt;/style&amp;gt;  外链式 1&amp;lt;link rel=&quot;stylesheet&quot; href=&quot;test.css&quot;&amp;gt;  内联式 123&amp;lt;div">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -135,7 +135,7 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="import-与-link-的区别"><a href="#import-与-link-的区别" class="headerlink" title="@import 与 link 的区别"></a>@import 与 link 的区别</h2><p> 前情提示：<br>在 html 页面中加载 css 的四种方式：</p>
+            <h3 id="前情提示"><a href="#前情提示" class="headerlink" title="前情提示"></a>前情提示</h3><p>在 html 页面中加载 css 的四种方式：</p>
 <ul>
 <li>内嵌式<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="selector-tag">style</span>&gt;</div><div class="line">	//内嵌的样式写在这</div><div class="line">&lt;/style&gt;</div></pre></td></tr></table></figure>
 </li>
@@ -152,7 +152,7 @@
 </li>
 </ul>
 <p><code>引入的样式的优先级：内联 &gt; 内嵌 &gt; (外链或导入)</code><br>其中，外链和导入两种方式引入的样式表的优先级高低，取决于定义位置的先后顺序，最后定义的优先级最高。</p>
-<h3 id="import-与-link-的区别-1"><a href="#import-与-link-的区别-1" class="headerlink" title="@import 与 link 的区别"></a>@import 与 link 的区别</h3><blockquote>
+<h3 id="import-与-link-的区别"><a href="#import-与-link-的区别" class="headerlink" title="@import 与 link 的区别"></a>@import 与 link 的区别</h3><blockquote>
 <ol>
 <li><strong>来源不同</strong><br>@import是由css提出的，只能用于导入 css 样式表；link是由 xhtml 提出的，不仅可以用于引入样式表，还能做其他的事：比如说定义RSS，定义rel属性等。</li>
 <li><strong>兼容性不同</strong><br>@import 是 css2.1 才提出来的，所以老的浏览器不支持它，要 IE5 以上才能支持它。而 link 是 xhtml 中的，所以并没有兼容性问题。 </li>
@@ -163,7 +163,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月18日 09:32</p>
+        <p>最后更新： 2018年07月18日 09:35</p>
         <p>原始链接： <a class="post-url" href="/2018/07/18/import与link的区别/" title="@import与link的区别">http://lenmontree.com/2018/07/18/import与link的区别/</a></p>
         <footer>
             <a href="http://lenmontree.com">
@@ -246,7 +246,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#import-与-link-的区别"><span class="post-toc-text">@import 与 link 的区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#import-与-link-的区别-1"><span class="post-toc-text">@import 与 link 的区别</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前情提示"><span class="post-toc-text">前情提示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#import-与-link-的区别"><span class="post-toc-text">@import 与 link 的区别</span></a></li></ol>
         </nav>
     </aside>
     
