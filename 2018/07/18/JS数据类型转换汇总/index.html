@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS 数据类型转换汇总 | Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="JS 中的数据类型 5 种基本数据类型字符串、数字、布尔、null、undefined2 种应用数据类型对象、函数其中，对象包括：[]数组、{}基本对象、/^$/正则表达式  数据类型转换把其他数据类型转换为 number 类型  isNaN、Number、parseFloat、parseInt在进行加减乘除数学运算的时候12345678910true -&amp;gt; 1   false -&amp;gt;">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS 数据类型转换汇总">
+<meta property="og:url" content="http://lenmontree.com/2018/07/18/JS数据类型转换汇总/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="JS 中的数据类型 5 种基本数据类型字符串、数字、布尔、null、undefined2 种应用数据类型对象、函数其中，对象包括：[]数组、{}基本对象、/^$/正则表达式  数据类型转换把其他数据类型转换为 number 类型  isNaN、Number、parseFloat、parseInt在进行加减乘除数学运算的时候12345678910true -&amp;gt; 1   false -&amp;gt;">
+<meta property="og:updated_time" content="2018-07-18T05:37:21.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS 数据类型转换汇总">
+<meta name="twitter:description" content="JS 中的数据类型 5 种基本数据类型字符串、数字、布尔、null、undefined2 种应用数据类型对象、函数其中，对象包括：[]数组、{}基本对象、/^$/正则表达式  数据类型转换把其他数据类型转换为 number 类型  isNaN、Number、parseFloat、parseInt在进行加减乘除数学运算的时候12345678910true -&amp;gt; 1   false -&amp;gt;">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS数据类型转换汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JS 数据类型转换汇总
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-18
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="JS-中的数据类型"><a href="#JS-中的数据类型" class="headerlink" title="JS 中的数据类型"></a>JS 中的数据类型</h3><blockquote>
+<p><strong>5 种基本数据类型</strong><br>字符串、数字、布尔、null、undefined<br><strong>2 种应用数据类型</strong><br>对象、函数<br>其中，对象包括：[]数组、{}基本对象、/^$/正则表达式</p>
+</blockquote>
+<h3 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h3><p><code>把其他数据类型转换为 number 类型</code></p>
+<blockquote>
+<p>isNaN、Number、parseFloat、parseInt<br>在进行加减乘除数学运算的时候<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span> -&gt; <span class="number">1</span>   <span class="literal">false</span> -&gt; <span class="number">0</span></div><div class="line"><span class="string">''</span> -&gt; <span class="number">0</span>     <span class="string">'12'</span> -&gt;  <span class="number">12</span></div><div class="line"><span class="string">'12px'</span> -&gt; <span class="literal">NaN</span>(<span class="built_in">Number</span>)/<span class="number">12</span>(<span class="built_in">parseInt</span>)</div><div class="line"><span class="literal">null</span> -&gt; <span class="number">0</span>    <span class="literal">undefined</span> -&gt; <span class="literal">NaN</span></div><div class="line"></div><div class="line">&#123;&#125;   /^$/ <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;  -&gt; <span class="literal">NaN</span></div><div class="line">[] -&gt; <span class="string">''</span> -&gt; <span class="number">0</span></div><div class="line">[<span class="number">12</span>] -&gt; <span class="string">'12'</span> -&gt; <span class="number">12</span></div><div class="line">[<span class="number">12</span>,<span class="number">13</span>]  -&gt; <span class="string">'12,13'</span> -&gt; <span class="literal">NaN</span></div><div class="line"><span class="comment">// 通过 toString 方法把数组转换为字符串，再把字符串转换为数字（调用了Number方法）</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>JS 中的数学运算</code></p>
+<blockquote>
+<ul>
+<li>、 - 、  *、  /<br>除了加法有特殊性，其他运算符都是数学运算，也就是遇到非数字类型，需要把其转换为 number ,再进行运算。</li>
+</ul>
+<p>加法的特殊性：<br>在遇到字符串的时候，加不是数学运算，而是字符串的拼接。只要不遇到字符串，就是数学运算。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span> - <span class="string">'1'</span>  -&gt;  <span class="number">0</span></div><div class="line"><span class="number">10</span> * <span class="literal">null</span>  -&gt;  <span class="number">0</span></div><div class="line"><span class="number">10</span> / <span class="literal">undefined</span> -&gt; <span class="literal">NaN</span></div><div class="line"><span class="number">10</span> * [<span class="number">10</span>] -&gt; <span class="number">100</span></div><div class="line"></div><div class="line"><span class="number">1</span> + <span class="string">'1'</span>  -&gt; <span class="string">'11'</span></div><div class="line"><span class="literal">null</span> + <span class="string">'1'</span>  -&gt; <span class="string">'null1'</span></div><div class="line"><span class="comment">//字符串拼接是把其他的值转化（toString）为字符串再拼接</span></div><div class="line"><span class="comment">//除对象以外的数据类型的 toString 都是直接把值用引号包起来即可。只有对象的有特殊性，对象.toString() === '[object Object]'</span></div><div class="line"></div><div class="line"><span class="number">1</span> + <span class="literal">null</span> + <span class="literal">true</span> + <span class="literal">undefined</span> + [] + <span class="string">'jasmine'</span> + <span class="literal">null</span> + <span class="literal">undefined</span> + [] + <span class="number">10</span>   -&gt; <span class="string">'NaNjasminenullundefined10'</span></div><div class="line"><span class="literal">NaN</span> + [] -&gt; <span class="string">'NaN'</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>将其他数据类型转为布尔类型</code></p>
+<blockquote>
+<p>Boolean、！、！！、<br>在条件判断的时候也是转换为布尔类型，然后验证条件的真假</p>
+<p>只有 0、NaN、’’、null、undefined 五个值转换为 false，其他都转换为 true 。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">[] -&gt; <span class="literal">true</span></div><div class="line"><span class="number">-1</span> -&gt; <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="keyword">if</span>(box)&#123;</div><div class="line">	<span class="comment">//先获取到变量box存储的值，然后转化为布尔类型，如果为 true 则条件成立，否则不成立</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(<span class="number">3</span> + <span class="string">'3px'</span>)&#123;</div><div class="line">	<span class="comment">//'33px' -&gt; true</span></div><div class="line">&#125;</div><div class="line"><span class="keyword">if</span>(<span class="number">3</span> - <span class="string">'3px'</span>)&#123;</div><div class="line">	<span class="comment">//NaN -&gt; false </span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<p><code>在使用 == 进行比较的时候</code></p>
+<blockquote>
+<p>在使用 == 进行比较的时候，如果左右两边数据类型不相同，浏览器会默认转换为相同的类型，然后再比较。（ === 不会这样操作 ）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//对象和对象: 比较的是空间地址，因为它们是引用数据类型。不是同一个空间，结果就是 false </span></div><div class="line">[] == [] -&gt; <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> a = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> b = a;</div><div class="line">a == b -&gt; <span class="literal">true</span></div><div class="line"></div><div class="line"><span class="comment">// 对象和数字: 把对象转换为数字</span></div><div class="line">[] == <span class="number">0</span>  -&gt; <span class="literal">true</span></div><div class="line">(&#123;&#125;) == <span class="literal">NaN</span>  -&gt; <span class="literal">false</span> <span class="literal">NaN</span> 和自己不相等，和其他任何值都不相等</div><div class="line"></div><div class="line"><span class="comment">// 对象和字符串：把两边都转换为数字，再进行比较</span></div><div class="line">[] == <span class="string">''</span>  -&gt; <span class="literal">true</span></div><div class="line">[<span class="number">12</span>] == <span class="string">'12px'</span>  -&gt; <span class="literal">false</span>  <span class="number">12</span> != <span class="literal">NaN</span></div><div class="line"></div><div class="line"><span class="comment">// 对象和 boolean ：把两边都转为数字，再进行比较</span></div><div class="line">[] == <span class="literal">true</span> -&gt; <span class="literal">false</span></div><div class="line"></div><div class="line">[] == <span class="literal">false</span> -&gt; <span class="literal">true</span>( <span class="number">0</span> ==<span class="number">0</span> )</div><div class="line">![] == <span class="literal">false</span>  -&gt; <span class="literal">true</span>( <span class="literal">false</span> == <span class="literal">false</span> )</div><div class="line"></div><div class="line"><span class="comment">// 字符串和数字：字符串转换为数字</span></div><div class="line"></div><div class="line"><span class="comment">//字符串和 boolean: 都转换为数字</span></div><div class="line"></div><div class="line"><span class="comment">// boolen 和数字： Boolean 转换为数字</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">//规律： 两个等号比较，左右两边数据值的类型不一样，浏览器会把两边的类型都转为数字，再进行比较。</span></div><div class="line"><span class="comment">// 但是，null 和 undefined 除外</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span>  -&gt; <span class="literal">true</span></div><div class="line"><span class="literal">null</span> === <span class="literal">undefined</span> -&gt; <span class="literal">false</span></div><div class="line"><span class="comment">// null 以及 undefined 和其他任何值都不相等。</span></div><div class="line"><span class="literal">null</span> == <span class="number">0</span> -&gt; <span class="literal">false</span></div><div class="line"><span class="comment">// NaN 和谁(包括自己)都不相等</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月18日 13:37</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/18/JS数据类型转换汇总/" title="JS 数据类型转换汇总">http://lenmontree.com/2018/07/18/JS数据类型转换汇总/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/&title=《JS 数据类型转换汇总》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/&title=《JS 数据类型转换汇总》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS 数据类型转换汇总》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/18/JS数据类型转换汇总/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-中的数据类型"><span class="post-toc-text">JS 中的数据类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据类型转换"><span class="post-toc-text">数据类型转换</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/18/import与link的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">@import与link的区别</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 20px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
