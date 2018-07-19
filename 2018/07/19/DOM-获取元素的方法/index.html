@@ -3,24 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>box-model | Lenmontree&#39; Blog</title>
+  <title>DOM-获取元素的方法 | Lenmontree&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="CSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  margin(外边距)：清除边框外的区域，为透明的。 padding（内边距）：清除内容周围的区域，为透明的。 border(边框) ：处在">
-<meta name="keywords" content="css   box-model">
+  <meta name="description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="box-model">
-<meta property="og:url" content="http://lenmontree.com/2018/04/01/box-model/index.html">
+<meta property="og:title" content="DOM-获取元素的方法">
+<meta property="og:url" content="http://lenmontree.com/2018/07/19/DOM-获取元素的方法/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="CSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  margin(外边距)：清除边框外的区域，为透明的。 padding（内边距）：清除内容周围的区域，为透明的。 border(边框) ：处在">
-<meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/56891960.jpg">
-<meta property="og:updated_time" content="2018-07-01T17:12:06.478Z">
+<meta property="og:description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
+<meta property="og:updated_time" content="2018-07-19T03:29:31.168Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="box-model">
-<meta name="twitter:description" content="CSS 中的盒模型1. 万物皆盒子所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。下图即为盒子模型的示意图：  说明：  margin(外边距)：清除边框外的区域，为透明的。 padding（内边距）：清除内容周围的区域，为透明的。 border(边框) ：处在">
-<meta name="twitter:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/56891960.jpg">
+<meta name="twitter:title" content="DOM-获取元素的方法">
+<meta name="twitter:description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -108,14 +106,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-box-model" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-DOM-获取元素的方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      box-model
+      DOM-获取元素的方法
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -128,7 +126,7 @@
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-04-01
+          <i class="fa fa-calendar"></i>  2018-07-19
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -144,37 +142,64 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h2 id="CSS-中的盒模型"><a href="#CSS-中的盒模型" class="headerlink" title="CSS 中的盒模型"></a>CSS 中的盒模型</h2><h3 id="1-万物皆盒子"><a href="#1-万物皆盒子" class="headerlink" title="1. 万物皆盒子"></a>1. 万物皆盒子</h3><p>所有的HTML元素都可以看做盒子。盒模型的本质就是一个盒子，封装周围的HTML元素。它包括外边距（margin）、边框（border）、内边距（padding）、内容（content）。<br>下图即为盒子模型的示意图：</p>
-<p><img src="http://ozkbl6lk3.bkt.clouddn.com/18-7-1/56891960.jpg" alt="box-model"></p>
-<p>说明：</p>
-<ul>
-<li>margin(外边距)：清除边框外的区域，为透明的。</li>
-<li>padding（内边距）：清除内容周围的区域，为透明的。</li>
-<li>border(边框) ：处在外边距和内边距中间，包围着padding和content。</li>
-<li>content（内容）：盒子的内容。</li>
+            <h3 id="获取-DOM-元素的方法"><a href="#获取-DOM-元素的方法" class="headerlink" title="获取 DOM 元素的方法"></a>获取 DOM 元素的方法</h3><ul>
+<li>document.getElementById()</li>
+<li>document.getElementsByName()</li>
+<li>[context].getElementsByTagName()</li>
+<li>[content].getElementsByClassName()</li>
+<li>document.documentElement()  获取整个 html 对象</li>
+<li>document.body()</li>
+<li>document.head()</li>
+<li>document.querySelector()</li>
+<li>document.querySelectorAll()</li>
+<li>…</li>
 </ul>
-<h3 id="2-元素的宽度和高度"><a href="#2-元素的宽度和高度" class="headerlink" title="2. 元素的宽度和高度"></a>2. 元素的宽度和高度</h3><ul>
-<li>最终元素的总宽度计算公式是这样的：<br><strong>总元素的宽度=宽度+左填充+右填充+左边框+右边框+左边距+右边距</strong></li>
-<li>元素的总高度最终计算公式是这样的：<br><strong>总元素的高度=高度+顶部填充+底部填充+上边框+下边框+上边距+下边距</strong></li>
-</ul>
-<h3 id="3-标准模式和混杂模式"><a href="#3-标准模式和混杂模式" class="headerlink" title="3. 标准模式和混杂模式"></a>3. 标准模式和混杂模式</h3><p>在了解浏览器的兼容性问题之前，有必要先了解<strong>DTD</strong>以及浏览器解析执行HTML文档两种模式：<strong>标准模式</strong>和<strong>怪异模式</strong>：</p>
+<p><code>getElementById</code></p>
+<blockquote>
+<p>此方法的上下文只能是 document （该方法只存在在 document 这个类上，只有这个类的实例有这个方法）<br>一个 html 页面中的元素的 id <code>理论</code>上时不会重复的</p>
 <ol>
-<li>Doctype:<br>Doctype 是一种标准通用的文档类型声明，它必须出现在文件的第一行，目的是告诉浏览器要以何种文档类型定义来解析文档。</li>
-<li>标准（严格）模式（strict model）<br>标准模式指浏览器按w3c的标准来解析执行代码。</li>
-<li>怪异（混杂）模式(quirks model)<br>怪异模式是指浏览器以一种较为宽松的向后兼容的方式来解析和执行代码。</li>
-<li>两种模式在盒模型的解释上的差异<br>标准模式下，元素宽度 = content width + padding left + padding right + border left + border right。<br>混杂模式下，元素宽度 = content width （content + padding left + padding right + border left + border right）。</li>
+<li>如果页面中的 id 重复了，我们获取的结果是第一个 id 对应的元素对象</li>
+<li>在 IE7 以及更低版本的浏览器中，会把表单元素中的 name 值当做 id 值来使用（项目中尽量不要让表单中的 name 和其他其他元素的 id 相同）</li>
+<li>如果我们把 js 放在结构的下面，我们可以直接使用 id 值来获取这个元素，不需要getElementById 来获取。而且这种方式，会把页面中所用 ID 是他的元素都获取到（它获取到个人可能是元素，也可能是与元素集合） —-&gt; 不推荐</li>
 </ol>
-<p>简而言之，就是 content width 是否是真的 content width?</p>
-<ul>
-<li>是 –》标准模式（严格模式）</li>
-<li>否 –&gt;怪异模式（混杂模式）</li>
-</ul>
-<h3 id="4-浏览器的兼容性问题"><a href="#4-浏览器的兼容性问题" class="headerlink" title="4. 浏览器的兼容性问题"></a>4. 浏览器的兼容性问题</h3><p>一旦为页面设置了恰当的 DTD，大多数浏览器都会按照上面的图示来呈现内容。<strong>然而 IE 5 和 6 的呈现却是不正确的。</strong>根据 W3C 的规范，元素内容占据的空间是由 width 属性设置的，而内容周围的 padding 和 border 值是另外计算的。不幸的是，IE5.X 和 6 在怪异模式中使用自己的非标准模型。这些浏览器的 width 属性不是内容的宽度，而是内容、内边距和边框的宽度的总和。<br>虽然有方法解决这个问题。但是目前最好的解决方案是回避这个问题。也就是，不要给元素添加具有指定宽度的内边距，而是尝试将内边距或外边距添加到元素的父元素和子元素。<br>IE8 及更早IE版本不支持设置填充的宽度和边框的宽度属性。<br>解决IE8及更早版本不兼容问题可以在HTML页面声明 &lt;!DOCTYPE html&gt;即可。（都使用标准模式不就没问题啦）</p>
+<p><code>如何获取页面上所有 id 都为 box1 的元素呢？</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取页面上的所有元素标签</span></div><div class="line"><span class="keyword">var</span> allList = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'*'</span>);</div><div class="line"><span class="keyword">var</span> result = [];</div><div class="line"><span class="comment">//遍历所有的元素标签，找到 id 为 box1 的元素</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allList.length; i ++)&#123;</div><div class="line">	<span class="keyword">var</span> item = allList[i];</div><div class="line">	item.id === <span class="string">'box1'</span>? result.push(item):<span class="literal">null</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(result)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 方法二</span></div><div class="line">result = <span class="built_in">document</span>.querySelectorAll(<span class="string">'#div'</span>);</div><div class="line"><span class="comment">// 注意： IE6-8 以下版本不兼容</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>getElementsByName</code></p>
+<blockquote>
+<p>通过元素的 name 属性来获取一组元素（类数组：节点集合 nodeList）<br>它的上下文只能是 document</p>
+<p>1.IE 浏览器只能识别表单元素的 name 属性值，所以这个方法一般都是用来操作表单元素的</p>
+</blockquote>
+<hr>
+<p><code>getElementsByTagName</code></p>
+<blockquote>
+<p>上下文可以是自己来指定的<br>获取到的结果是一个元素集合（类数组集合）</p>
+<p>1.获取的结果是<code>集合</code>，哪怕集合中只有一项，我们想要操作的是这一项（元素对象），需要先从集合中获取出来，然后再操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var bodyBox = document.getElementsByTagName(&apos;body&apos;)[0];</div><div class="line">	var divList = bodyBox.getElementsByTagName(&apos;div&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>2.在指定的上下文中获取所有子子孙孙元素中标签名叫做这个的（后代筛选）</p>
+</blockquote>
+<hr>
+<p><code>getElementsByClassName</code></p>
+<blockquote>
+<p>上下文可以随意指定<br>获取的结果是一个元素集合（类数组集合）</p>
+<p>1.真实项目中经常会通过样式类名来获取元素，getElementsByClassName 这个方法在 IE6-8 浏览器中是不兼容的，想用的话，需要自己处理兼容</p>
+</blockquote>
+<p><code>document.documentElement / document.body</code></p>
+<blockquote>
+<p>获取 html 或者 body(一个元素对象)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取当前浏览器窗口可视区域的宽度（当前页面一屏幕的宽度）</span></div><div class="line"><span class="built_in">document</span>.documentElement.clientWidth / <span class="built_in">document</span>.body.clientWidth</div><div class="line"></div><div class="line"><span class="comment">// clientHeight 是获取高度</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>querySelector / querySelectorAll</code></p>
+<blockquote>
+<p>在 IE6-8 下不兼容，而且也没什么特别好的办法来处理它的兼容。所以这两个方法多用于移动端开发使用</p>
+<p>querySelector:  获取一个元素对象</p>
+<p>querySelectorAll:  获取一个元素集合</p>
+<p>只要是 css 支持的选择器，这里大部分都支持</p>
+</blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月02日 01:12</p>
-        <p>原始链接： <a class="post-url" href="/2018/04/01/box-model/" title="box-model">http://lenmontree.com/2018/04/01/box-model/</a></p>
+        <p>最后更新： 2018年07月19日 11:29</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/19/DOM-获取元素的方法/" title="DOM-获取元素的方法">http://lenmontree.com/2018/07/19/DOM-获取元素的方法/</a></p>
         <footer>
             <a href="http://lenmontree.com">
                 <img src="/images/logo.png" alt="jasmine">
@@ -196,7 +221,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/04/01/box-model/&title=《box-model》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -206,22 +231,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/04/01/box-model/&title=《box-model》 — Lenmontree' Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/04/01/box-model/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《box-model》 — Lenmontree' Blog&url=http://lenmontree.com/2018/04/01/box-model/&via=http://lenmontree.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DOM-获取元素的方法》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&via=http://lenmontree.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/04/01/box-model/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -231,7 +256,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/04/01/box-model/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -243,7 +268,7 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/cssbox-model/" class="color1">css   box-model</a>
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
       
   </li>
 
@@ -256,26 +281,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-中的盒模型"><span class="post-toc-text">CSS 中的盒模型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-万物皆盒子"><span class="post-toc-text">1. 万物皆盒子</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-元素的宽度和高度"><span class="post-toc-text">2. 元素的宽度和高度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-标准模式和混杂模式"><span class="post-toc-text">3. 标准模式和混杂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-浏览器的兼容性问题"><span class="post-toc-text">4. 浏览器的兼容性问题</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取-DOM-元素的方法"><span class="post-toc-text">获取 DOM 元素的方法</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/07/01/解决部署博客文件时出现的问题/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          解决部署博客文件时出现的问题
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/10/26/初始HTML5-CSS以及-Bootstrap/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">Hello-to-HTML5-CSS&amp;Bootstrap</span>
+    <a href="/2018/07/18/JS数据类型转换汇总/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JS 数据类型转换汇总</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
