@@ -8,17 +8,17 @@
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
+  <meta name="description" content="DOM 的节点 node : 节点，在一个 html 页面中的所有内容都是节点（包括标签、注释、文字文本等）  元素节点： html 标签 文本节点：文字内容（高版本浏览器会把空格和换行也当做文档节点） 注释节点：注释内容 document 文档节点  …    元素节点  nodeType：1nodeName：大写的标签名（在部分浏览器的怪异模式下，我们写的标签名是小写，它获取的就是小写，反之为">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DOM-获取元素的方法">
-<meta property="og:url" content="http://lenmontree.com/2018/07/19/DOM-获取元素的方法/index.html">
+<meta property="og:url" content="http://lenmontree.com/2018/07/19/DOM-节点/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
-<meta property="og:updated_time" content="2018-07-19T03:29:31.168Z">
+<meta property="og:description" content="DOM 的节点 node : 节点，在一个 html 页面中的所有内容都是节点（包括标签、注释、文字文本等）  元素节点： html 标签 文本节点：文字内容（高版本浏览器会把空格和换行也当做文档节点） 注释节点：注释内容 document 文档节点  …    元素节点  nodeType：1nodeName：大写的标签名（在部分浏览器的怪异模式下，我们写的标签名是小写，它获取的就是小写，反之为">
+<meta property="og:updated_time" content="2018-07-19T07:59:00.422Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DOM-获取元素的方法">
-<meta name="twitter:description" content="获取 DOM 元素的方法 document.getElementById() document.getElementsByName() [context].getElementsByTagName() [content].getElementsByClassName() document.documentElement()  获取整个 html 对象 document.body() documen">
+<meta name="twitter:description" content="DOM 的节点 node : 节点，在一个 html 页面中的所有内容都是节点（包括标签、注释、文字文本等）  元素节点： html 标签 文本节点：文字内容（高版本浏览器会把空格和换行也当做文档节点） 注释节点：注释内容 document 文档节点  …    元素节点  nodeType：1nodeName：大写的标签名（在部分浏览器的怪异模式下，我们写的标签名是小写，它获取的就是小写，反之为">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -106,7 +106,7 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-DOM-获取元素的方法" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-DOM-节点" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -142,64 +142,111 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="获取-DOM-元素的方法"><a href="#获取-DOM-元素的方法" class="headerlink" title="获取 DOM 元素的方法"></a>获取 DOM 元素的方法</h3><ul>
-<li>document.getElementById()</li>
-<li>document.getElementsByName()</li>
-<li>[context].getElementsByTagName()</li>
-<li>[content].getElementsByClassName()</li>
-<li>document.documentElement()  获取整个 html 对象</li>
-<li>document.body()</li>
-<li>document.head()</li>
-<li>document.querySelector()</li>
-<li>document.querySelectorAll()</li>
-<li>…</li>
+            <h3 id="DOM-的节点"><a href="#DOM-的节点" class="headerlink" title="DOM 的节点"></a>DOM 的节点</h3><blockquote>
+<p>node : 节点，在一个 html 页面中的所有内容都是节点（包括标签、注释、文字文本等）</p>
+<ul>
+<li>元素节点： html 标签</li>
+<li>文本节点：文字内容（高版本浏览器会把空格和换行也当做文档节点）</li>
+<li>注释节点：注释内容</li>
+<li>document 文档节点 </li>
+<li>… </li>
 </ul>
-<p><code>getElementById</code></p>
+</blockquote>
+<p><code>元素节点</code></p>
 <blockquote>
-<p>此方法的上下文只能是 document （该方法只存在在 document 这个类上，只有这个类的实例有这个方法）<br>一个 html 页面中的元素的 id <code>理论</code>上时不会重复的</p>
-<ol>
-<li>如果页面中的 id 重复了，我们获取的结果是第一个 id 对应的元素对象</li>
-<li>在 IE7 以及更低版本的浏览器中，会把表单元素中的 name 值当做 id 值来使用（项目中尽量不要让表单中的 name 和其他其他元素的 id 相同）</li>
-<li>如果我们把 js 放在结构的下面，我们可以直接使用 id 值来获取这个元素，不需要getElementById 来获取。而且这种方式，会把页面中所用 ID 是他的元素都获取到（它获取到个人可能是元素，也可能是与元素集合） —-&gt; 不推荐</li>
-</ol>
-<p><code>如何获取页面上所有 id 都为 box1 的元素呢？</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//获取页面上的所有元素标签</span></div><div class="line"><span class="keyword">var</span> allList = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'*'</span>);</div><div class="line"><span class="keyword">var</span> result = [];</div><div class="line"><span class="comment">//遍历所有的元素标签，找到 id 为 box1 的元素</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; allList.length; i ++)&#123;</div><div class="line">	<span class="keyword">var</span> item = allList[i];</div><div class="line">	item.id === <span class="string">'box1'</span>? result.push(item):<span class="literal">null</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(result)</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 方法二</span></div><div class="line">result = <span class="built_in">document</span>.querySelectorAll(<span class="string">'#div'</span>);</div><div class="line"><span class="comment">// 注意： IE6-8 以下版本不兼容</span></div></pre></td></tr></table></figure></p>
+<p>nodeType：1<br>nodeName：大写的标签名（在部分浏览器的怪异模式下，我们写的标签名是小写，它获取的就是小写，反之为大写）<br>nodeValue：null</p>
+</blockquote>
+<p>[currentElement].tagName：获取当前元素的标签名（获取的标签名一般都是大写）</p>
+<hr>
+<p><code>文本节点</code></p>
+<blockquote>
+<p>nodeType：3<br>nodeName：#text<br>nodeValue：文本内容</p>
 </blockquote>
 <hr>
-<p><code>getElementsByName</code></p>
+<p><code>注释节点</code></p>
 <blockquote>
-<p>通过元素的 name 属性来获取一组元素（类数组：节点集合 nodeList）<br>它的上下文只能是 document</p>
-<p>1.IE 浏览器只能识别表单元素的 name 属性值，所以这个方法一般都是用来操作表单元素的</p>
+<p>nodeType：8<br>nodeName：#comment<br>nodeValue：注释内容</p>
 </blockquote>
 <hr>
-<p><code>getElementsByTagName</code></p>
+<p><code>文档节点</code></p>
 <blockquote>
-<p>上下文可以是自己来指定的<br>获取到的结果是一个元素集合（类数组集合）</p>
-<p>1.获取的结果是<code>集合</code>，哪怕集合中只有一项，我们想要操作的是这一项（元素对象），需要先从集合中获取出来，然后再操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;body&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	&lt;div&gt;&lt;/div&gt;</div><div class="line">	...</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;script&gt;</div><div class="line">	var bodyBox = document.getElementsByTagName(&apos;body&apos;)[0];</div><div class="line">	var divList = bodyBox.getElementsByTagName(&apos;div&apos;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>2.在指定的上下文中获取所有子子孙孙元素中标签名叫做这个的（后代筛选）</p>
+<p>nodeType：9<br>nodeName：#document<br>nodeValue：null</p>
 </blockquote>
 <hr>
-<p><code>getElementsByClassName</code></p>
 <blockquote>
-<p>上下文可以随意指定<br>获取的结果是一个元素集合（类数组集合）</p>
-<p>1.真实项目中经常会通过样式类名来获取元素，getElementsByClassName 这个方法在 IE6-8 浏览器中是不兼容的，想用的话，需要自己处理兼容</p>
+<p>节点是用来描述页面中每一部分之间关系的</p>
 </blockquote>
-<p><code>document.documentElement / document.body</code></p>
+<h3 id="DOM-节点关系属性"><a href="#DOM-节点关系属性" class="headerlink" title="DOM 节点关系属性"></a>DOM 节点关系属性</h3><p><code>childNodes</code></p>
 <blockquote>
-<p>获取 html 或者 body(一个元素对象)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取当前浏览器窗口可视区域的宽度（当前页面一屏幕的宽度）</span></div><div class="line"><span class="built_in">document</span>.documentElement.clientWidth / <span class="built_in">document</span>.body.clientWidth</div><div class="line"></div><div class="line"><span class="comment">// clientHeight 是获取高度</span></div></pre></td></tr></table></figure></p>
+<p>获取当前元素的所有的子节点（子节点集合：类数组）<br>注意：不仅仅是元素子节点，文本、注释等都会包含在内;<br>子节点说明只是在儿子辈分中查找;</p>
 </blockquote>
 <hr>
-<p><code>querySelector / querySelectorAll</code></p>
+<p><code>children</code></p>
 <blockquote>
-<p>在 IE6-8 下不兼容，而且也没什么特别好的办法来处理它的兼容。所以这两个方法多用于移动端开发使用</p>
-<p>querySelector:  获取一个元素对象</p>
-<p>querySelectorAll:  获取一个元素集合</p>
-<p>只要是 css 支持的选择器，这里大部分都支持</p>
+<p>获取所有的元素子节点（元素集合）<br>在 IE6-8 下获取的结果和标准浏览器中有区别（IE6-8 中会把注释节点当做元素节点获取到）</p>
+</blockquote>
+<hr>
+<p><code>parentNode</code></p>
+<blockquote>
+<p>获取当前元素的父节点（元素对象）</p>
+</blockquote>
+<hr>
+<p><code>previousSibling / nextSibling</code></p>
+<blockquote>
+<p>previousSibling：获取当前节点的上一个哥哥节点，不一定是元素节点，也可能是文本或注释<br>nextSibling：获取当前节点的下一个弟弟节点，获取的节点情况同上</p>
+</blockquote>
+<hr>
+<p><code>previousElementSibling / nextElementSibling</code></p>
+<blockquote>
+<p>previousElementSibling：获取当前节点的上一个哥哥元素节点<br>nextElementSibling：获取当前节点的下一个弟弟元素节点<br>IE6-8 下不兼容</p>
+</blockquote>
+<hr>
+<p><code>firstChild / lastChild</code></p>
+<blockquote>
+<p>firstChild：当前元素所有子节点中的第一个（不一定是元素节点，也可能是文本或注释）<br>lastChild：当前元素所有子节点中的最后一个（不一定是元素节点，也可能是文本或注释）</p>
+</blockquote>
+<hr>
+<p><code>firstElementChild / lastElementChild</code></p>
+<blockquote>
+<p>IE 6-8 下不兼容<br>firstElementChild：当前元素下的所有元素子节点的第一个节点<br>lastElementChild：当前元素下的所有元素子节点的最后一个节点</p>
+</blockquote>
+<h3 id="DOM-的增删改操作"><a href="#DOM-的增删改操作" class="headerlink" title="DOM 的增删改操作"></a>DOM 的增删改操作</h3><blockquote>
+<p>真实项目中，偶尔会在 js 中动态创建一些 html 标签，然后把其增加到页面中</p>
+</blockquote>
+<p><code>document.createElement</code></p>
+<blockquote>
+<p>在 js 中动态创建一个 html 标签</p>
+</blockquote>
+<hr>
+<p><code>appendChild</code></p>
+<blockquote>
+<p>容器.appendChild(新元素)<br>把当前创建的新元素添加到容器的末尾</p>
+</blockquote>
+<hr>
+<p><code>insertBefore</code></p>
+<blockquote>
+<p>容器.insertBefore(新元素,老元素)<br>在当前容器中，把创建的新元素添加到老元素之前</p>
+</blockquote>
+<hr>
+<p><code>removeChild</code></p>
+<blockquote>
+<p>容器.removeChild(元素)<br>在当前容器当中，把某一个元素移除掉</p>
+</blockquote>
+<hr>
+<p><code>replaceChild</code></p>
+<blockquote>
+<p>容器.replacechild(新元素，老元素)<br>在当前容器中，用新元素替换老元素</p>
+</blockquote>
+<hr>
+<p><code>cloneNode</code></p>
+<blockquote>
+<p>元素.cloneNode(false / true)<br>把原有元素克隆一份一模一样的<br>false：只克隆当前元素本身<br>true：把当前元素以及元素的所有后代都进行克隆（深度克隆）</p>
 </blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月19日 11:29</p>
-        <p>原始链接： <a class="post-url" href="/2018/07/19/DOM-获取元素的方法/" title="DOM-获取元素的方法">http://lenmontree.com/2018/07/19/DOM-获取元素的方法/</a></p>
+        <p>最后更新： 2018年07月19日 15:59</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/19/DOM-节点/" title="DOM-获取元素的方法">http://lenmontree.com/2018/07/19/DOM-节点/</a></p>
         <footer>
             <a href="http://lenmontree.com">
                 <img src="/images/logo.png" alt="jasmine">
@@ -221,7 +268,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/19/DOM-节点/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -231,22 +278,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/19/DOM-节点/&title=《DOM-获取元素的方法》 — Lenmontree' Blog&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/19/DOM-节点/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DOM-获取元素的方法》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/&via=http://lenmontree.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《DOM-获取元素的方法》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/19/DOM-节点/&via=http://lenmontree.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/19/DOM-节点/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -256,7 +303,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/19/DOM-获取元素的方法/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/19/DOM-节点/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -281,26 +328,16 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取-DOM-元素的方法"><span class="post-toc-text">获取 DOM 元素的方法</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM-的节点"><span class="post-toc-text">DOM 的节点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM-节点关系属性"><span class="post-toc-text">DOM 节点关系属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM-的增删改操作"><span class="post-toc-text">DOM 的增删改操作</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/07/19/DOM-节点/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          DOM-获取元素的方法
-        
-      </span>
-    </a>
   
-  
-    <a href="/2018/07/18/JS数据类型转换汇总/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">JS 数据类型转换汇总</span>
+    <a href="/2018/07/19/DOM-获取元素的方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">DOM-获取元素的方法</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
