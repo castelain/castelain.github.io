@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS中的Math常用方法 | Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="数学函数：它是对象数据类型的12&amp;gt; typeof Math&amp;lt; &quot;object&quot; Math中提供了很多数学中的量以及操作数字的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;gt; console.dir(Math);&amp;lt; E:2.718281828459">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中的Math常用方法">
+<meta property="og:url" content="http://lenmontree.com/2018/07/20/JS中的Math常用方法/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="数学函数：它是对象数据类型的12&amp;gt; typeof Math&amp;lt; &quot;object&quot; Math中提供了很多数学中的量以及操作数字的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;gt; console.dir(Math);&amp;lt; E:2.718281828459">
+<meta property="og:updated_time" content="2018-07-20T07:38:30.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS中的Math常用方法">
+<meta name="twitter:description" content="数学函数：它是对象数据类型的12&amp;gt; typeof Math&amp;lt; &quot;object&quot; Math中提供了很多数学中的量以及操作数字的方法1234567891011121314151617181920212223242526272829303132333435363738394041424344454647&amp;gt; console.dir(Math);&amp;lt; E:2.718281828459">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS中的Math常用方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JS中的Math常用方法
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端知识点/">前端知识点</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-20
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <blockquote>
+<p>数学函数：它是对象数据类型的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="keyword">typeof</span> <span class="built_in">Math</span></div><div class="line">&lt; <span class="string">"object"</span></div></pre></td></tr></table></figure></p>
+<p>Math中提供了很多数学中的量以及操作数字的方法<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="built_in">console</span>.dir(<span class="built_in">Math</span>);</div><div class="line">&lt; E:<span class="number">2.718281828459045</span></div><div class="line">LN2:<span class="number">0.6931471805599453</span></div><div class="line">LN10:<span class="number">2.302585092994046</span></div><div class="line">LOG2E:<span class="number">1.4426950408889634</span></div><div class="line">LOG10E:<span class="number">0.4342944819032518</span></div><div class="line">PI:<span class="number">3.141592653589793</span></div><div class="line">SQRT1_2:<span class="number">0.7071067811865476</span></div><div class="line">SQRT2:<span class="number">1.4142135623730951</span></div><div class="line"></div><div class="line">abs:ƒ abs()</div><div class="line">acos:ƒ acos()</div><div class="line">acosh:ƒ acosh()</div><div class="line">asin:ƒ asin()</div><div class="line">asinh:ƒ asinh()</div><div class="line">atan:ƒ atan()</div><div class="line">atan2:ƒ atan2()</div><div class="line">atanh:ƒ atanh()</div><div class="line">cbrt:ƒ cbrt()</div><div class="line">ceil:ƒ ceil()</div><div class="line">clz32:ƒ clz32()</div><div class="line">cos:ƒ cos()</div><div class="line">cosh:ƒ cosh()</div><div class="line">exp:ƒ exp()</div><div class="line">expm1:ƒ expm1()</div><div class="line">floor:ƒ floor()</div><div class="line">fround:ƒ fround()</div><div class="line">hypot:ƒ hypot()</div><div class="line">imul:ƒ imul()</div><div class="line">log:ƒ log()</div><div class="line">log1p:ƒ log1p()</div><div class="line">log2:ƒ log2()</div><div class="line">log10:ƒ log10()</div><div class="line">max:ƒ max()</div><div class="line">min:ƒ min()</div><div class="line">pow:ƒ pow()</div><div class="line">random:ƒ random()</div><div class="line">round:ƒ round()</div><div class="line">sign:ƒ sign()</div><div class="line">sin:ƒ sin()</div><div class="line">sinh:ƒ sinh()</div><div class="line">sqrt:ƒ sqrt()</div><div class="line">tan:ƒ tan()</div><div class="line">tanh:ƒ tanh()</div><div class="line">trunc:ƒ trunc()</div><div class="line"><span class="built_in">Symbol</span>(<span class="built_in">Symbol</span>.toStringTag):<span class="string">"Math"</span></div><div class="line">__proto__:<span class="built_in">Object</span></div></pre></td></tr></table></figure></p>
+<p>其中几个常用的操作数字的方法讲解如下：</p>
+</blockquote>
+<p><code>abs</code></p>
+<blockquote>
+<p>Math.abs()： 求某一数值的绝对值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.abs(<span class="number">12</span>)  -&gt;  <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-12</span>) -&gt;  <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.abs(<span class="number">-12.9</span>) -&gt; <span class="number">12.9</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>round</code></p>
+<blockquote>
+<p>Math.round()：四舍五入<br>注意：该方法与数学上的四舍五入的概念有一点点不同。<br><code>1.在正数中，小数点部分的数字 &gt;= .5，则表示入，否则是舍</code>（与数学中的概念一致）<br><code>2.在负数中，小数点部分的数字 &gt; .5，才表示入，否则是舍（特殊之处）</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.round(<span class="number">12.3</span>)  -&gt;  <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">12.5</span>)  -&gt;  <span class="number">13</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">12.500001</span>)  -&gt; <span class="number">13</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">12.9</span>)  -&gt;  <span class="number">13</span></div><div class="line"></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-12.3</span>) -&gt;  <span class="number">-12</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-12.5</span>) -&gt;  <span class="number">-12</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-12.500001</span>)  -&gt; <span class="number">-13</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">-12.9</span>) -&gt;  <span class="number">-13</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>random</code></p>
+<blockquote>
+<p>Math.random()：返回一个[0,1)之间的随机小数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.random()  -&gt; <span class="number">0.6956162637507968</span></div><div class="line"></div><div class="line"><span class="comment">// 获取一个[0,10]之间的随机整数</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * <span class="number">10</span>)</div><div class="line"></div><div class="line"><span class="comment">// 获取一个[3,15]之间的随机整数</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * <span class="number">12</span> + <span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment">// 总结规律：</span></div><div class="line"><span class="comment">// 获取一个[m,n]之间的的随机整数</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="built_in">Math</span>.random() * (n - m) + m)</div></pre></td></tr></table></figure>
+</blockquote>
+<hr>
+<p><code>max  /  min</code></p>
+<blockquote>
+<p>Math.max()：返回一组数中的最大值<br>Math.min()：返回一组数中的最小值<br>注意：传递的参数只能是一组数字，而不能是数组，否则，返回的结果为 NaN<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.max(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)   -&gt;  <span class="number">6</span></div><div class="line"><span class="built_in">Math</span>.min(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>)   -&gt;  <span class="number">1</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</div><div class="line">&gt; <span class="built_in">Math</span>.max(arr);</div><div class="line">&lt; <span class="literal">NaN</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>ceil  /  floor</code></p>
+<blockquote>
+<p>Math. ceil() ：表示向上取整<br>Math.floor() ：表示向下取整<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">12</span>)    -&gt; <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">12.1</span>)  -&gt; <span class="number">13</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">12.9</span>)  -&gt; <span class="number">13</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-12.1</span>) -&gt; <span class="number">-12</span></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">-12.9</span>) -&gt; <span class="number">-12</span></div><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">12</span>)   -&gt; <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">12.1</span>) -&gt; <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">12.9</span>) -&gt; <span class="number">12</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-12.1</span>) -&gt; <span class="number">-13</span></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">-12.9</span>) -&gt; <span class="number">-13</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>pow  /  sqrt</code></p>
+<blockquote>
+<p>Math.pow(x,y)：返回 x 的 y 次幂的值<br>Math.sqrt(x)：返回 x 的开方的值<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.pow(<span class="number">10</span>,<span class="number">2</span>)  -&gt; <span class="number">100</span></div><div class="line"><span class="built_in">Math</span>.sqrt(<span class="number">100</span>)  -&gt; <span class="number">10</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<p><code>PI</code></p>
+<blockquote>
+<p>一个常量，表示数学中的圆周率的值（π）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; <span class="built_in">Math</span>.PI</div><div class="line">&lt; <span class="number">3.141592653589793</span></div></pre></td></tr></table></figure></p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月20日 15:38</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/20/JS中的Math常用方法/" title="JS中的Math常用方法">http://lenmontree.com/2018/07/20/JS中的Math常用方法/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/20/JS中的Math常用方法/&title=《JS中的Math常用方法》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/20/JS中的Math常用方法/&title=《JS中的Math常用方法》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/20/JS中的Math常用方法/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS中的Math常用方法》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/20/JS中的Math常用方法/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/20/JS中的Math常用方法/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/20/JS中的Math常用方法/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/19/DOM-节点/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">DOM-节点</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
