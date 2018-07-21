@@ -8,20 +8,20 @@
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。1var str = &apos;Long time no see!&apos;; 字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome888812345var str = &apos;Nice">
+  <meta name="description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。  1var str = &apos;Long time no see!&apos;;  字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome8888  12345var str =">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS中的字符串及常用方法">
 <meta property="og:url" content="http://lenmontree.com/2018/07/20/JS中的字符串及常用方法/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。1var str = &apos;Long time no see!&apos;; 字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome888812345var str = &apos;Nice">
+<meta property="og:description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。  1var str = &apos;Long time no see!&apos;;  字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome8888  12345var str =">
 <meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/24274791.jpg">
 <meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/64625486.jpg">
 <meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/3872980.jpg">
-<meta property="og:updated_time" content="2018-07-21T03:57:48.515Z">
+<meta property="og:updated_time" content="2018-07-21T04:07:39.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中的字符串及常用方法">
-<meta name="twitter:description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。1var str = &apos;Long time no see!&apos;; 字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome888812345var str = &apos;Nice">
+<meta name="twitter:description" content="在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。  1var str = &apos;Long time no see!&apos;;  字符串具有一些有意思的特性：1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 undefined )2.字符串中有一个叫做 length 的属性，存储的是字符串的长度toome8888  12345var str =">
 <meta name="twitter:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/24274791.jpg">
   
   
@@ -147,8 +147,14 @@
       
             
             <blockquote>
-<p>在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Long time no see!'</span>;</div></pre></td></tr></table></figure></p>
-<p>字符串具有一些有意思的特性：<br>1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 <code>undefined</code> )<br>2.字符串中有一个叫做 length 的属性，存储的是字符串的长度<br>toome8888<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Nice to meet you!'</span></div><div class="line"><span class="comment">// 获取第一个字符</span></div><div class="line"><span class="keyword">var</span> firstChar = str[<span class="number">0</span>];</div><div class="line"><span class="comment">//获取最后一个字符</span></div><div class="line"><span class="keyword">var</span> lastChar = str[ str.length - <span class="number">1</span> ]</div></pre></td></tr></table></figure></p>
+<p>在 JS中用单双引号包裹起来的都叫字符串，它是由 0 到 多个字符组成的。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Long time no see!'</span>;</div></pre></td></tr></table></figure>
+<blockquote>
+<p>字符串具有一些有意思的特性：<br>1.它是以数字作为索引的，从零开始(以超出索引范围的数字下标去访问字符，得到的结果是 <code>undefined</code> )<br>2.字符串中有一个叫做 length 的属性，存储的是字符串的长度<br>toome8888</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Nice to meet you!'</span></div><div class="line"><span class="comment">// 获取第一个字符</span></div><div class="line"><span class="keyword">var</span> firstChar = str[<span class="number">0</span>];</div><div class="line"><span class="comment">//获取最后一个字符</span></div><div class="line"><span class="keyword">var</span> lastChar = str[ str.length - <span class="number">1</span> ]</div></pre></td></tr></table></figure>
+<blockquote>
 <p>真实项目中，操作字符串的情况很常见。因此，需要掌握一些常用的字符串操作方法<br>console.dir(String.prototype)</p>
 </blockquote>
 <p><img src="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/24274791.jpg" alt=""><br><img src="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/64625486.jpg" alt=""></p>
@@ -161,34 +167,44 @@
 <hr>
 <p><code>substr  /  substring  /  slice</code><strong>非常非常非常重要</strong></p>
 <blockquote>
-<p>这些方法都是用于实现字符串截取的<br>[str].substr(n,m)：从索引 n 开始，<code>截取 m 个字符</code><br>[str].substring(n,m)：从索引 n 开始，<code>截取到索引为 m 处的字符（不包含索引为 m 处的字符）</code>，把找到的字符截取<br>[str].slice()：和 substring 语法一样，区别在于 slice 方法支持用负数作为索引<br>当索引是负数的时候，浏览器在处理的时候，是用字符串的总长度加上索引，然后按照正数索引的情况进行处理<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.substr(<span class="number">1</span>,<span class="number">3</span>); -&gt; <span class="string">"ell"</span></div><div class="line">str.substring(<span class="number">1</span>,<span class="number">3</span>);  -&gt; <span class="string">"el"</span></div><div class="line">str.slice(<span class="number">-7</span>,<span class="number">-3</span>);   -&gt; <span class="string">"worl"</span> 等价于 -&gt; str.slice(str.length <span class="number">-7</span>, str.length - <span class="number">3</span>)</div></pre></td></tr></table></figure></p>
+<p>这些方法都是用于实现字符串截取的<br>[str].substr(n,m)：从索引 n 开始，<code>截取 m 个字符</code><br>[str].substring(n,m)：从索引 n 开始，<code>截取到索引为 m 处的字符（不包含索引为 m 处的字符）</code>，把找到的字符截取<br>[str].slice()：和 substring 语法一样，区别在于 slice 方法支持用负数作为索引<br>当索引是负数的时候，浏览器在处理的时候，是用字符串的总长度加上索引，然后按照正数索引的情况进行处理</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.substr(<span class="number">1</span>,<span class="number">3</span>); -&gt; <span class="string">"ell"</span></div><div class="line">str.substring(<span class="number">1</span>,<span class="number">3</span>);  -&gt; <span class="string">"el"</span></div><div class="line">str.slice(<span class="number">-7</span>,<span class="number">-3</span>);   -&gt; <span class="string">"worl"</span> 等价于 -&gt; str.slice(str.length <span class="number">-7</span>, str.length - <span class="number">3</span>)</div></pre></td></tr></table></figure>
+<blockquote>
 <p>一些细节知识点：</p>
 <ol>
-<li>对应[str].substr()/[str].substring()/[str].slice()，如果只传递了 n ，表示从索引 n 开始，一直截取到末尾<br>2.如果传递的索引超出最大长度，也是返回能截取到的部分即可<br>3.如果一个参数都不传递，相当于把整个字符串都截取，返回的是整个字符串（字符串的克隆）<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.substr(<span class="number">2</span>);  -&gt; <span class="string">"llo world !"</span></div><div class="line">str.substr(<span class="number">2</span>,<span class="number">20</span>); -&gt; <span class="string">"llo world !"</span></div><div class="line">str.substr();   -&gt; <span class="string">"Hello world !"</span></div></pre></td></tr></table></figure>
-</li>
+<li>对应[str].substr()/[str].substring()/[str].slice()，如果只传递了 n ，表示从索引 n 开始，一直截取到末尾<br>2.如果传递的索引超出最大长度，也是返回能截取到的部分即可<br>3.如果一个参数都不传递，相当于把整个字符串都截取，返回的是整个字符串（字符串的克隆）</li>
 </ol>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.substr(<span class="number">2</span>);  -&gt; <span class="string">"llo world !"</span></div><div class="line">str.substr(<span class="number">2</span>,<span class="number">20</span>); -&gt; <span class="string">"llo world !"</span></div><div class="line">str.substr();   -&gt; <span class="string">"Hello world !"</span></div></pre></td></tr></table></figure>
 <hr>
 <p><code>toUpperCase  /  toLowerCase</code></p>
 <blockquote>
-<p>[str].toUpperCase：把字符串中的所有字符都大写<br>[str].toLowerCase：把字符串中的所有字符都小写<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>; </div><div class="line">str.toUpperCase();  -&gt; <span class="string">"HELLO WORLD !"</span></div><div class="line">str.toLowerCase();  -&gt;  <span class="string">"hello world !"</span></div></pre></td></tr></table></figure></p>
+<p>[str].toUpperCase：把字符串中的所有字符都大写<br>[str].toLowerCase：把字符串中的所有字符都小写</p>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>; </div><div class="line">str.toUpperCase();  -&gt; <span class="string">"HELLO WORLD !"</span></div><div class="line">str.toLowerCase();  -&gt;  <span class="string">"hello world !"</span></div></pre></td></tr></table></figure>
 <hr>
 <p><code>indexOf  /  lastIndexOf</code></p>
 <blockquote>
-<p>[str].indexOf()：检测当前字符在字符串中首次出现的位置的索引<br>[str].lastIndexOf()：检测当前字符在字符串中最后次出现的位置的索引<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.indexOf(<span class="string">'l'</span>);  -&gt; <span class="number">2</span></div><div class="line">str.lastIndexOf(<span class="string">'l'</span>);  -&gt; <span class="number">9</span></div></pre></td></tr></table></figure></p>
-<p>细节知识点：<br>如果 [str].indexOf(char) 等于 -1，就说明当前字符在该字符串中不存在（根据这个规律，可以验证当前字符串中是否包含某一字符）<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(str.indexOf(<span class="string">'?'</span>) === <span class="number">-1</span>)&#123;</div><div class="line">	<span class="comment">//说明没有出现过‘？’</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	<span class="comment">// 说明出现过</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>[str].indexOf()：检测当前字符在字符串中首次出现的位置的索引<br>[str].lastIndexOf()：检测当前字符在字符串中最后次出现的位置的索引</p>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'Hello world !'</span>;</div><div class="line">str.indexOf(<span class="string">'l'</span>);  -&gt; <span class="number">2</span></div><div class="line">str.lastIndexOf(<span class="string">'l'</span>);  -&gt; <span class="number">9</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>细节知识点：<br>如果 [str].indexOf(char) 等于 -1，就说明当前字符在该字符串中不存在（根据这个规律，可以验证当前字符串中是否包含某一字符）</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(str.indexOf(<span class="string">'?'</span>) === <span class="number">-1</span>)&#123;</div><div class="line">	<span class="comment">//说明没有出现过‘？’</span></div><div class="line">&#125;<span class="keyword">else</span>&#123;</div><div class="line">	<span class="comment">// 说明出现过</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <hr>
 <p><code>split</code></p>
 <blockquote>
-<p>[str].split()：按照某一字符，把字符串拆分成数组中的某一项，和数组中的 join() 方法是对应的（[arr].join()：是以指定字符将数组拼接成一个字符串）<br>拆分得到的数组的每一项都是字符串<br>支持正则<br>[str].split(‘ ‘)：以空格进行拆分<br>[str].split()：将整个字符串拆分为一个个的字符组成的数组<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hobby = <span class="string">'music|movie|eat'</span></div><div class="line"><span class="keyword">var</span> hobbyList = hobby.split(<span class="string">'|'</span>);  -&gt; [<span class="string">"music"</span>, <span class="string">"movie"</span>, <span class="string">"eat"</span>]</div><div class="line">hobby.split(<span class="string">'@'</span>);  -&gt; [<span class="string">"music|movie|eat"</span>]</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"name=jasmine&amp;age=22"</span>;</div><div class="line">str.split(<span class="regexp">/=|&amp;/g</span>);  -&gt;  [<span class="string">"name"</span>, <span class="string">"jasmine"</span>, <span class="string">"age"</span>, <span class="string">"22"</span>]</div></pre></td></tr></table></figure></p>
+<p>[str].split()：按照某一字符，把字符串拆分成数组中的某一项，和数组中的 join() 方法是对应的（[arr].join()：是以指定字符将数组拼接成一个字符串）<br>拆分得到的数组的每一项都是字符串<br>支持正则<br>[str].split(‘ ‘)：以空格进行拆分<br>[str].split()：将整个字符串拆分为一个个的字符组成的数组</p>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> hobby = <span class="string">'music|movie|eat'</span></div><div class="line"><span class="keyword">var</span> hobbyList = hobby.split(<span class="string">'|'</span>);  -&gt; [<span class="string">"music"</span>, <span class="string">"movie"</span>, <span class="string">"eat"</span>]</div><div class="line">hobby.split(<span class="string">'@'</span>);  -&gt; [<span class="string">"music|movie|eat"</span>]</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"name=jasmine&amp;age=22"</span>;</div><div class="line">str.split(<span class="regexp">/=|&amp;/g</span>);  -&gt;  [<span class="string">"name"</span>, <span class="string">"jasmine"</span>, <span class="string">"age"</span>, <span class="string">"22"</span>]</div></pre></td></tr></table></figure>
 <hr>
 <p><code>replace</code></p>
 <blockquote>
-<p>[str].replace(old,new)：实现字符或字符串的替换（以新换旧）<br>执行一次 replace，只能替换一次。在不使用正则的情况下，有的时候需要执行很多次 replace方法。因此， replace 方法经常要和正则一起配合使用<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'lenmontree has a name: lenmontree'</span>;</div><div class="line">str.replace(<span class="string">'lenmontree'</span>,<span class="string">'jasmine'</span>);  -&gt; <span class="string">'jasmine has a name: lenmontree'</span></div><div class="line"></div><div class="line"><span class="comment">//正则解决多次匹配</span></div><div class="line">str.replace(<span class="regexp">/lenmontree/g</span>,<span class="string">'jasmine'</span>);</div><div class="line">-&gt; <span class="string">"jasmine has a name: jasmine"</span></div></pre></td></tr></table></figure></p>
+<p>[str].replace(old,new)：实现字符或字符串的替换（以新换旧）<br>执行一次 replace，只能替换一次。在不使用正则的情况下，有的时候需要执行很多次 replace方法。因此， replace 方法经常要和正则一起配合使用</p>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> str = <span class="string">'lenmontree has a name: lenmontree'</span>;</div><div class="line">str.replace(<span class="string">'lenmontree'</span>,<span class="string">'jasmine'</span>);  -&gt; <span class="string">'jasmine has a name: lenmontree'</span></div><div class="line"></div><div class="line"><span class="comment">//正则解决多次匹配</span></div><div class="line">str.replace(<span class="regexp">/lenmontree/g</span>,<span class="string">'jasmine'</span>);</div><div class="line">-&gt; <span class="string">"jasmine has a name: jasmine"</span></div></pre></td></tr></table></figure>
 <hr>
 <p><code>trim  /  trimLeft  /  trimRight</code></p>
 <blockquote>
@@ -197,7 +213,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月21日 11:57</p>
+        <p>最后更新： 2018年07月21日 12:07</p>
         <p>原始链接： <a class="post-url" href="/2018/07/20/JS中的字符串及常用方法/" title="JS中的字符串及常用方法">http://lenmontree.com/2018/07/20/JS中的字符串及常用方法/</a></p>
         <footer>
             <a href="http://lenmontree.com">
