@@ -8,18 +8,18 @@
   
     <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
   
-  <meta name="description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+  <meta name="description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  12345678910typeof []  -&amp;gt; &quot;ob">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS中的数组">
 <meta property="og:url" content="http://lenmontree.com/2018/07/21/JS中的数组/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
-<meta property="og:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+<meta property="og:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  12345678910typeof []  -&amp;gt; &quot;ob">
 <meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/83951569.jpg">
-<meta property="og:updated_time" content="2018-07-21T06:03:35.453Z">
+<meta property="og:updated_time" content="2018-07-21T06:26:27.164Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中的数组">
-<meta name="twitter:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+<meta name="twitter:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  12345678910typeof []  -&amp;gt; &quot;ob">
 <meta name="twitter:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/83951569.jpg">
   
   
@@ -148,7 +148,7 @@
 <p>数组是对象数据类型的</p>
 <p>数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length<br>类数组：类似于数组，但不是数组的数据<br>1.通过 getElementsByTagName() 获取的元素集合是类数组<br>2.函数中的实参集合 arguments 也是类数组<br>…</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> []  -&gt; <span class="string">"object"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>];</div><div class="line"><span class="built_in">console</span>.log(arr);  -&gt; </div><div class="line">(<span class="number">3</span>) [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>]<span class="number">0</span>: <span class="number">121</span>: <span class="number">132</span>: <span class="number">14</span></div><div class="line">length: <span class="number">3</span></div><div class="line">__proto__: <span class="built_in">Array</span>(<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> []  -&gt; <span class="string">"object"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>];</div><div class="line"><span class="built_in">console</span>.log(arr);  -&gt; </div><div class="line">(<span class="number">3</span>) [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>]</div><div class="line">    <span class="number">0</span>: <span class="number">12</span></div><div class="line">    <span class="number">1</span>: <span class="number">13</span></div><div class="line">    <span class="number">2</span>: <span class="number">14</span></div><div class="line">length: <span class="number">3</span></div><div class="line">__proto__: <span class="built_in">Array</span>(<span class="number">0</span>)</div></pre></td></tr></table></figure>
 <h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><blockquote>
 <p>for 循环：只能遍历到数组私有的一些属性<br>for in 循环：可以把一些自定义的公共属性也遍历到<br>因此，真实情况下，常用的是 for 循环遍历数组</p>
 </blockquote>
@@ -227,7 +227,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月21日 14:03</p>
+        <p>最后更新： 2018年07月21日 14:26</p>
         <p>原始链接： <a class="post-url" href="/2018/07/21/JS中的数组/" title="JS中的数组">http://lenmontree.com/2018/07/21/JS中的数组/</a></p>
         <footer>
             <a href="http://lenmontree.com">
