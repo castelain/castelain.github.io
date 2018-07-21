@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS中的数组 | Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中的数组">
+<meta property="og:url" content="http://lenmontree.com/2018/07/21/JS中的数组/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+<meta property="og:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/83951569.jpg">
+<meta property="og:updated_time" content="2018-07-21T06:03:35.453Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS中的数组">
+<meta name="twitter:description" content="数组的基础结构 数组是对象数据类型的 数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length类数组：类似于数组，但不是数组的数据1.通过 getElementsByTagName() 获取的元素集合是类数组2.函数中的实参集合 arguments 也是类数组…  1234567typeof []  -&amp;gt; &quot;object">
+<meta name="twitter:image" content="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/83951569.jpg">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS中的数组" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JS中的数组
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端知识点/">前端知识点</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-21
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="数组的基础结构"><a href="#数组的基础结构" class="headerlink" title="数组的基础结构"></a>数组的基础结构</h3><blockquote>
+<p>数组是对象数据类型的</p>
+<p>数组也有属性名，不过属性名为数字。把数字属性名称为索引：数组把数字作为索引，索引从零开始，有一个表示数组长度的属性：length<br>类数组：类似于数组，但不是数组的数据<br>1.通过 getElementsByTagName() 获取的元素集合是类数组<br>2.函数中的实参集合 arguments 也是类数组<br>…</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> []  -&gt; <span class="string">"object"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>];</div><div class="line"><span class="built_in">console</span>.log(arr);  -&gt; </div><div class="line">(<span class="number">3</span>) [<span class="number">12</span>, <span class="number">13</span>, <span class="number">14</span>]<span class="number">0</span>: <span class="number">121</span>: <span class="number">132</span>: <span class="number">14</span></div><div class="line">length: <span class="number">3</span></div><div class="line">__proto__: <span class="built_in">Array</span>(<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<h3 id="遍历数组"><a href="#遍历数组" class="headerlink" title="遍历数组"></a>遍历数组</h3><blockquote>
+<p>for 循环：只能遍历到数组私有的一些属性<br>for in 循环：可以把一些自定义的公共属性也遍历到<br>因此，真实情况下，常用的是 for 循环遍历数组</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++)&#123;</div><div class="line">    <span class="built_in">console</span>.log(arr[i]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> key <span class="keyword">in</span> arr)&#123;</div><div class="line">	<span class="comment">//key:属性名（数组中的属性名是索引）</span></div><div class="line">    <span class="built_in">console</span>.log(arr[key]);</div><div class="line">&#125;</div><div class="line"></div><div class="line">-&gt; <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></div><div class="line"></div><div class="line"><span class="comment">// 自定义了一个公共属性 a </span></div><div class="line"><span class="built_in">Array</span>.prototype.a = <span class="number">100</span>;</div><div class="line"></div><div class="line"><span class="comment">// for 循环</span></div><div class="line"><span class="comment">// -&gt; 1 2 3 4</span></div><div class="line"><span class="comment">// for in 循环</span></div><div class="line"><span class="comment">// -&gt; 1 2 3 4 100</span></div></pre></td></tr></table></figure>
+<h3 id="数组中的常用方法"><a href="#数组中的常用方法" class="headerlink" title="数组中的常用方法"></a>数组中的常用方法</h3><blockquote>
+<p>数组中有很多的方法</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.dir(<span class="built_in">Array</span>.prototype);</div></pre></td></tr></table></figure>
+<p><img src="http://ozkbl6lk3.bkt.clouddn.com/18-7-21/83951569.jpg" alt=""></p>
+<p><code>数组中的方法的记忆点</code><br>1.方法的意义和作用<br>2.方法的形参<br>3.方法的返回值<br>4.通过此方法后，原来的数组是否发生了改变</p>
+<p><strong><code>实现数组元素的增删改</code></strong></p>
+<p><strong>增加</strong><br><code>push</code></p>
+<blockquote>
+<p>作用：向数组的末尾追加内容<br>参数：一到多个，任何数据类型都可以。想要给数组末尾追加什么，直接传递到 push 方法中就可以了，传递的多个参数用逗号隔开<br>返回值：是新增数组的长度<br>原有数组改变了</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="comment">// 增加</span></div><div class="line"><span class="comment">// 1. push: 向数组末尾追加新内容</span></div><div class="line">arr.push(<span class="number">100</span>);  -&gt; <span class="number">5</span></div><div class="line">arr;            -&gt; (<span class="number">5</span>) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">100</span>]</div></pre></td></tr></table></figure>
+<p><code>unshift</code></p>
+<blockquote>
+<p>作用：向数组开头追加新元素<br>参数：一到多个需要追加的元素，可以是任何数据类型<br>返回值：新增后数组的长度<br>原来数组改变了</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line">arr.unshift(<span class="number">100</span>);  -&gt; <span class="number">5</span></div><div class="line">arr;               -&gt; (<span class="number">5</span>) [<span class="number">100</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</div></pre></td></tr></table></figure>
+<p><code>array[length] = xxx</code></p>
+<blockquote>
+<p>把数组当做一个普通的对象，使用对象的键值对的操作，给其设置新的属性（索引）<br>只能增加一个元素，且只能增加在数组末尾</p>
+</blockquote>
+<hr>
+<p><strong>删除</strong><br><code>pop</code></p>
+<blockquote>
+<p>作用：删除数组最后一项<br>参数：无<br>返回值：被删除的那一项<br>原来数组改变了</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line">arr.pop();  -&gt; <span class="number">4</span></div><div class="line">arr;          -&gt; [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div></pre></td></tr></table></figure>
+<p><code>shift</code></p>
+<blockquote>
+<p>作用：删除数组第一项<br>参数：无<br>返回值：被删除的那一项<br>原有数组改变了<br>注意：使用 shift 方法删除第一项后，后面每一项的索引都要向前进一位（导致后面的项的所有都发生了改变）</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line">arr.shift();  -&gt; <span class="number">1</span></div><div class="line">arr;          -&gt; [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>]</div></pre></td></tr></table></figure>
+<p><code>delete array[索引]</code></p>
+<blockquote>
+<p>作用：删除指定索引位置对应得元素<br>把数组当做普通对象操作<br>当前项被删除后，原有数组其他项的索引不变，当前索引的 length 也不会改变<br><code>不建议使用</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line"><span class="keyword">delete</span> arr[<span class="number">1</span>]; -&gt; <span class="literal">true</span></div><div class="line">arr;           -&gt; </div><div class="line">(<span class="number">4</span>) [<span class="number">1</span>, empty, <span class="number">3</span>, <span class="number">4</span>]</div><div class="line"><span class="number">0</span>:<span class="number">1</span></div><div class="line"><span class="number">2</span>:<span class="number">3</span></div><div class="line"><span class="number">3</span>:<span class="number">4</span></div><div class="line">length:<span class="number">4</span></div><div class="line">__proto__:<span class="built_in">Array</span>(<span class="number">0</span>)</div></pre></td></tr></table></figure>
+<p><code>array.length --</code></p>
+<blockquote>
+<p>作用：删除数组的最后一项元素</p>
+</blockquote>
+<p><code>splice</code></p>
+<blockquote>
+<p>总的作用：数组中内置的一个方法，可以实现数组元素的增删改</p>
+<p>作用：1.实现删除：splice(n,m)：从索引 n 开始，删除 m 个<br>参数：m 不写表示删除到数组末尾；要是一个参数都不传递，就一个元素也不会删除<br>返回值：被删除的数组元素组成的一个新数组<br>原有数组改变了</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// array.splice(n,m) -&gt; 从索引 n 开始，删除 m 个元素</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</div><div class="line">arr.splice(<span class="number">1</span>,<span class="number">3</span>);  -&gt; [<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>] </div><div class="line">arr;              -&gt; (<span class="number">6</span>) [<span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line"></div><div class="line"><span class="comment">// array.splice(n)  -&gt; 从索引 n 开始，把到末尾的元素都删除</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</div><div class="line">arr.splice(<span class="number">6</span>);    -&gt;  [<span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line">arr;              -&gt; (<span class="number">6</span>) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]</div><div class="line"></div><div class="line"><span class="comment">// array.splice()  -&gt; 不删除任何元素</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</div><div class="line">arr.splice();     -&gt; []</div><div class="line">arr;              -&gt; (<span class="number">9</span>) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line"></div><div class="line"><span class="comment">// array.splice(0)  -&gt; 清空数组</span></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>];</div><div class="line">arr.splice(<span class="number">0</span>);     -&gt; [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</div><div class="line">arr;              -&gt; []</div></pre></td></tr></table></figure>
+<blockquote>
+<p>作用：splice实现修改<br>splice(n.m,x) ：在原有删除的基础上，用 x 代替删除的内容</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line">arr.splice(<span class="number">2</span>,<span class="number">2</span>,<span class="number">100</span>);  -&gt; [<span class="number">3</span>, <span class="number">4</span>]</div><div class="line">arr;                  -&gt;  [<span class="number">1</span>, <span class="number">2</span>, <span class="number">100</span>]</div></pre></td></tr></table></figure>
+<blockquote>
+<p>作用：splice实现增加<br>splice (n,0,x)：在修改的基础上，一项都不删除，把 x 插入到<code>索引 n 的前面</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</div><div class="line"></div><div class="line">arr.splice(<span class="number">2</span>,<span class="number">0</span>,<span class="number">100</span>); -&gt; []</div><div class="line">arr;                 -&gt; (<span class="number">5</span>) [<span class="number">1</span>, <span class="number">2</span>, <span class="number">100</span>, <span class="number">3</span>, <span class="number">4</span>]</div></pre></td></tr></table></figure>
+<p><code>array.splice(0,0,x)</code></p>
+<blockquote>
+<p>在数组开始添加元素 x</p>
+</blockquote>
+<p><code>array.splice(array.length,0,x)</code></p>
+<blockquote>
+<p>在数组末尾添加元素 x</p>
+</blockquote>
+<p><code>array.splice(0,1)</code></p>
+<blockquote>
+<p>删除数组第一项元素</p>
+</blockquote>
+<p><code>array.splice(array.length-1,1)</code></p>
+<blockquote>
+<p>删除数组最后一项元素</p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月21日 14:03</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/21/JS中的数组/" title="JS中的数组">http://lenmontree.com/2018/07/21/JS中的数组/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/21/JS中的数组/&title=《JS中的数组》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/21/JS中的数组/&title=《JS中的数组》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/21/JS中的数组/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS中的数组》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/21/JS中的数组/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/21/JS中的数组/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/21/JS中的数组/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组的基础结构"><span class="post-toc-text">数组的基础结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遍历数组"><span class="post-toc-text">遍历数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组中的常用方法"><span class="post-toc-text">数组中的常用方法</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/20/JS中的字符串及常用方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JS中的字符串及常用方法</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 10px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
