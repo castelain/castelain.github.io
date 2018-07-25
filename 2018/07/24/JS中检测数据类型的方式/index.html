@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>JS中检测数据类型的方式 | Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="方式概述  typeof：检测数据类型的操作符 instanceof：检测某个实例是否属于某个类 constructor：获取当前实例的构造器 Object.prototype.toString.call：获取当前实例的所属类型的信息   方式详解typeof   检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）语法：typeof 变量typeof 操作符是检查一个变量是否是 unde">
+<meta name="keywords" content="JavaScript js系列编程练习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS中检测数据类型的方式">
+<meta property="og:url" content="http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="方式概述  typeof：检测数据类型的操作符 instanceof：检测某个实例是否属于某个类 constructor：获取当前实例的构造器 Object.prototype.toString.call：获取当前实例的所属类型的信息   方式详解typeof   检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）语法：typeof 变量typeof 操作符是检查一个变量是否是 unde">
+<meta property="og:updated_time" content="2018-07-25T03:24:59.129Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS中检测数据类型的方式">
+<meta name="twitter:description" content="方式概述  typeof：检测数据类型的操作符 instanceof：检测某个实例是否属于某个类 constructor：获取当前实例的构造器 Object.prototype.toString.call：获取当前实例的所属类型的信息   方式详解typeof   检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）语法：typeof 变量typeof 操作符是检查一个变量是否是 unde">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-JS中检测数据类型的方式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      JS中检测数据类型的方式
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端知识点/">前端知识点</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-24
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="方式概述"><a href="#方式概述" class="headerlink" title="方式概述"></a>方式概述</h3><blockquote>
+<ol>
+<li>typeof：检测数据类型的操作符</li>
+<li>instanceof：检测某个实例是否属于某个类</li>
+<li>constructor：获取当前实例的构造器</li>
+<li>Object.prototype.toString.call：获取当前实例的所属类型的信息</li>
+</ol>
+</blockquote>
+<h3 id="方式详解"><a href="#方式详解" class="headerlink" title="方式详解"></a>方式详解</h3><p><strong><code>typeof</code></strong> </p>
+<blockquote>
+<p>检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）<br>语法：typeof 变量<br>typeof 操作符是检查一个变量是否是 <code>undefined 、String、Number、Boolean</code>这4中基本数据类型中的一种的绝佳工具。但是，如果变量是 <code>null</code> 或者 <code>对象</code>时， typeof 操作符就不能把他们区分出来，而都只会返回’object’，实际意义不大。</p>
+<p>注意：</p>
+<ol>
+<li>typeof 无法区分出 数组和其他对象，因为返回值都是 ‘object’</li>
+<li>typeof 可以判断出函数’function’</li>
+</ol>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>;  -&gt; <span class="string">'undefined'</span></div><div class="line"><span class="keyword">typeof</span> <span class="string">'jasmine'</span>;  -&gt; <span class="string">'string'</span></div><div class="line"><span class="keyword">typeof</span> <span class="number">22.2</span>;       -&gt; <span class="string">'number'</span></div><div class="line"><span class="keyword">typeof</span> <span class="literal">true</span>;       -&gt; <span class="string">'boolean'</span></div><div class="line"></div><div class="line"><span class="keyword">typeof</span> <span class="literal">null</span>;       -&gt; <span class="string">'object'</span></div><div class="line"><span class="keyword">typeof</span> (<span class="keyword">new</span> <span class="built_in">Object</span>());  -&gt; <span class="string">'object'</span></div><div class="line"><span class="keyword">typeof</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];    -&gt; <span class="string">'object'</span></div><div class="line"><span class="keyword">typeof</span> /^$/;       -&gt; <span class="string">'object'</span></div><div class="line"></div><div class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;;  -&gt; <span class="string">'function'</span></div></pre></td></tr></table></figure>
+<hr>
+<p><strong><code>instanceof</code></strong></p>
+<blockquote>
+<p>原理：检查右边指定的构造函数的原型对象是否在左边指定的对象的原型链上，返回结果为 true / false<br>语法：obj instanceof constructor<br>注意：<br>1.<code>基本数据类型 instanceof constructor</code>永远是 <code>false</code><br>2.<code>引用数据类型 instanceof Object</code>永远是 <code>true</code><br>3.可以<code>区分出数组和其他对象</code><br>4.<code>只能用于引用数据类型，不适用与基本数据类型</code><br>5.<code>instanceof 会检查整个原型链</code>。因此，对于同一个实例对象，可能会对多个构造函数返回 true</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>;  -&gt; <span class="literal">false</span></div><div class="line"><span class="number">12</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>;         -&gt; <span class="literal">false</span></div><div class="line"><span class="string">'jasmine'</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>;  -&gt; <span class="literal">false</span></div><div class="line"><span class="literal">true</span> <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>;      -&gt; <span class="literal">false</span></div><div class="line"></div><div class="line"><span class="literal">null</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span>;      -&gt; <span class="literal">true</span></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="keyword">instanceof</span> <span class="built_in">Object</span>;   -&gt; <span class="literal">true</span></div><div class="line"><span class="keyword">new</span> <span class="built_in">Object</span>() <span class="keyword">instanceof</span> <span class="built_in">Object</span>; -&gt; <span class="literal">true</span></div><div class="line"></div><div class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>] <span class="keyword">instanceof</span> <span class="built_in">Array</span>;    -&gt; <span class="literal">true</span></div><div class="line">/^$/ <span class="keyword">instanceof</span> <span class="built_in">RegExp</span>;      -&gt; <span class="literal">true</span></div><div class="line">(&#123;&#125;) <span class="keyword">instanceof</span> <span class="built_in">Object</span>;        -&gt; <span class="literal">true</span></div></pre></td></tr></table></figure>
+<hr>
+<p><strong><code>constructor</code></strong></p>
+<blockquote>
+<p>原理：obj.constructor —&gt;(等价于) 对应原型对象.constructor属性<br>作用：得知某个实例对象，到底是哪一个构造函数产生的<br>语法：obj.constructor === constructor</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>)</span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"></div><div class="line">f.constructor === F;       -&gt; <span class="literal">true</span></div><div class="line">f.constructor === <span class="built_in">RegExp</span>;  -&gt; <span class="literal">false</span></div></pre></td></tr></table></figure>
+<hr>
+<p><strong><code>Object.prototype.toString.call</code></strong></p>
+<blockquote>
+<p>作用：返回指定变量的数据类型，既适用于基本数据类型，也适用于引用数据类型<br>返回值：字符串”[object 类型]”</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 基本数据类型</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">'jasmine'</span>);               -&gt; <span class="string">"[object String]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">22.2</span>);                    -&gt; <span class="string">"[object Number]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">true</span>);                    -&gt; <span class="string">"[object Boolean]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>);                    -&gt; <span class="string">"[object Null]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>);               -&gt; <span class="string">"[object Undefined]"</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 引用数据类型</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]);                 -&gt; <span class="string">"[object Array]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="regexp">/^$/</span>);                    -&gt; <span class="string">"[object RegExp]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);            -&gt; <span class="string">"[object Function]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Date</span>());              -&gt; <span class="string">"[object Date]"</span></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="keyword">new</span> <span class="built_in">Object</span>());            -&gt; <span class="string">"[object Object]"</span></div></pre></td></tr></table></figure>
+<h3 id="判断数组"><a href="#判断数组" class="headerlink" title="判断数组"></a>判断数组</h3><p><code>instanceof</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>;   -&gt; <span class="literal">true</span></div></pre></td></tr></table></figure></p>
+<p><code>constructor</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line">arr.constructor === <span class="built_in">Array</span>;   -&gt; <span class="literal">true</span></div><div class="line"></div><div class="line">arr.constructor.name;        -&gt; <span class="string">"Array"</span></div></pre></td></tr></table></figure></p>
+<p><code>Object.prototype.toString.call</code><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(arr);                         </div><div class="line">-&gt; <span class="string">"[Object Array]"</span></div></pre></td></tr></table></figure></p>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月25日 11:24</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/24/JS中检测数据类型的方式/" title="JS中检测数据类型的方式">http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/&title=《JS中检测数据类型的方式》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/&title=《JS中检测数据类型的方式》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JS中检测数据类型的方式》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScriptjs系列编程练习/" class="color5">JavaScript js系列编程练习</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方式概述"><span class="post-toc-text">方式概述</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方式详解"><span class="post-toc-text">方式详解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断数组"><span class="post-toc-text">判断数组</span></a></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/21/JS中的数组/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JS中的数组</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
