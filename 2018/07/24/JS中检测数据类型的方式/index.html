@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
 <meta property="og:description" content="方式概述  typeof：检测数据类型的操作符 instanceof：检测某个实例是否属于某个类 constructor：获取当前实例的构造器 Object.prototype.toString.call：获取当前实例的所属类型的信息   方式详解typeof   检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）语法：typeof 变量typeof 操作符是检查一个变量是否是 unde">
-<meta property="og:updated_time" content="2018-07-25T06:23:27.890Z">
+<meta property="og:updated_time" content="2018-07-25T06:26:11.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中检测数据类型的方式">
 <meta name="twitter:description" content="方式概述  typeof：检测数据类型的操作符 instanceof：检测某个实例是否属于某个类 constructor：获取当前实例的构造器 Object.prototype.toString.call：获取当前实例的所属类型的信息   方式详解typeof   检查指定变量的数据类型，返回值是该变量的类型（字符串形式的）语法：typeof 变量typeof 操作符是检查一个变量是否是 unde">
@@ -195,12 +195,13 @@
 <hr>
 <p><code>Object.prototype.toString.call()</code></p>
 <blockquote>
-<p>说明：可以对任意对象给出正确的决定<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(arr);   -&gt; <span class="string">"[Object Array]"</span></div></pre></td></tr></table></figure></p>
+<p>说明：可以对任意对象给出正确的决定（前提是：它是未被修改过的原生版本）</p>
 </blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="built_in">Object</span>.prototype.toString.call(arr);   -&gt; <span class="string">"[Object Array]"</span></div></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月25日 14:23</p>
+        <p>最后更新： 2018年07月25日 14:26</p>
         <p>原始链接： <a class="post-url" href="/2018/07/24/JS中检测数据类型的方式/" title="JS中检测数据类型的方式">http://lenmontree.com/2018/07/24/JS中检测数据类型的方式/</a></p>
         <footer>
             <a href="http://lenmontree.com">
