@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://lenmontree.com/2018/07/20/JS中的Math常用方法/index.html">
 <meta property="og:site_name" content="Lenmontree&#39; Blog">
 <meta property="og:description" content="数学函数：它是对象数据类型的 Math中提供了很多数学中的量以及操作数字的方法Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。无需创建它，通过把 Math 作为对象使用就可以调用其所有属性和方法。  12typeof Math&quot;object&quot; 1234567891011121314">
-<meta property="og:updated_time" content="2018-07-29T13:57:59.834Z">
+<meta property="og:updated_time" content="2018-07-29T15:29:40.031Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS中的Math常用方法">
 <meta name="twitter:description" content="数学函数：它是对象数据类型的 Math中提供了很多数学中的量以及操作数字的方法Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()，像 Math.sin() 这样的函数只是函数，不是某个对象的方法。无需创建它，通过把 Math 作为对象使用就可以调用其所有属性和方法。  12typeof Math&quot;object&quot; 1234567891011121314">
@@ -185,10 +185,11 @@
 <p>一个常量，表示数学中的圆周率的值（π）</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Math</span>.PI</div><div class="line"><span class="number">3.141592653589793</span></div></pre></td></tr></table></figure>
+<h4 id="一个奇葩的题"><a href="#一个奇葩的题" class="headerlink" title="一个奇葩的题"></a>一个奇葩的题</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 正常情况，和预期一样</span></div><div class="line"><span class="string">"4 9 16 25"</span>.split(<span class="string">' '</span>).map(<span class="built_in">Math</span>.sqrt);</div><div class="line"><span class="comment">// "4 9 16 25".split(" "); //=&gt;["4","9","16","25"]</span></div><div class="line"><span class="comment">// 结果是：[2,3,4,5]</span></div><div class="line"></div><div class="line"> [<span class="string">"3"</span>, <span class="string">"3"</span>, <span class="string">"5"</span>, <span class="string">"9"</span>].map(<span class="built_in">parseFloat</span>);</div><div class="line"> <span class="comment">//[3,3,5,9]</span></div><div class="line"> </div><div class="line"></div><div class="line"><span class="string">"3 3 5 9"</span>.split(<span class="string">' '</span>).map(<span class="built_in">parseInt</span>);</div><div class="line"><span class="comment">// 预期结果是 [3,3,5,9]</span></div><div class="line"><span class="comment">// But，输出是[3, NaN, NaN, NaN]</span></div><div class="line"><span class="comment">// 原因说明：</span></div><div class="line"><span class="comment">// map 方法接受两个参数：回调函数、执行回调函数时使用的 this 值。 [array].map(function(currentValue,index,array)&#123;&#125;,thisArg);</span></div><div class="line"></div><div class="line"><span class="comment">// 接收两个参数：待转换的值、指定的进制数</span></div><div class="line"><span class="built_in">parseInt</span>(string,radix);</div><div class="line"><span class="comment">// 其中，需要尤其注意的是：</span></div><div class="line"><span class="comment">// radix 可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。</span></div><div class="line"><span class="comment">//如果省略该参数或其值为0，则数字将以 //10 为基础来解析。如果它以 “0x” 或 //“0X” 开头，将以 16 为基数。</span></div><div class="line"><span class="comment">//如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。</span></div><div class="line"></div><div class="line"><span class="comment">// 过程详解：[array].map(parseInt)每次会对每一个数组元素都调用一次函数parseInt。每次都会传递给回调函数3个参数，而parseInt总共接收2个参数，而在这里的话，map函数每次都会传2个参数给parseInt,分别是currentValue、index。即：parseInt(currentValue,index)</span></div><div class="line"></div><div class="line"><span class="comment">// 第一次调用：parseInt("3",0) //基于10进制转换字符串“3”，结果为：3</span></div><div class="line"><span class="comment">// 第二次调用：parseInt("3",1) //不存在1进制，所有返回 NaN</span></div><div class="line"><span class="comment">// 第三次调用：parseInt("5",2) //基于2进制转换字符串“5”。由于2进制中只有0和1，所以返回 NaN</span></div><div class="line"><span class="comment">// 第四次调用：parseInt("9",3) //不存在3进制，所以返回 NaN</span></div></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2018年07月29日 21:57</p>
+        <p>最后更新： 2018年07月29日 23:29</p>
         <p>原始链接： <a class="post-url" href="/2018/07/20/JS中的Math常用方法/" title="JS中的Math常用方法">http://lenmontree.com/2018/07/20/JS中的Math常用方法/</a></p>
         <footer>
             <a href="http://lenmontree.com">
@@ -271,7 +272,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#abs"><span class="post-toc-text">abs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#round"><span class="post-toc-text">round</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#random"><span class="post-toc-text">random</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#max-min"><span class="post-toc-text">max  /  min</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ceil-floor"><span class="post-toc-text">ceil  /  floor</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pow-sqrt"><span class="post-toc-text">pow  /  sqrt</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PI"><span class="post-toc-text">PI</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#abs"><span class="post-toc-text">abs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#round"><span class="post-toc-text">round</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#random"><span class="post-toc-text">random</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#max-min"><span class="post-toc-text">max  /  min</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ceil-floor"><span class="post-toc-text">ceil  /  floor</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pow-sqrt"><span class="post-toc-text">pow  /  sqrt</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PI"><span class="post-toc-text">PI</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一个奇葩的题"><span class="post-toc-text">一个奇葩的题</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
@@ -289,8 +290,8 @@
     </a>
   
   
-    <a href="/2018/07/19/DOM-节点/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">DOM-节点</span>
+    <a href="/2018/07/19/DOM-获取元素的方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">DOM-获取元素的方法</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
