@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Ajax | Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="Ajax (全称 ：Asynchronous JavaScript and XML –&amp;gt; 异步的 JS 和 XML) 这一技术可以向服务器请求额外的数据而无需卸载页面，会带来更好的用户体验  虽然名字中包含‘XML’的成分，但 Ajax 通信与数据格式无关，并不一定要是 xml 格式的数据（名字中会有 xml 是因为早期使用该技术在服务器与客户端传递的数据主要是 xml 格式的而已，而现在传">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax">
+<meta property="og:url" content="http://lenmontree.com/2018/07/29/Ajax/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="Ajax (全称 ：Asynchronous JavaScript and XML –&amp;gt; 异步的 JS 和 XML) 这一技术可以向服务器请求额外的数据而无需卸载页面，会带来更好的用户体验  虽然名字中包含‘XML’的成分，但 Ajax 通信与数据格式无关，并不一定要是 xml 格式的数据（名字中会有 xml 是因为早期使用该技术在服务器与客户端传递的数据主要是 xml 格式的而已，而现在传">
+<meta property="og:updated_time" content="2018-07-29T06:57:16.603Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajax">
+<meta name="twitter:description" content="Ajax (全称 ：Asynchronous JavaScript and XML –&amp;gt; 异步的 JS 和 XML) 这一技术可以向服务器请求额外的数据而无需卸载页面，会带来更好的用户体验  虽然名字中包含‘XML’的成分，但 Ajax 通信与数据格式无关，并不一定要是 xml 格式的数据（名字中会有 xml 是因为早期使用该技术在服务器与客户端传递的数据主要是 xml 格式的而已，而现在传">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Ajax" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Ajax
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/前端知识点/">前端知识点</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-07-29
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="Ajax-全称-：Asynchronous-JavaScript-and-XML-–-gt-异步的-JS-和-XML"><a href="#Ajax-全称-：Asynchronous-JavaScript-and-XML-–-gt-异步的-JS-和-XML" class="headerlink" title="Ajax (全称 ：Asynchronous JavaScript and XML –&gt; 异步的 JS 和 XML)"></a>Ajax (全称 ：Asynchronous JavaScript and XML –&gt; 异步的 JS 和 XML)</h3><blockquote>
+<p>这一技术可以向服务器请求额外的数据而无需卸载页面，会带来更好的用户体验</p>
+<ol>
+<li>虽然名字中包含‘XML’的成分，但 Ajax 通信与数据格式无关，并不一定要是 xml 格式的数据（名字中会有 xml 是因为早期使用该技术在服务器与客户端传递的数据主要是 xml 格式的而已，而现在传递的主要是 json 格式的数据）<br>2.名字中的异步，指的主要是特指<code>局部刷新</code>，而非同步或异步这样的概念。</li>
+</ol>
+</blockquote>
+<h3 id="一些细节知识点"><a href="#一些细节知识点" class="headerlink" title="一些细节知识点"></a>一些细节知识点</h3><h4 id="全局刷新"><a href="#全局刷新" class="headerlink" title="全局刷新"></a>全局刷新</h4><blockquote>
+<p>尽管当前的页面只需要更新部分的数据，但服务器也会把整个页面的数据重新渲染后返回。最后客户端需要刷新页面才能看到最终的结果。</p>
+</blockquote>
+<h4 id="非前后端完全分离（数据渲染在服务器端）"><a href="#非前后端完全分离（数据渲染在服务器端）" class="headerlink" title="非前后端完全分离（数据渲染在服务器端）"></a>非前后端完全分离（数据渲染在服务器端）</h4><blockquote>
+<p>前端开发只需要完成页面的制作，并且把页面中的一些交互效果完成即可。页面中需要动态呈现的部分，都是交给后端开发人员进行数据绑定与基于服务器端的数据渲染。</p>
+<p>优点：<br> 1.服务器返回客户端的源代码中是可以看到动态数据的，这样<code>有利于 SEO 优化</code>；<br> 2.由于数据渲染在服务器端，客户端最后只需要渲染代码就可以，不需要额外的处理了。所有，如果服务器的计算速度快的话，页面的<code>呈现速度也会较快</code>。<br> 缺点：<br> 1.不利于团队协作开发，开发效率较低;<br> 2.服务器的压力较大。</p>
+</blockquote>
+<h4 id="前后端完全分离（数据渲染在客户端）"><a href="#前后端完全分离（数据渲染在客户端）" class="headerlink" title="前后端完全分离（数据渲染在客户端）"></a>前后端完全分离（数据渲染在客户端）</h4><blockquote>
+<p>页面中需要动态绑定获得的数据，是由客户端完成的。<br>1.向服务器端发送 Ajax 请求；<br>2.把得到的数据解析为对象字符串以后，拼接得到 HTML 字符串；<br>3.把拼接好的 HTML 片段插入到合适的位置，不需要刷新整个页面。</p>
+<p>优点：<br>1.在接口文档完成后，前后端人员就可以分头进行各自的开发了。这样有利于加快开发效率，真正意义上实现了前后端技术的区分；<br>2.可以很方便的请求一些实时的数据，而不需要每次都重新刷新整个页面，会让用户体验更好。<br> 缺点：<br> 1.在源代码中，看不到动态绑定的数据，不利于 SEO 优化；<br> 2.加载页面时，大致上是：第一次向服务器发送请求，请求到的结果中只有页面的 HTML 和 CSS，还没有数据。第二次向服务器发送请求，将请求到的数据加入到页面相应的部分…过程比非前后端完全分离要繁琐一些，因此，页面的加载速度可能要慢一些。</p>
+</blockquote>
+<h4 id="URL、URI、URN"><a href="#URL、URI、URN" class="headerlink" title="URL、URI、URN"></a>URL、URI、URN</h4><blockquote>
+<p>URL：统一资源定位符<br>URI：统一资源标识符<br>URN：统一资源名称<br>URI = URL + URN</p>
+</blockquote>
+<h4 id="Ajax-中的请求方式"><a href="#Ajax-中的请求方式" class="headerlink" title="Ajax 中的请求方式"></a>Ajax 中的请求方式</h4><blockquote>
+<p>GET 系列请求</p>
+<ol>
+<li>get：从服务器获取资源<br>2.head：获取响应的头部信息<br>3.delete：删除服务器上的指定的资源文件</li>
+<li>……<br>POST 系列请求<br>1.post：向服务器推送数据<br>2.put：向服务器推送文件资源（数据量比post的要大）</li>
+</ol>
+</blockquote>
+<h4 id="GET-系列请求和-POST-系列请求在实际的使用中，存在着很多的区别"><a href="#GET-系列请求和-POST-系列请求在实际的使用中，存在着很多的区别" class="headerlink" title="GET 系列请求和 POST 系列请求在实际的使用中，存在着很多的区别"></a>GET 系列请求和 POST 系列请求在实际的使用中，存在着很多的区别</h4><blockquote>
+<p>1.数据量大小问题<br>GET 系列请求传递给服务器的数据内容没有 POST 系列请求传递的多。<br>原因：GET 请求传递给服务器的内容一般都基于<code>URL地址问号传参</code>来实现的，而 POST 请求一般都是基于设置<code>请求主体</code>来实现的。<br> 各浏览器都有自己的关于 URL 地址最大长度的限制（谷歌：8KB，火狐：7KB，IE：2KB）。超出限制长度的部分，浏览器会自动截取掉，导致传输给服务器的数据缺失。<br>  理论上，POST通过请求主体传送给服务器的数据是没有大小限制的。但是，在真实项目中，为了保证传输速率，会限制上传数据量的大小。</p>
+<p> 2.安全性问题<br>  GET 系列请求的安全性没有 POST 系列请求的安全性高（虽然 POST 的安全性也不是特别的高）<br> 原因：GET 请求是通过URL 地址传参的，有‘URL劫持’的风险，容易泄露数据。而POST 请求传递的数据是设置在请求主体里的，黑客要获得数据，就要麻烦一些。</p>
+<p> 3.缓存问题<br>  GET 系列请求可能会出现缓存（缓存不可控，一般不使用）。而 POST 请求就不会产生缓存（除非自己进行特殊处理）。<br> 原因：GET 请求是通过 URL 地址问号传参的，而 POST 请求是通过请求主体传参的。设置请求主体不会出现缓存，而 URL传递参数就会出现缓存了。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 每个一分钟，从服务器获取实时的数据，并将数据显示在客户端浏览器中。</span></div><div class="line"><span class="comment">// 但是，由于 GET 请求可能会出现缓存，可能导致获取到的数据不是实时的。</span></div><div class="line"><span class="comment">//第一次请求数据回来，间隔一分钟，浏览器又发送一次请求。但是，新发送的请求，无论是地址还是传递的参数，都是一样的。浏览器很可能会把上一次缓存下来的数据获取，而不是获取最新的数据</span></div><div class="line">setTimeOut(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	$.ajax(&#123;</div><div class="line">        url: <span class="string">'xxx.com?name=y'</span>,</div><div class="line">        method: <span class="string">'get'</span>,</div><div class="line">        dataType: <span class="string">'json'</span>,</div><div class="line">        success: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</div><div class="line">            alert(<span class="built_in">JSON</span>.parse(result));</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">&#125;,<span class="number">60000</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// 上述问题的解决方案：</span></div><div class="line"><span class="comment">// 方案一： 加上属性： cache: true(清除缓存)</span></div><div class="line"><span class="comment">// 方案二：在url地址传参的后面加上随机生成的一个小数。这样一来，每次请求的地址就不一样了，就可以解决缓存引发的问题。</span></div><div class="line">url: <span class="string">'xxx.com?name=y&amp;_='</span>+<span class="built_in">Math</span>.random()</div></pre></td></tr></table></figure>
+<h3 id="JavaScript-中原生的-Ajax"><a href="#JavaScript-中原生的-Ajax" class="headerlink" title="JavaScript 中原生的 Ajax"></a>JavaScript 中原生的 Ajax</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//这个函数先检测原生的 XHR 对象是否存在，如果存在则返回它的实例对象；如果原生对象不存在，就检测 ActiveXObject 对象是存在，如何存在则返回它的最新版本的一个实例对象；如果这两种对象都不存在，就抛出一个错误。（主要是为了兼容 IE7 之前的版本）</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createXHR</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">if</span>(<span class="keyword">typeof</span> XMLHttpRequest != <span class="string">'undefined'</span>)&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">new</span> XMLHttpRequest();</div><div class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(<span class="keyword">typeof</span> ActiveXObject != <span class="string">'undefined'</span>)&#123;</div><div class="line">        <span class="keyword">var</span> versions = [<span class="string">'MSXML2.XMLHttp.6.0'</span>,<span class="string">'MSXML2.XMLHttp.3.0'</span>,<span class="string">'MSXML2.XMLHttp'</span>];</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; versions.length; i ++)&#123;</div><div class="line">            <span class="keyword">try</span>&#123;</div><div class="line">                <span class="keyword">new</span> ActiveXObject(versions[i]);</div><div class="line">                <span class="built_in">arguments</span>.callee.activeXString = versions[i];</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;<span class="keyword">catch</span>(ex)&#123;</div><div class="line">                <span class="comment">// 跳过</span></div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> <span class="built_in">Error</span>(<span class="string">'No XHR object available.'</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 1.使用自定义的方法，创建一个 XHR 的实例对象</span></div><div class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> createXHR();</div><div class="line"><span class="comment">// 2. 启动一个针对指定 URL 地址的 GET 请求，但并不发送</span></div><div class="line">xhr.open(<span class="string">'get'</span>,<span class="string">'www.example.com'</span>,<span class="literal">true</span>);</div><div class="line"><span class="comment">// 3. 为 xhr 对象绑定事件。但 readystate 的属性发送改变时，就会触发这个事件，执行绑定的函数</span></div><div class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">	<span class="keyword">if</span>(xhr.readyState === <span class="number">4</span> and xhr.status === <span class="number">200</span>)&#123;</div><div class="line">        <span class="comment">//对响应数据进行处理</span></div><div class="line">        alert(xhr.responseText);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="comment">// 4. 发送请求（传递的参数为请求数据，若没有，则填 null ）</span></div><div class="line">xhr.send(<span class="literal">null</span>);</div></pre></td></tr></table></figure>
+<h3 id="JQuery-中的-Ajax"><a href="#JQuery-中的-Ajax" class="headerlink" title="JQuery 中的 Ajax"></a>JQuery 中的 Ajax</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">$.ajax(&#123;</div><div class="line">	url: <span class="string">'xxx.txt'</span>, <span class="comment">// 请求的地址</span></div><div class="line">	method: <span class="string">'get'</span>,  <span class="comment">//请求的方法</span></div><div class="line">	dataType: <span class="string">'json'</span>, <span class="comment">//预设获取的结果的类型，不会影响服务器的返回（服务器返回给我们的一般都是 JSON 格式的数据）。如果预设的是 JSON，那么类库会把服务器返回的字符串转为 JSON 对象；如果我们预设的是 txet(默认值)，我们把服务器获取的结果直接拿过来用即可；也可以预设为 xml 格式。（这个属性不会影响服务器端，只会影响客户端对返回数据的二次处理方式）</span></div><div class="line">	cache: <span class="literal">false</span>, <span class="comment">//设置是否清除缓存，只对 GET 请求有作用，默认为 true，即不清除缓存。</span></div><div class="line">	data: <span class="literal">null</span>,   <span class="comment">//通过 data，可以将一些数据传递给服务器。 GET 系列请求会把 data 中的内容拼接在 URL 地址的后面，通过问号传参的方式传递给服务器；POST 系列请求会把内容放在请求主体中，传递给服务器。</span></div><div class="line">	<span class="keyword">async</span>: <span class="literal">true</span>,  <span class="comment">// 设置同步还是异步，默认是 true，即异步</span></div><div class="line">	</div><div class="line">	success: <span class="function"><span class="keyword">function</span>(<span class="params">result</span>)</span>&#123;</div><div class="line">		<span class="comment">//当 Ajax 请求成功时，将获取到的结果作为实参，传递给这个回调函数，触发这个函数</span></div><div class="line">    &#125;,</div><div class="line">    error: <span class="function"><span class="keyword">function</span>(<span class="params">msg</span>)</span>&#123;</div><div class="line">        <span class="comment">// 当 Ajax 请求失败时，将失败的原因信息作为实参，传递给这个回调函数，触发这个回调函数</span></div><div class="line">    &#125;,</div><div class="line">    complete: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">       <span class="comment">// 无论成功或失败，都会执行这个回调函数</span></div><div class="line">    &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="拓展问题"><a href="#拓展问题" class="headerlink" title="拓展问题"></a>拓展问题</h4><blockquote>
+<p>当在浏览器地址栏中输入一个URL地址，到最后看到页面，中间都经历了哪些事情？</p>
+<p><strong><code>Request 请求阶段</code></strong><br>1.首先根据客户端输入的域名，到DNS服务器上进行反解析（通过域名找到服务器的外网 IP）<br>2.通过找到的外网 IP，找到对应的服务器<br>3.通过在地址栏找到的端口号（没输入是因为不同的协议有自己的默认的端口号）找到服务器上发布的对应的项目</p>
+<p><strong><code>Response 响应阶段</code></strong><br>4.服务器获取到请求资源文件的地址，把资源文件中的源代码找到<br>5.服务器会把找到的源代码返回给客户端</p>
+<p><strong><code>浏览器自主渲染阶段</code></strong><br>6.客户端接收到源代码后，会交到浏览器的内核（渲染引擎）进行渲染，最后由浏览器绘制出页面</p>
+</blockquote>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年07月29日 14:57</p>
+        <p>原始链接： <a class="post-url" href="/2018/07/29/Ajax/" title="Ajax">http://lenmontree.com/2018/07/29/Ajax/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/07/29/Ajax/&title=《Ajax》 — Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/07/29/Ajax/&title=《Ajax》 — Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/07/29/Ajax/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ajax》 — Lenmontree' Blog&url=http://lenmontree.com/2018/07/29/Ajax/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/07/29/Ajax/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/07/29/Ajax/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ajax-全称-：Asynchronous-JavaScript-and-XML-–-gt-异步的-JS-和-XML"><span class="post-toc-text">Ajax (全称 ：Asynchronous JavaScript and XML –> 异步的 JS 和 XML)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一些细节知识点"><span class="post-toc-text">一些细节知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#全局刷新"><span class="post-toc-text">全局刷新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#非前后端完全分离（数据渲染在服务器端）"><span class="post-toc-text">非前后端完全分离（数据渲染在服务器端）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#前后端完全分离（数据渲染在客户端）"><span class="post-toc-text">前后端完全分离（数据渲染在客户端）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#URL、URI、URN"><span class="post-toc-text">URL、URI、URN</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Ajax-中的请求方式"><span class="post-toc-text">Ajax 中的请求方式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#GET-系列请求和-POST-系列请求在实际的使用中，存在着很多的区别"><span class="post-toc-text">GET 系列请求和 POST 系列请求在实际的使用中，存在着很多的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-中原生的-Ajax"><span class="post-toc-text">JavaScript 中原生的 Ajax</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JQuery-中的-Ajax"><span class="post-toc-text">JQuery 中的 Ajax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#拓展问题"><span class="post-toc-text">拓展问题</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/24/JS中检测数据类型的方式/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">JS中检测数据类型的方式</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
