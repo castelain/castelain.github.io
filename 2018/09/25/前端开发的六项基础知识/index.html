@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Lenmontree&#39; Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="lenmontree,Lenmontree's Blog" />
+  
+  <meta name="description" content="前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识 HTML 常用的 meta 头 html 中的 meta 标签总是位于 head 标签中，用于定义关于页面的一些原数据meta 标签中的属性是以属性名=属性值的形式定义的meta标签的两大属性：name(页面描述信息)、http-equiv（http标题信息）  name属性（1）keywords(关键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lenmontree&#39; Blog">
+<meta property="og:url" content="http://lenmontree.com/2018/09/25/前端开发的六项基础知识/index.html">
+<meta property="og:site_name" content="Lenmontree&#39; Blog">
+<meta property="og:description" content="前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识 HTML 常用的 meta 头 html 中的 meta 标签总是位于 head 标签中，用于定义关于页面的一些原数据meta 标签中的属性是以属性名=属性值的形式定义的meta标签的两大属性：name(页面描述信息)、http-equiv（http标题信息）  name属性（1）keywords(关键">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fba2ed3c06a9f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/7ed42f5cly1fqguw4y1zej20ge0e8wes.jpg">
+<meta property="og:image" content="https://coolshell.cn/wp-content/uploads/2013/05/Render-Process-768x250.jpg">
+<meta property="og:updated_time" content="2018-08-26T09:47:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lenmontree&#39; Blog">
+<meta name="twitter:description" content="前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识 HTML 常用的 meta 头 html 中的 meta 标签总是位于 head 标签中，用于定义关于页面的一些原数据meta 标签中的属性是以属性名=属性值的形式定义的meta标签的两大属性：name(页面描述信息)、http-equiv（http标题信息）  name属性（1）keywords(关键">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/4/25/162fba2ed3c06a9f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title">Lenmontree&#39;s Blog</span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a  href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a  href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a  href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                    <h2>
+                        Lenmontree&#39;s Blog
+                    </h2>
+                    
+                </div>
+                <div id="header-description">
+                    
+                    <h3>
+                        个人学习与成长轨迹
+                    </h3>
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="lenmontree" target="_blank" href="http://lenmontree.com">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/castelain">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="//weibo.com/hilenmontree">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-前端开发的六项基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <h3 id="前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识"><a href="#前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识" class="headerlink" title="前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识"></a>前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识</h3><hr>
+<h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><ol>
+<li>常用的 meta 头<blockquote>
+<p>html 中的 meta 标签总是位于 head 标签中，用于定义关于页面的一些原数据<br>meta 标签中的属性是以<code>属性名=属性值</code>的形式定义的<br>meta标签的两大属性：name(页面描述信息)、http-equiv（http标题信息）</p>
+<ol>
+<li>name属性<br>（1）keywords(关键字)<br>（2）description(页面内容描述)<br>（3）author(作者)<br>（4）viewport(视口)<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=<span class="string">"viewport"</span> content=<span class="string">"width=device-width, initial-scale=1.0, user-scaleable=no"</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>2.http-equive属性<br>（1）content-type(页面字符集的设定)<br>（2）expires(期限，网页的到期时间)<br>（3）pragma(cache模式)<br>（4）refresh(刷新)<br>（5）set-cookie(cookie设定)<br>（6）window-target(显示窗口的设定)</p>
+</blockquote>
+<ol>
+<li><p>对标签语义化的理解</p>
+<blockquote>
+<p>（1）清晰的页面结构<br>（2）便于团队开发和维护<br>（3）支持更多的设备（比如：屏幕阅读器）<br>（4）有利于SEO</p>
+<p> 尽可能少的使用无语义的标签div和span；在语义不明显时，既可以使用div或者p时，尽量用p, 因为p在默认情况下有上下间距，对兼容特殊终端有利；<br>不要使用纯样式标签，如：b、font、u等，改用css设置。需要强调的文本，可以包含在strong或者em标签中（浏览器预设样式，能用CSS指定就不用他们），strong默认样式是加粗（不要用b），em是斜体（不用i）；<br>使用表格时，标题要用caption，表头用thead，主体部分用tbody包围，尾部用tfoot包围。表头和一般单元格要区分开，表头用th，单元格用td；<br>表单域要用fieldset标签包起来，并用legend标签说明表单的用途；每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。<br>html5新增的一些语义化标签<br><img src="https://user-gold-cdn.xitu.io/2018/4/25/162fba2ed3c06a9f?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="html5新增的一些语义化标签"></p>
+</blockquote>
+</li>
+<li><p>HTML 5 新增的能力</p>
+<blockquote>
+<p>绘画 canvas 元素<br>audio、video标签<br>localStorage（本地数据持久化存储，即使关闭浏览器，数据也存在）<br>一系列语义化的标签，如：header、nav、article、section、sider、footer<br>线性渐变（grandient）<br>边框圆角（border-radius）<br>阴影（shadow）</p>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>HTML的渲染解析知识（比如：为什么CSS放前面，JS放后面；怎样理解并行加载串行执行）<blockquote>
+<ol>
+<li>CSS 要放在 HTML 的body标签前面，也就是 head 标签中<br>因为这样的话，浏览器会先读取CSS样式，将样式文件准备好。然后再读取body标签中的结构内容。此时，边渲染DOM元素的同时，也就把样式添加上了。<br>如果把CSS放在后面，可能会出现白屏问题（IE、Chrome），也可能出现无样式闪烁(Firefox)</li>
+<li>JS要放在HTML的后面，也就是body的结束标签之前。<br>因为在加载JS的时候，会阻塞其他一切的活动，包括：其他资源的下载和页面的呈现。如何用户的网速很慢或者JS文件过大，可能所需的加载时间比较长，此时，可能带给用户页面老是刷不出来的感觉，用户体验会很差。因此，要把它放在后面，先加载HTML和CSS，在静态页面出来了以后，再读取加载JS，让页面动起来。</li>
+<li>CSS阻塞：当CSS放在JS之前时，会出现CSS阻塞（因为，浏览器为了保持HTML中CSS和JS的顺序，会在将CSS加载完毕以后才去加载JS，而加载JS具有阻塞其他资源下载的特性，故而会出现CSS阻塞的现象。而将JS放在CSS之前时，就不会出现CSS阻塞）<br>4.JS阻塞：JS无论放在哪，都会阻塞其他资源的下载。不同的一点是，放在HTML的head标签中时，会阻止其它资源的加载以及页面的呈现；而放在HTML的后面，也就是body结束标签时，则只会阻塞其后的资源的加载。</li>
+<li></li>
+</ol>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ol>
+<li>怎样写出更好的CSS，<blockquote>
+<p>（0）reset(初始化样式表)</p>
+<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td &#123; margin: 0; padding: 0; &#125;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>（1）如层级不宜过深<br>一般不宜超过3层。层级过深会导致查询&gt; &gt;DOM节点耗时耗资源；在浏览器渲染页面&gt;的过程中，DOM树和CSSOM树的关联成&gt;本会更高；CSS代码易读性较差。<br>（2）何时用 ID 和何时用 class<br>只有一个独立样式的元素适合用 id，而有&gt;多个元素拥有的相同的样式的元素适合用 &gt;class。<br>（3）怎么拆分组织<br>尽量使用CSS外部样式文件，少使用内联&gt;样式和内部样式。</p>
+</blockquote>
+<ol>
+<li>盒模型<blockquote>
+<p>盒模型有 IE 盒模型和 W3C 盒模型(标准盒模型)。<br>无论是哪种，都有：content(内容)、padding(内边距)、border(边框)、margin(外边距)<br>不同之处：<br>W3C盒模型中，元素的宽度指的就是content的宽度<br>IE盒模型中，元素的宽度指的是（content的宽度+两边padding的宽度+两边border的宽度）</p>
+<p> 通过设置box-sizing这个属性，可以确定盒模型中元素尺寸的计算方式</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* box-sizing 的默认值是content-box。</span></div><div class="line"><span class="comment">尺寸计算公式：width = 内容的宽度，height = 内容的高度。*/</span></div><div class="line">。<span class="selector-tag">contentBox</span>&#123;</div><div class="line">	<span class="attribute">box-sizing</span>: content-box;</div><div class="line">&#125;</div><div class="line"><span class="comment">/* 推荐使用border-box。</span></div><div class="line"><span class="comment">width = border + padding + 内容的  width，</span></div><div class="line"><span class="comment">height = border + padding + 内容的 height。*/</span></div><div class="line"><span class="selector-class">.borderBox</span>&#123;</div><div class="line">	<span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<ol>
+<li>非常常用的 CSS3 知识<br>（1）比如 CSS3 动画</li>
+</ol>
+<p>（2）弹性布局<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 弹性盒子的一般使用方法 */</span></div><div class="line"><span class="selector-class">.container</span>&#123;</div><div class="line">	<span class="attribute">display</span>: -webkit-flex;</div><div class="line">	<span class="attribute">display</span>: flex;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.flex1</span>&#123;</div><div class="line">	<span class="attribute">-webkit-flex</span>: <span class="number">1</span>;</div><div class="line">	<span class="attribute">flex</span>: <span class="number">1</span>;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.flex2</span>&#123;</div><div class="line">	<span class="attribute">-webkit-flex</span>: <span class="number">2</span>;</div><div class="line">	<span class="attribute">flex</span>: <span class="number">2</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* 弹性盒子实现元素居中 */</span></div><div class="line"><span class="selector-class">.center</span>&#123;</div><div class="line">	 <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">	<span class="attribute">-webkit-align-item</span>: center;</div><div class="line">	<span class="attribute">align-item</span>: center;</div><div class="line">	<span class="attribute">-webkit-justify-content</span>: center;</div><div class="line">	<span class="attribute">justify-content</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<hr>
+<h4 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h4><ol>
+<li>事件模型<blockquote>
+<p>JS 中的事件模型包括三种：DOM0事件模型（原始事件模型）、DOM2事件模型、IE事件模型<br>（1）DOM0事件模型<br> 特点：</p>
+<ul>
+<li>没有事件传播。事件一旦触发，就会立即执行事件处理函数。<ul>
+<li>一个DOM元素上只能绑定一种类型的事件的一个事件处理程序。若为同一事件绑定了两个事件处理程序，则后面那个事件处理程序会覆盖前面那一个。</li>
+<li>事件句柄名：on + 事件名<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div id="myDiv" onClick="alert('hello world')"&gt;myDiv&lt;/div&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'myDiv'</span>).onClick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</div><div class="line">	alert(e);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 移除事件处理程序</span></div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">'myDiv'</span>).onClick = <span class="literal">null</span>;</div></pre></td></tr></table></figure>
+<blockquote>
+<p> （2）DOM2事件模型<br>  特点：</p>
+<ul>
+<li>一个DOM元素上可以为同一事件绑定多个事件处理程序</li>
+<li>事件会传播</li>
+<li>方法：<br>[dom].addEventListener( [event]，[function]，[true/false] )  –&gt; 绑定事件监听<br>[dom].removeEventListener( [event]，[function]，[true/false] )  –&gt; 移除事件监听<br>event.stopPropagation() –&gt; 取消事件冒泡<br>event.preventDefault()   –&gt; 取消事件的默认行为<br><code>DOM2事件模型中，事件传播被分为3个阶段</code>：捕获阶段（不具体的元素-》具体的目标元素）、处于目标阶段（到达目标元素）、冒泡阶段（具体的元素-》不具体的元素）<br>DOM2中的方法的第3个参数，指定的是：是否在捕获阶段调用事件处理函数，默认为 false，即在冒泡阶段调用事件处理函数。<br>（3）IE事件模型<br>特点：</li>
+<li>一个DOM元素可以针对一个事件可以绑定多个事件处理程序</li>
+<li>事件处理程序的调用都是在事件冒泡阶段<br>方法：<br>[dom].attach( [event]，[function] )   –&gt;绑定事件<br>[dom].detach( [event]，[function] )   –&gt; 移除事件</li>
+</ul>
+</blockquote>
+<ol>
+<li><p>闭包</p>
+<blockquote>
+<p>指的是：可以访问另一个函数作用域中的变量的函数。创建闭包的最简单的方式就是在一个函数的内部再创建另一个函数。<br>特点：</p>
+<ul>
+<li>内部的函数可以访问外部函数的变量，反之则不行。</li>
+<li>返回的内部函数，保存有状态。<br>用途：<br>它的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中。</li>
+<li>返回一个函数，延迟执行；</li>
+<li>将多参数的函数简化为单参数的函数；</li>
+<li>突破作用域链，保存函数状态；</li>
+<li>……<br><code>使用闭包的注意点</code><br>1）由于闭包会使得函数中的变量都被保存在内存中，内存消耗很大，所以不能滥用闭包，否则会造成网页的性能问题，在IE中可能导致内存泄露。解决方法是，在退出函数之前，将不使用的局部变量全部删除。<br>2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</li>
+</ul>
+</blockquote>
+</li>
+<li><p>原型链</p>
+<blockquote>
+<p>每个实例对象（object ）都有一个私有属性（称之为 <strong>proto</strong>）指向它的原型对象（prototype）。该原型对象也有一个自己的原型对象 ，层层向上直到一个对象的原型对象为 null。根据定义，null 没有原型，并作为这个原型链中的最后一个环节。</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>几乎所有 JavaScript 中的对象都是位于原型链顶端的Object的实例。<br><img src="https://wx4.sinaimg.cn/large/7ed42f5cly1fqguw4y1zej20ge0e8wes.jpg" alt="原型"></p>
+</blockquote>
+<ol>
+<li>浏览器的解析渲染原理<blockquote>
+<p>简要来说：</p>
+<ul>
+<li>解析HTML标签，生成DOM树；</li>
+<li>解析CSS规则，生成CSS规则树；</li>
+<li>解析JS文件，根据CSSOM API 和 DOM API 来操作CSS 规则树和 DOM 树；</li>
+<li>将DOM树与CSS规则树关联起来，构造渲染树（rendering tree）(渲染树中会去除了一些不可见的节点)；</li>
+<li>计算渲染树的节点的几何结构（位置，尺寸等）（layout 和 reflow 的过程）；</li>
+<li><p>调用操作系统的Native GUI 的 API，渲染绘制页面。</p>
+<p>浏览器工作大流程：<br><img src="https://coolshell.cn/wp-content/uploads/2013/05/Render-Process-768x250.jpg" alt="浏览器工作大流程"><br>参考文章：<a href="https://coolshell.cn/articles/9666.html" target="_blank" rel="external">参考文章</a></p>
+</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+<ol>
+<li>DOM树、渲染树、重排重绘、分层渲染、为什么DOM操作过多会影响性能等<blockquote>
+<p>（1）DOM树：DOM是针对HTML和XML文档的一个API。DOM可以将任何的HTML文档和XML文档描绘成一个层次化的节点树。<br>操作DOM的一些常用方法：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.documentElement();</div><div class="line"><span class="built_in">document</span>.head();</div><div class="line"><span class="built_in">document</span>.body();</div><div class="line"></div><div class="line">[context].querySelector();</div><div class="line">[context].querySelectorAll();</div><div class="line"></div><div class="line"><span class="built_in">document</span>.getElementById();</div><div class="line">[context].getElementsByTagName();</div><div class="line">[context].getElementsByClassName();</div><div class="line">[context].getElementsByName();</div></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>（2）渲染树：<br> 一般来说，在浏览器对页面文件进行解析渲染的过程中，在将文件解析完成之后，将DOM树和CSS规则树关联起来，构造出来的用于后面的页面渲染的树，就是渲染树。</p>
+<ul>
+<li>渲染树并不等同与DOM树，因为一些像header 或 display: none 的节点就没有必要放在渲染树中了。</li>
+<li><p>CSS规则树主要是为了完成匹配，并将CSS 规则附加到渲染树的每一个节点（也就是DOM节点）上。DOM节点 + CSS规则 = 渲染树的节点，也就是Frame。</p>
+<p>（3）重绘和重排：<br>repaint(重绘)：屏幕的一部分需要重画。比如：某个元素的CSS的背景颜色发生了变化，但是元素的几何尺寸没有发生改变。<br>reflow(layout / 重排)：意味着元素的几何尺寸发生了变化（是渲染树的一部分或全部发生了变化），需要重新验证并计算。<code>HTML的布局是基于流式布局的，所以，如果某元素的几何尺寸发生了变化的话，就会需要重新布局，这也就是 reflow</code><br>页面会发生重绘或重排的几种情况有：</p>
+<ul>
+<li>增加、删除、修改DOM节点；</li>
+<li>移动DOM的位置；</li>
+<li>修改CSS样式；</li>
+<li>滚动窗口；</li>
+<li>修改页面的默认字体；</li>
+<li>…….<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 触发重排 reflow */</span></div><div class="line"><span class="selector-tag">display</span>: <span class="selector-tag">none</span>;</div><div class="line"></div><div class="line"><span class="comment">/* 触发重绘 repaint */</span></div><div class="line"><span class="selector-tag">visibility</span>: <span class="selector-tag">hidden</span>;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>（4）分层渲染：</p>
+<p>（5）为什么DOM操作过多会影响性能：<br> DOM操作会触发浏览器页面的重绘或重排，这两个操作对于浏览器的性能都是极大的损耗，重排更是。</p>
+</li>
+</ul>
+</blockquote>
+<hr>
+<h4 id="移动-Web-开发"><a href="#移动-Web-开发" class="headerlink" title="移动 Web 开发"></a>移动 Web 开发</h4><ol>
+<li><p>移动 Web 开发和 PC Web 开发有何不同？</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>怎样实现响应式布局</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>移动端的手势和动作</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>怎么提高移动端页面的渲染性能？针对移动端网络，考察你是否能从减少HTTP请求出发提出解决方案，是否了解GPU渲染（偏进阶）等；</p>
+<blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h4 id="调试"><a href="#调试" class="headerlink" title="调试"></a>调试</h4><ol>
+<li><p>是否会使用基本的抓包工具、调试控制台</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>怎么从茫茫网络内容中找到有效信息</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>移动端如何调试</p>
+<blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><ol>
+<li><p>常见的 HTTP 状态码</p>
+<blockquote>
+<p>（1）1xx   消息</p>
+<ul>
+<li>100     客户端可以继续发送请求</li>
+</ul>
+<p>（2）2xx   成功</p>
+<ul>
+<li>200   请求已成功处理，请求的资源也已经返回<ul>
+<li>204   no content，请求已成功处理，但没有内容返回</li>
+</ul>
+</li>
+</ul>
+<p>（3）3xx  重定向</p>
+<ul>
+<li>300   请求的资源可以从多个地址获得</li>
+<li>301   重定向，资源永久移除，客户端不应该再继续通过该 url 访问该资源<ul>
+<li>302  重定向，资源临时移除，以后可能仍然使用该 url</li>
+<li>303  see other，请求的资源在另一个URI，应该使用GET定向获取资源</li>
+</ul>
+</li>
+<li><p>304  not modefined，浏览器可以使用本地缓存</p>
+<p>（4）4xx  客户端错误</p>
+<ul>
+<li>400    bad request，客户端发送的请求不能理解</li>
+<li>401   unauthorized，表示发送的请求需要有HTTP认证信息或是认证失败了</li>
+<li>403      forbidden，服务器拒绝提供服务</li>
+<li>404     not found，没找到资源</li>
+</ul>
+<p>（5）5xx    服务器端错误</p>
+</li>
+<li>500  internal server error ，服务器内部错误</li>
+<li>503   server unavaliable，服务暂不可用</li>
+</ul>
+</blockquote>
+</li>
+<li><p>不同请求类型的区别</p>
+<blockquote>
+<p>（1）GET请求<br> 向服务器请求资源，从服务器取回数据。<br>（2）POST请求<br>  向服务器提交数据。<br>（3）PULL请求<br>   向服务器推送数据，提交的数据量通常要比POST请求的多。<br> （4）PUT请求</p>
+<pre><code>向服务器更新数据。通过把已经存在的资源的ID和新的实体用PUT请求上传到服务器来更新资源。
+</code></pre><p> （5）DELETE请求<br> 删除服务器上的指定的资源<br> （6）HEAD请求<br> HEAD请求与GET请求类似，但仅仅返回相应的头部，没有具体的响应体。<br> （7）OPTIONS请求<br> OPTIONS允许客户端请求一个服务所支持的请求方法。它所对应的响应头是Allow，它非常简洁地列出了支持的方法。下面为服务端成功处理了OPTIONS请求后，响应的内容：<br>Allow: HEAD,GET,PUT,DELETE,OPTIONS<br>（8）CONNECT请求<br>主要用来建立一个对资源的网络连接。一旦建立连接后，会响应一个200状态码和一条”Connectioin Established”的消息。</p>
+</blockquote>
+</li>
+<li><p>有什么缓存方案以及怎么实现</p>
+<blockquote>
+</blockquote>
+</li>
+</ol>
+<hr>
+<h4 id="综合问题"><a href="#综合问题" class="headerlink" title="综合问题"></a>综合问题</h4><ol>
+<li><p>用户从输入 url 到最终页面呈现，这个过程发生了什么<br>（用户输入url，到浏览器缓存机制检查，到HTTP请求包结构，到DNS解析，到连接建立，到服务器端处理（如动态页面处理、静态页面返回，CDN相关知识），到浏览器收到HTML内容怎么解析，到怎么并行加载串行执行CSS、JS，到怎么构造渲染树渲染页面，到怎么根据请求头把内容缓存到浏览器端。如果此时你还能补充HTTPS、同构直出、Service Worker之类）</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>老板反馈页面打开白屏，而你手机上使正常的，怎么办</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p>我页面上有个动画，一卡一卡的性能不行，怎么优化</p>
+<blockquote>
+</blockquote>
+</li>
+</ol>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年08月26日 17:47</p>
+        <p>原始链接： <a class="post-url" href="/2018/09/25/前端开发的六项基础知识/" title="">http://lenmontree.com/2018/09/25/前端开发的六项基础知识/</a></p>
+        <footer>
+            <a href="http://lenmontree.com">
+                <img src="/images/logo.png" alt="jasmine">
+                jasmine
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/&title=Lenmontree' Blog&pic=http://lenmontree.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/&title=Lenmontree' Blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=Lenmontree' Blog&url=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/&via=http://lenmontree.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://lenmontree.com/2018/09/25/前端开发的六项基础知识/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识"><span class="post-toc-text">前端开发的六项基础知识：HTML、CSS、JavaScript、移动Web开发、调试、网络知识</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTML"><span class="post-toc-text">HTML</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#CSS"><span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#移动-Web-开发"><span class="post-toc-text">移动 Web 开发</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#调试"><span class="post-toc-text">调试</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTTP"><span class="post-toc-text">HTTP</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#综合问题"><span class="post-toc-text">综合问题</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/07/29/Ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">Ajax</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2018 jasmine<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "http://lenmontree.com",
+      animate: true,
+      isHome: false,
+      share: true
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/前端知识点/">前端知识点</a><a class="category-link" href="/categories/博客搭建/">博客搭建</a><a class="category-link" href="/categories/后端知识点/">后端知识点</a><a class="category-link" href="/categories/工具类/">工具类</a><a class="category-link" href="/categories/日常/">日常</a><a class="category-link" href="/categories/面经/">面经</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a  href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a  href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/Bootstrap/" style="font-size: 10px;">Bootstrap</a> <a href="/tags/CSS/" style="font-size: 15px;">CSS</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/JavaScript-js系列编程练习/" style="font-size: 15px;">JavaScript js系列编程练习</a> <a href="/tags/MarkDown/" style="font-size: 10px;">MarkDown</a> <a href="/tags/bugs/" style="font-size: 10px;">bugs</a> <a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/css-box-model/" style="font-size: 10px;">css   box-model</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/实习/" style="font-size: 10px;">实习</a> <a href="/tags/碎碎念/" style="font-size: 10px;">碎碎念</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+  </div>
+</body>
+</html>
