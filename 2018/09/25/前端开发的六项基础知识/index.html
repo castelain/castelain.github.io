@@ -157,7 +157,7 @@
 <h4 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h4><ol>
 <li>怎样写出更好的CSS，<blockquote>
 <p>（0）reset(初始化样式表)</p>
-<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td &#123; margin: 0; padding: 0; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml">html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, blockquote, pre, form, fieldset, table, th, td &#123; margin: 0; padding: 0; &#125;</span></div></pre></td></tr></table></figure>
 </blockquote>
 </li>
 </ol>
@@ -185,7 +185,7 @@
 <ul>
 <li>没有事件传播。事件一旦触发，就会立即执行事件处理函数。<ul>
 <li>一个DOM元素上只能绑定一种类型的事件的一个事件处理程序。若为同一事件绑定了两个事件处理程序，则后面那个事件处理程序会覆盖前面那一个。</li>
-<li>事件句柄名：on + 事件名<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;div id="myDiv" onClick="alert('hello world')"&gt;myDiv&lt;/div&gt;</div></pre></td></tr></table></figure>
+<li>事件句柄名：on + 事件名<figure class="highlight htmlbars"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"myDiv"</span> <span class="attr">onClick</span>=<span class="string">"alert('hello world')"</span>&gt;</span>myDiv<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></div></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
